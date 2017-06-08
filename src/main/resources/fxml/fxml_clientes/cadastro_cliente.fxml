@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_clientes.CadastroCliente">
+   <children>
+      <TextField fx:id="tfNome" layoutX="355.0" layoutY="194.0" promptText="Nome" AnchorPane.bottomAnchor="362.0" AnchorPane.leftAnchor="355.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="194.0" />
+      <TextField fx:id="tfCpf" layoutX="355.0" layoutY="232.0" promptText="CPF" />
+      <TextField fx:id="tfEndereco" layoutX="355.0" layoutY="274.0" prefHeight="19.0" prefWidth="171.0" promptText="Endereço" />
+      <Button fx:id="btCadastrar" layoutX="400.0" layoutY="373.0" mnemonicParsing="false" onAction="#btCadastrarActionHandler" text="Cadastrar" />
+      <Label layoutX="281.0" layoutY="199.0" text="Nome:" />
+      <Label layoutX="281.0" layoutY="239.0" text="CPF:" />
+      <Label layoutX="281.0" layoutY="277.0" text="Endereco:" />
+      <Label layoutX="281.0" layoutY="317.0" text="Telefone:" />
+      <TextField fx:id="tfTelefone" layoutX="355.0" layoutY="312.0" promptText="Telefone" />
+   </children>
+</AnchorPane>

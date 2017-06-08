@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_local.DeletarSalao">
+   <children>
+      <ComboBox fx:id="cbDeleteSalao" layoutX="338.0" layoutY="216.0" prefWidth="150.0" />
+      <Button fx:id="btDeletarSalao" layoutX="360.0" layoutY="265.0" mnemonicParsing="false" onAction="#btDeletarSalaoActionHandler" text="Deletar Salao" />
+   </children>
+</AnchorPane>

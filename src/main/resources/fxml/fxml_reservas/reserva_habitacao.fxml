@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_reservas.ReservaHabitacao">
+   <children>
+      <TextField fx:id="tfCliente" layoutX="314.0" layoutY="220.0" promptText="Nome Cliente" />
+      <TextField fx:id="tfQuarto" layoutX="314.0" layoutY="259.0" promptText="Numero Quarto" />
+      <DatePicker fx:id="dpCheckIn" layoutX="314.0" layoutY="297.0" promptText="Data Check In" />
+      <Button fx:id="btReserva" layoutX="344.0" layoutY="336.0" mnemonicParsing="false" onAction="#btReservaActionHandler" text="Fazer Reserva" />
+   </children>
+</AnchorPane>

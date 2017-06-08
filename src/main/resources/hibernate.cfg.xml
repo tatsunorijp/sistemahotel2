@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.id.new_generator_mappings">false</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/sistemahotel_interface</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">32169876</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+
+        <!-- List of XML mapping files -->
+        <mapping class="sistemahotel.dominio.gerenciamento_estoque.Produto"/>
+        <mapping class="sistemahotel.dominio.gerenciamento_acesso.Usuario"/>
+        <mapping class="sistemahotel.dominio.pessoa.Pessoa"/>
+        <mapping class="sistemahotel.dominio.gerenciamento_clientes.Cliente"/>
+        <mapping class="sistemahotel.dominio.gerenciamento_acesso.Gerente"/>
+        <mapping class="sistemahotel.dominio.gerenciamento_acesso.Recepcionista"/>
+        <mapping class="sistemahotel.dominio.gerenciamento_reserva.Reserva"/>
+        <mapping class="sistemahotel.dominio.gerenciamento_local.Habitacao"/>
+        <mapping class="sistemahotel.dominio.gerenciamento_local.SalaoFestas"/>
+        <mapping class="sistemahotel.dominio.gerenciamento_local.Local"/>
+
+    </session-factory>
+</hibernate-configuration>

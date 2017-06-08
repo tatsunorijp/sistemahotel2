@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="645.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.telainicial.newTelaInicial">
+   <children>
+      <SplitPane dividerPositions="0.23787740164684354" layoutY="27.0" prefHeight="618.0" prefWidth="1095.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="643.0" prefWidth="527.0">
+               <children>
+                  <Accordion prefHeight="642.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <panes>
+                      <TitledPane animated="false" text="Gerenciador de Clientes">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView prefHeight="534.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Button fx:id="btNovoCadastro" layoutX="11.0" layoutY="10.0" mnemonicParsing="false" onAction="#btNovoCadastroActionHandler" prefHeight="40.0" prefWidth="232.0" text="Novo Cadastro" />
+                                    <Button fx:id="btDeletarCadastro" layoutX="11.0" layoutY="89.0" mnemonicParsing="false" onAction="#btDeletarCadastroActionHandler" prefHeight="40.0" prefWidth="232.0" text="Deletar Cadastro" />
+                                    <Button fx:id="btAlterarCadastro" layoutX="11.0" layoutY="49.0" mnemonicParsing="false" onAction="#btAlterarCadastroActionHandler" prefHeight="40.0" prefWidth="232.0" text="Alterar Cadastro" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Gerenciador de Reservas">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView prefHeight="536.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0" />
+                                    <Button fx:id="btNovaReservaHabitacao" layoutX="11.0" layoutY="10.0" mnemonicParsing="false" onAction="#btNovaReservaHabitacaoActionHandler" prefHeight="40.0" prefWidth="232.0" text="Nova Reserva Habitacao" />
+                                    <Button fx:id="btNovaReservaSalao" layoutX="11.0" layoutY="50.0" mnemonicParsing="false" onAction="#btNovaReservaSalaoActionHandler" prefHeight="40.0" prefWidth="233.0" text="Nova Reserva Salao" />
+                                    <Button fx:id="btAlterarReserva" layoutX="11.0" layoutY="90.0" mnemonicParsing="false" onAction="#beAlterarReservaActionHandler" prefHeight="40.0" prefWidth="233.0" text="Alterar Reserva" />
+                                    <Button fx:id="btExcluirReserva" layoutX="11.0" layoutY="128.0" mnemonicParsing="false" onAction="#btExcluirReservaActionHandler" prefHeight="40.0" prefWidth="233.0" text="Excluir Reserva" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Gerenciador de Estoque">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView layoutY="-1.0" prefHeight="536.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0" />
+                                    <Button fx:id="btAdicionarProduto" layoutX="11.0" layoutY="10.0" mnemonicParsing="false" onAction="#btAdicionarProdutoActionHandler" prefHeight="40.0" prefWidth="232.0" text="Adicionar Produto" />
+                                    <Button fx:id="btAlterarProduto" layoutX="11.0" layoutY="50.0" mnemonicParsing="false" onAction="#btAlterarProdutoActionHandler" prefHeight="40.0" prefWidth="232.0" text="Alterar Produto" />
+                                    <Button fx:id="btRemoverProduto" layoutX="11.0" layoutY="90.0" mnemonicParsing="false" onAction="#btRemoverProdutoActionHandler" prefHeight="40.0" prefWidth="232.0" text="Remover Produto" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                        <TitledPane animated="false" text="Gerenciador de Locais">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView prefHeight="541.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Button fx:id="btNovaHabitacao" layoutX="11.0" layoutY="10.0" mnemonicParsing="false" onAction="#btNovaHabitacaoActionHandler" prefHeight="40.0" prefWidth="232.0" text="Nova Habitacao" />
+                                    <Button fx:id="btNovoSalaoDeEventos" layoutX="11.0" layoutY="50.0" mnemonicParsing="false" onAction="#btNovoSalaoDeEventosActionHandler" prefHeight="40.0" prefWidth="232.0" text="Novo Salao de Eventos" />
+                                    <Button fx:id="btDeletarHabitacao" layoutX="11.0" layoutY="90.0" mnemonicParsing="false" onAction="#btDeletarHabitacaoActionHandler" prefHeight="40.0" prefWidth="232.0" text="Deletar Habitacao" />
+                                    <Button fx:id="btDeletarSalaoDeEventos" layoutX="11.0" layoutY="130.0" mnemonicParsing="false" onAction="#btDeletarSalaoDeEventosActionHandler" prefHeight="40.0" prefWidth="232.0" text="Deletar Salao de Eventos" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="643.0" prefWidth="585.0">
+               <children>
+                  <TabPane fx:id="tbPane" layoutY="1.0" prefHeight="643.0" prefWidth="721.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="Inicio">
+                           <content>
+                              <Label text="Desenvolvido por Marcelo Benesciutti, Leonardo Laraniaga, Tatsunori Asahide" />
+                           </content></Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <MenuBar prefHeight="29.0" prefWidth="1095.0" AnchorPane.bottomAnchor="616.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
