@@ -7,14 +7,16 @@
 
 <AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_clientes.AlterarCadastro">
    <children>
-      <TextField fx:id="tfNomeCliente" layoutX="366.0" layoutY="188.0" />
-      <TextField fx:id="tfEnderecoCliente" layoutX="366.0" layoutY="228.0" />
-      <TextField fx:id="tfCpfCliente" layoutX="366.0" layoutY="270.0" />
-      <TextField fx:id="tfTelefoneCliente" layoutX="366.0" layoutY="312.0" />
-      <Label layoutX="290.0" layoutY="191.0" text="Nome" />
-      <Label layoutX="290.0" layoutY="231.0" text="Endereco" />
-      <Label layoutX="290.0" layoutY="275.0" text="CPF" />
-      <Label layoutX="290.0" layoutY="319.0" text="Telefone" />
+      <TextField fx:id="tfNomeCliente" layoutX="366.0" layoutY="139.0" />
+      <TextField fx:id="tfEnderecoCliente" layoutX="366.0" layoutY="179.0" />
+      <TextField fx:id="tfCpfCliente" layoutX="366.0" layoutY="221.0" />
+      <TextField fx:id="tfTelefoneCliente" layoutX="366.0" layoutY="311.0" />
+      <Label layoutX="290.0" layoutY="142.0" text="Nome" />
+      <Label layoutX="290.0" layoutY="182.0" text="Endereco" />
+      <Label layoutX="290.0" layoutY="226.0" text="CPF" />
+      <Label layoutX="290.0" layoutY="317.0" text="Telefone" />
       <Button fx:id="btAlterar" layoutX="418.0" layoutY="368.0" mnemonicParsing="false" onAction="#btAlterarActionHandler" text="Alterar" />
+      <TextField fx:id="tfRG" layoutX="366.0" layoutY="265.0" />
+      <Label layoutX="288.0" layoutY="270.0" text="RG" />
    </children>
 </AnchorPane>

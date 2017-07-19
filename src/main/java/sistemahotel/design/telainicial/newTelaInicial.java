@@ -8,13 +8,11 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
-import javafx.scene.layout.AnchorPane;
 
 import javax.swing.text.html.ListView;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
 //Programado por Tatsunori
 public class newTelaInicial implements Initializable{
@@ -56,18 +54,19 @@ public class newTelaInicial implements Initializable{
         }
 
     }
-    public void btAlterarCadastroActionHandler(){
+
+    public void btAlterarCadastroActionHandler (ActionEvent e){
         try{
-            Node node;
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/fxml_clientes/alterar_cadastro.fxml"));
-            node = loader.load();
-            Tab tb = new Tab("Alterar Cadastro",node);
-            tbPane.getTabs().add(tb);
+        Node node;
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/fxml_clientes/alterar_cadastro_list.fxml"));
+        node = loader.load();
+
+        Tab tb = new Tab("Alterar Cadastro",node);
+        tbPane.getTabs().add(tb);
         }catch(IOException ex){
             ex.printStackTrace();
         }
-
     }
     public void btDeletarCadastroActionHandler(){
         try{

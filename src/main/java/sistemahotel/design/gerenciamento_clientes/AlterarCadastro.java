@@ -29,13 +29,16 @@ public class AlterarCadastro implements Initializable{
     TextField tfCpfCliente;
     @FXML
     TextField tfTelefoneCliente;
+    @FXML
+    TextField tfRG;
     public void btAlterarActionHandler(ActionEvent e) {
         ClienteDAO gc = new ClienteDAO();
         String nome = tfNomeCliente.getText();
         String endereco = tfEnderecoCliente.getText();
         String cpf = tfCpfCliente.getText();
         String telefone = tfTelefoneCliente.getText();
-        gc.alterarCadastro(nome, endereco, cpf, telefone);
+        String rg = tfRG.getText();
+        gc.alterarCadastro(nome, endereco, cpf, telefone,rg);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");
         alert.setHeaderText(null);
@@ -49,5 +52,6 @@ public class AlterarCadastro implements Initializable{
         tfEnderecoCliente.setText(clientepass.getEndereco());
         tfCpfCliente.setText(clientepass.getCPF());
         tfTelefoneCliente.setText(clientepass.getTelefone());
+        tfRG.setText(clientepass.getRG());
     }
 }

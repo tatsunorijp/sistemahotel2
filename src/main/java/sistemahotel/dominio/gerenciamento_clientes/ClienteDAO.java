@@ -15,17 +15,18 @@ public class ClienteDAO {
     Transaction tx = null;
 
     Cliente c1 = new Cliente();
-    public void novoCliente(String nome, String endereco, String cpf, String telefone){
+    public void novoCliente(String nome, String endereco, String cpf, String telefone, String rg){
         c1.setTipo();
         c1.setNome(nome);
         c1.setCPF(cpf);
         c1.setEndereco(endereco);
         c1.setTelefone(telefone);
+        c1.setRG(rg);
         session.save(c1);
     }
 
     //byTatsu
-    public void alterarCadastro(String nome, String endereco, String cpf, String telefone){
+    public void alterarCadastro(String nome, String endereco, String cpf, String telefone, String rg){
         tx = session.beginTransaction();
         id = Passing.clientepass.getId();
         c1 = session.get(Cliente.class, id);
@@ -34,6 +35,7 @@ public class ClienteDAO {
         c1.setCPF(cpf);
         c1.setTelefone(telefone);
         c1.setTipo();
+        c1.setRG(rg);
         session.flush();
         session.saveOrUpdate(c1);
         tx.commit();

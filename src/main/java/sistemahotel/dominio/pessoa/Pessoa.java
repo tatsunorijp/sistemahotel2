@@ -3,6 +3,8 @@ package sistemahotel.dominio.pessoa;
 import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
+import java.util.Date;
+
 //Programado por Leonardo
 @Entity
 public abstract class Pessoa {
@@ -13,7 +15,20 @@ public abstract class Pessoa {
     protected String tipo;
     @Column(name="CPF", unique = true)
     private String CPF;
+    @Column (name = "RG", unique = true)
+    private String RG;
     private String nome;
+
+
+    public Date getDataDeNascimento() {
+        return dataDeNascimento;
+    }
+
+    public void setDataDeNascimento(Date dataDeNascimento) {
+        this.dataDeNascimento = dataDeNascimento;
+    }
+
+    private Date dataDeNascimento;
 
     public Long getId() {
         return id;
@@ -39,4 +54,11 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
+    public String getRG() {
+        return RG;
+    }
+
+    public void setRG(String RG) {
+        this.RG = RG;
+    }
 }
