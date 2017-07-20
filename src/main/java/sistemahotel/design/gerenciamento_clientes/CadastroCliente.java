@@ -2,20 +2,13 @@ package sistemahotel.design.gerenciamento_clientes;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import sistemahotel.dominio.gerenciamento_clientes.ClienteDAO;
 import sistemahotel.infraestrutura.DataController;
 
-import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Date;
 
 //Programado por Tatsunori
 public class CadastroCliente {
@@ -58,7 +51,7 @@ public class CadastroCliente {
         LocalDate dataDeNascimento = tfDataDeNascimento.getValue();
 
         ClienteDAO gc = new ClienteDAO();
-        gc.novoCliente(nome, endereco, cpf,telefone,rg);
+        gc.novoCliente(nome, endereco, cpf,telefone,rg,email,cidade,nacionalidade,placaDoCarro,informacoesAdicionais,dataDeNascimento);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");
         alert.setHeaderText(null);

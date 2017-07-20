@@ -24,7 +24,7 @@
       <TextField fx:id="tfNacionalidade" layoutX="555.0" layoutY="70.0" promptText="Nacionalidade" />
       <TextField fx:id="tfPlacaDoCarro" layoutX="555.0" layoutY="110.0" promptText="Placa do Carro" />
       <DatePicker fx:id="tfDataDeNascimento" layoutX="555.0" layoutY="149.0" />
-      <TextField fx:id="tfInformacoesAdicionais" layoutX="489.0" layoutY="204.0" prefHeight="142.0" prefWidth="236.0" promptText="        Informações adicionais" />
+      <TextField fx:id="tfInformacoesAdicionais" layoutX="499.0" layoutY="247.0" prefHeight="142.0" prefWidth="236.0" promptText="        Informações adicionais" />
       <Label layoutX="73.0" layoutY="277.0" text="E-mail" />
       <Label layoutX="73.0" layoutY="320.0" text="Cidade" />
       <Label layoutX="406.0" layoutY="79.0" text="Nacionalidade" />

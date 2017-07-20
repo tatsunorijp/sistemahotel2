@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_clientes.DeletarCadastro">
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_clientes.DeletarCadastro">
    <children>
-      <ComboBox fx:id="cbSelecionar" layoutX="375.0" layoutY="219.0" prefWidth="150.0" />
-      <Button fx:id="btDeletar" layoutX="421.0" layoutY="265.0" mnemonicParsing="false" onAction="#btDeletarActionHandler" text="Deletar" />
-      <Label layoutX="302.0" layoutY="224.0" text="Cadastro: " />
+      <Button fx:id="btDeletar" layoutX="381.0" layoutY="539.0" mnemonicParsing="false" onAction="#btDeletarActionHandler" text="Deletar" />
+      <TableView fx:id="TVCliente" layoutX="14.0" layoutY="14.0" prefHeight="524.0" prefWidth="826.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="TCNome" prefWidth="630.0" text="Nome" />
+          <TableColumn fx:id="TCRG" prefWidth="195.0" text="RG" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

@@ -30,7 +30,7 @@ import static sistemahotel.infraestrutura.Passing.clientepass;
  * Created by tatsunori on 19/07/17.
  */
 public class AlterarCadastroList implements Initializable {
-    Cliente current;
+
     @FXML
     TableView <Cliente> TVCliente;
     @FXML

@@ -3,6 +3,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import sistemahotel.infraestrutura.Passing;
 
+import java.time.LocalDate;
+
 import static sistemahotel.infraestrutura.DataController.ssf;
 //Programado por Tatsunori
 public class ClienteDAO {
@@ -15,18 +17,24 @@ public class ClienteDAO {
     Transaction tx = null;
 
     Cliente c1 = new Cliente();
-    public void novoCliente(String nome, String endereco, String cpf, String telefone, String rg){
+    public void novoCliente(String nome, String endereco, String cpf, String telefone, String rg, String email, String cidade, String nacionalidade, String placaDoCarro, String informacoesAdicionais, LocalDate dataDeNascimento){
         c1.setTipo();
         c1.setNome(nome);
         c1.setCPF(cpf);
         c1.setEndereco(endereco);
         c1.setTelefone(telefone);
         c1.setRG(rg);
+        c1.setEmail(email);
+        c1.setCidade(cidade);
+        c1.setNacionalidade(nacionalidade);
+        c1.setPlacaDoCarro(placaDoCarro);
+        c1.setInformacoesAdicionais(informacoesAdicionais);
+        c1.setDataDeNascimento(dataDeNascimento);
         session.save(c1);
     }
 
     //byTatsu
-    public void alterarCadastro(String nome, String endereco, String cpf, String telefone, String rg){
+    public void alterarCadastro(String nome, String endereco, String cpf, String telefone, String rg, String email, String cidade, String nacionalidade, String placaDoCarro, String informacoesAdicionais, LocalDate dataDeNascimento){
         tx = session.beginTransaction();
         id = Passing.clientepass.getId();
         c1 = session.get(Cliente.class, id);
@@ -36,6 +44,12 @@ public class ClienteDAO {
         c1.setTelefone(telefone);
         c1.setTipo();
         c1.setRG(rg);
+        c1.setEmail(email);
+        c1.setCidade(cidade);
+        c1.setNacionalidade(nacionalidade);
+        c1.setPlacaDoCarro(placaDoCarro);
+        c1.setInformacoesAdicionais(informacoesAdicionais);
+        c1.setDataDeNascimento(dataDeNascimento);
         session.flush();
         session.saveOrUpdate(c1);
         tx.commit();

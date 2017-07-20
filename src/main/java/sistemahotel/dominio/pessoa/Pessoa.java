@@ -3,7 +3,7 @@ package sistemahotel.dominio.pessoa;
 import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 //Programado por Leonardo
 @Entity
@@ -18,17 +18,15 @@ public abstract class Pessoa {
     @Column (name = "RG", unique = true)
     private String RG;
     private String nome;
+    private LocalDate dataDeNascimento;
 
-
-    public Date getDataDeNascimento() {
+    public LocalDate getDataDeNascimento() {
         return dataDeNascimento;
     }
 
-    public void setDataDeNascimento(Date dataDeNascimento) {
+    public void setDataDeNascimento(LocalDate dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
     }
-
-    private Date dataDeNascimento;
 
     public Long getId() {
         return id;

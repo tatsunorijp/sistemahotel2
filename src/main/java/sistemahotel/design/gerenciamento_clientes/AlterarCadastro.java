@@ -14,6 +14,7 @@ import sistemahotel.infraestrutura.DataController;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import static sistemahotel.infraestrutura.Passing.clientepass;
@@ -31,14 +32,33 @@ public class AlterarCadastro implements Initializable{
     TextField tfTelefoneCliente;
     @FXML
     TextField tfRG;
+    @FXML
+    TextField tfEmail;
+    @FXML
+    TextField tfCidade;
+    @FXML
+    TextField tfNacionalidade;
+    @FXML
+    TextField tfPlacaDoCarro;
+    @FXML
+    TextField tfInformacoesAdicionais;
+    @FXML
+    DatePicker tfDataDeNascimento;
     public void btAlterarActionHandler(ActionEvent e) {
         ClienteDAO gc = new ClienteDAO();
         String nome = tfNomeCliente.getText();
-        String endereco = tfEnderecoCliente.getText();
         String cpf = tfCpfCliente.getText();
-        String telefone = tfTelefoneCliente.getText();
         String rg = tfRG.getText();
-        gc.alterarCadastro(nome, endereco, cpf, telefone,rg);
+        String endereco = tfEnderecoCliente.getText();
+        String telefone = tfTelefoneCliente.getText();
+        String email = tfEmail.getText();
+        String cidade = tfCidade.getText();
+        String nacionalidade = tfNacionalidade.getText();
+        String placaDoCarro = tfPlacaDoCarro.getText();
+        String informacoesAdicionais = tfInformacoesAdicionais.getText();
+        LocalDate dataDeNascimento = tfDataDeNascimento.getValue();
+
+        gc.alterarCadastro(nome, endereco, cpf, telefone,rg,email,cidade,nacionalidade,placaDoCarro,informacoesAdicionais,dataDeNascimento);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");
         alert.setHeaderText(null);
@@ -53,5 +73,11 @@ public class AlterarCadastro implements Initializable{
         tfCpfCliente.setText(clientepass.getCPF());
         tfTelefoneCliente.setText(clientepass.getTelefone());
         tfRG.setText(clientepass.getRG());
+        tfEmail.setText(clientepass.getEmail());
+        tfCidade.setText(clientepass.getCidade());
+        tfNacionalidade.setText(clientepass.getNacionalidade());
+        tfPlacaDoCarro.setText(clientepass.getPlacaDoCarro());
+        tfInformacoesAdicionais.setText(clientepass.getInformacoesAdicionais());
+        //tfDataDeNascimento.setValue(clientepass.getDataDeNascimento());
     }
 }
