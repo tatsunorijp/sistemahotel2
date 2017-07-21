@@ -14,6 +14,15 @@ public abstract class Local {
     private String numero;
     protected String tipo;
     protected String status;
+    protected String informacoesAdicionais;
+
+    public String getInformacoesAdicionais() {
+        return informacoesAdicionais;
+    }
+
+    public void setInformacoesAdicionais(String informacoesAdicionais) {
+        this.informacoesAdicionais = informacoesAdicionais;
+    }
 
     public String toString(){
         return getNumero();

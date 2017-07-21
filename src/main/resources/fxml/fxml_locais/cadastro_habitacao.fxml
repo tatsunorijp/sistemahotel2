@@ -12,7 +12,7 @@
       <TextField fx:id="tfNmroHab" layoutX="414.0" layoutY="114.0" promptText="Numero da habitacao" />
       <Button fx:id="btNovaHab" layoutX="338.0" layoutY="513.0" mnemonicParsing="false" onAction="#btNovaHabActionHandler" text="Cadastrar Habitacao" />
       <ComboBox fx:id="cbCamasDeSolteiro" layoutX="414.0" layoutY="163.0" prefWidth="150.0" />
-      <ComboBox fx:id="cdCamasDeCasal" layoutX="416.0" layoutY="214.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbCamasDeCasal" layoutX="416.0" layoutY="214.0" prefWidth="150.0" />
       <TextArea fx:id="taInformacoesAdicionais" layoutX="389.0" layoutY="301.0" prefHeight="112.0" prefWidth="200.0" />
       <Label layoutX="143.0" layoutY="121.0" text="Numero da habitacao:" />
       <Label layoutX="138.0" layoutY="172.0" text="Quantidade de camas de solteiro:" />

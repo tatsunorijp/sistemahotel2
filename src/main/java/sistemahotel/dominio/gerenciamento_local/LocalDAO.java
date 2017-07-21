@@ -11,10 +11,13 @@ import java.util.Scanner;
 //Programado por Tatsunori
 public class LocalDAO {
     Transaction tx = null;
-    public void novaHabitacao(String numero) {
+    public void novaHabitacao(String numero, int camasSolteiro, int camasCasal, String informacoesAdicionais) {
         Session session = ssf.openSession();
         Habitacao habitacao = new Habitacao();
         habitacao.setNumero(numero);
+        habitacao.setCamasDeSolteiro(camasSolteiro);
+        habitacao.setCamasDeCasal(camasCasal);
+        habitacao.setInformacoesAdicionais(informacoesAdicionais);
         session.save(habitacao);
         session.close();
     }
