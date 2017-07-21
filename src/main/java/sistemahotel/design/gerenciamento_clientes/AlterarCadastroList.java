@@ -10,18 +10,22 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import sistemahotel.dominio.gerenciamento_clientes.Cliente;
+import sistemahotel.dominio.gerenciamento_clientes.ClienteDAO;
 import sistemahotel.dominio.pessoa.Pessoa;
 import sistemahotel.infraestrutura.DataController;
 import sistemahotel.infraestrutura.Passing;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import static sistemahotel.infraestrutura.Passing.clientepass;
@@ -46,6 +50,7 @@ public class AlterarCadastroList implements Initializable {
         TCNome.setCellValueFactory( new PropertyValueFactory<>("nome"));
         TCRG.setCellValueFactory(new PropertyValueFactory<>("RG"));
         TVCliente.setItems(FXCollections.observableList(list));
+        ClienteDAO dc = new ClienteDAO();
 
         TVCliente.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -58,7 +63,7 @@ public class AlterarCadastroList implements Initializable {
                     Stage stage = new Stage();
                     FXMLLoader loader = new FXMLLoader();
                     Parent root = null;
-                    loader.setLocation(getClass().getResource("/fxml/fxml_clientes/cadastrocliente_selecionado.fxml"));
+                    loader.setLocation(getClass().getResource("/fxml/fxml_reservas/cadastrocliente_selecionada.fxml"));
                     try {
                         root = loader.load();
                     } catch (IOException e1) {
@@ -70,7 +75,6 @@ public class AlterarCadastroList implements Initializable {
                 }
             }
         });
-
 
     }
 }

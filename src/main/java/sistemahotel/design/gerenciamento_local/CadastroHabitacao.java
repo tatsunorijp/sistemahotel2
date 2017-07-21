@@ -32,7 +32,7 @@ public class CadastroHabitacao implements Initializable {
     ComboBox cbCamasDeCasal;
 
     ArrayList<Integer> lista = new ArrayList<Integer>();
-    lista.add(1);
+    //lista.add(1);
 
 
     public void btNovaHabActionHandler(ActionEvent e){
@@ -47,6 +47,6 @@ public class CadastroHabitacao implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        cbCamasDeSolteiro.setItems();
+        //cbCamasDeSolteiro.setItems();
     }
 }
