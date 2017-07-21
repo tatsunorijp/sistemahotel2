@@ -31,6 +31,7 @@ public class ReservaDAO {
         nr1.setData(date);
         nr1.getData();
         nr1.getCliente();
+        nr1.setStatus("Reservado");
         session.save(nr1);
         tx.commit();
         session.close();
@@ -43,6 +44,7 @@ public class ReservaDAO {
         nrs1.setCliente(cliente);
         nrs1.setLocal(salaofestas);
         nrs1.setData(date);
+        nrs1.setStatus("Reservado");
         session.save(nrs1);
         tx.commit();
         session.close();
@@ -70,11 +72,11 @@ public class ReservaDAO {
         session.close();
     }
 
-    public void deletarReserva(Long id){
+    public void deletarReserva(Reserva r){
         Session session = ssf.openSession();
-        Reserva r;
+        //Reserva r;
         tx = session.beginTransaction();
-        r = session.get(Reserva.class, id);
+        //r = session.get(Reserva.class, id);
         session.delete(r);
         tx.commit();
         session.close();

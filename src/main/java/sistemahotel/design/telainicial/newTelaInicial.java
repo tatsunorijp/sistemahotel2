@@ -122,7 +122,7 @@ public class newTelaInicial implements Initializable{
         try{
             Node node;
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/fxml_reservas/alterar_reserva.fxml"));
+            loader.setLocation(getClass().getResource("/fxml/fxml_reservas/alterar_reserva_list.fxml"));
             node = loader.load();
             Tab tb = new Tab("Alterar Reserva",node);
             tbPane.getTabs().add(tb);

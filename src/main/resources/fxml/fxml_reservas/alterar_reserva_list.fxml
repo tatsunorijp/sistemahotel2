@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="592.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_reservas.DeletarReserva">
+<AnchorPane prefHeight="592.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_reservas.AlterarReservaList">
    <children>
       <TableView fx:id="tvReserva" prefHeight="592.0" prefWidth="905.0">
         <columns>
