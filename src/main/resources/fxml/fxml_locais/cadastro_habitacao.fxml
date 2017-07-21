@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_local.CadastroHabitacao">
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_local.CadastroHabitacao">
    <children>
-      <TextField fx:id="tfNmroHab" layoutX="328.0" layoutY="226.0" promptText="Numero da habitacao" />
-      <Button fx:id="btNovaHab" layoutX="338.0" layoutY="265.0" mnemonicParsing="false" onAction="#btNovaHabActionHandler" text="Cadastrar Habitacao" />
+      <TextField fx:id="tfNmroHab" layoutX="414.0" layoutY="114.0" promptText="Numero da habitacao" />
+      <Button fx:id="btNovaHab" layoutX="338.0" layoutY="513.0" mnemonicParsing="false" onAction="#btNovaHabActionHandler" text="Cadastrar Habitacao" />
+      <ComboBox fx:id="cbCamasDeSolteiro" layoutX="414.0" layoutY="163.0" prefWidth="150.0" />
+      <ComboBox fx:id="cdCamasDeCasal" layoutX="416.0" layoutY="214.0" prefWidth="150.0" />
+      <TextArea fx:id="taInformacoesAdicionais" layoutX="389.0" layoutY="301.0" prefHeight="112.0" prefWidth="200.0" />
+      <Label layoutX="143.0" layoutY="121.0" text="Numero da habitacao:" />
+      <Label layoutX="138.0" layoutY="172.0" text="Quantidade de camas de solteiro:" />
+      <Label layoutX="138.0" layoutY="223.0" text="Quantidade de camas de casal:" />
+      <Label layoutX="147.0" layoutY="350.0" text="Informacoes adicionais:" />
    </children>
 </AnchorPane>
