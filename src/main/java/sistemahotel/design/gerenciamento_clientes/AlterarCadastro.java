@@ -41,7 +41,7 @@ public class AlterarCadastro implements Initializable{
     @FXML
     TextField tfPlacaDoCarro;
     @FXML
-    TextField tfInformacoesAdicionais;
+    TextArea tfInformacoesAdicionais;
     @FXML
     DatePicker tfDataDeNascimento;
     public void btAlterarActionHandler(ActionEvent e) {

@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import sistemahotel.dominio.gerenciamento_clientes.ClienteDAO;
 import sistemahotel.infraestrutura.DataController;
@@ -31,7 +32,7 @@ public class CadastroCliente {
     @FXML
     TextField tfPlacaDoCarro;
     @FXML
-    TextField tfInformacoesAdicionais;
+    TextArea tfInformacoesAdicionais;
     @FXML
     DatePicker tfDataDeNascimento;
 

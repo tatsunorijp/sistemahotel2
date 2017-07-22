@@ -63,7 +63,7 @@ public class AlterarCadastroList implements Initializable {
                     Stage stage = new Stage();
                     FXMLLoader loader = new FXMLLoader();
                     Parent root = null;
-                    loader.setLocation(getClass().getResource("/fxml/fxml_reservas/cadastrocliente_selecionada.fxml"));
+                    loader.setLocation(getClass().getResource("/fxml/fxml_clientes/cadastrocliente_selecionado.fxml"));
                     try {
                         root = loader.load();
                     } catch (IOException e1) {
