@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sistemahotel.dominio.gerenciamento_local.LocalDAO;
@@ -17,12 +18,18 @@ public class CadastroSalao {
 
     @FXML
     TextField tfNmroSalao;
-
+    @FXML
+    TextField tfMaximoPessoas;
+    @FXML
+    TextArea taInformacoesAdicionais;
 
 
     public void btCadastrarSalaoActionHandler(ActionEvent e){
         LocalDAO salao = new LocalDAO();
-        salao.novoSalao(tfNmroSalao.getText());
+        String numeroSalao = tfNmroSalao.getText();
+        String maximoPessoas = tfMaximoPessoas.getText();
+        String informacoesAdicionais = taInformacoesAdicionais.getText();
+        salao.novoSalao(numeroSalao,maximoPessoas,informacoesAdicionais);
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");

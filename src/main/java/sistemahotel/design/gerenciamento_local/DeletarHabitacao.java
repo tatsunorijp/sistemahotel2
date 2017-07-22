@@ -3,43 +3,67 @@ package sistemahotel.design.gerenciamento_local;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import sistemahotel.dominio.gerenciamento_local.Local;
 import sistemahotel.dominio.gerenciamento_local.LocalDAO;
 import sistemahotel.dominio.gerenciamento_local.Habitacao;
 import sistemahotel.infraestrutura.DataController;
+import sistemahotel.infraestrutura.Passing;
+
 import static sistemahotel.infraestrutura.Passing.habitacaopass;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 //Programado por Leonardo
 public class DeletarHabitacao implements Initializable{
-    @FXML ComboBox cbDeleteHab;
+    @FXML
+    TableView tvDeletarLocal;
+    @FXML
+    TableColumn tcNumeroLocal;
+    @FXML
+    TableColumn tcTipoLocal;
 
-    public void btDeletarHabActionHandler (ActionEvent e){
-        LocalDAO gl = new LocalDAO();
-        habitacaopass = (Habitacao) cbDeleteHab.getValue();
-        gl.deletarLocal(habitacaopass);
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Operação realizada com sucesso");
-        alert.setHeaderText(null);
-        alert.setContentText("Habitacao Deletada");
-        alert.showAndWait();
-        Stage stage = new Stage();
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList<Habitacao> list = FXCollections.observableList(DataController.listHabitacoes());
-        cbDeleteHab.setItems(list);
+        LocalDAO dl = new LocalDAO();
+        ObservableList<Local> list = FXCollections.observableList(DataController.listLocal());
+        tcNumeroLocal.setCellValueFactory(new PropertyValueFactory<>("Numero do local"));
+        tcTipoLocal.setCellValueFactory(new PropertyValueFactory<>("Tipo do local"));
+        tvDeletarLocal.setItems(FXCollections.observableList(list));
+
+        tvDeletarLocal.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent click) {
+
+                if (click.getClickCount() == 2) {
+
+                    Passing.localpass = (Local) tvDeletarLocal.getSelectionModel().getSelectedItem();
+
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Deletar Local");
+                    alert.setHeaderText("Deseja deletar o local selecionado?");
+
+                    Optional<ButtonType> result = alert.showAndWait();
+                    if (result.get() == ButtonType.OK){
+                        dl.deletarLocal(Passing.localpass);
+                    } else {
+                        // ... user chose CANCEL or closed the dialog
+                    }
+                }
+            }
+        });
     }
 }

@@ -22,10 +22,12 @@ public class LocalDAO {
         session.close();
     }
 
-    public void novoSalao(String numero) {
+    public void novoSalao(String numero, String maximoPessoas, String informacoesAdicionais) {
         Session session = ssf.openSession();
         SalaoFestas salao = new SalaoFestas();
         salao.setNumero(numero);
+        salao.setMaximoPessoas(maximoPessoas);
+        salao.setInformacoesAdicionais(informacoesAdicionais);
         session.save(salao);
         session.close();
     }

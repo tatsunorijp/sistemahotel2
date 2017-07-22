@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_local.CadastroSalao">
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_local.CadastroSalao">
    <children>
-      <Button fx:id="btCadastrarSalao" layoutX="353.0" layoutY="265.0" mnemonicParsing="false" onAction="#btCadastrarSalaoActionHandler" text="Cadastrar Salao" />
-      <TextField fx:id="tfNmroSalao" layoutX="328.0" layoutY="221.0" promptText="Numero do Salao" />
+      <Button fx:id="btCadastrarSalao" layoutX="355.0" layoutY="460.0" mnemonicParsing="false" onAction="#btCadastrarSalaoActionHandler" text="Cadastrar Salao" />
+      <TextField fx:id="tfNmroSalao" layoutX="374.0" layoutY="174.0" prefHeight="26.0" prefWidth="122.0" promptText="Número do salão" />
+      <TextField fx:id="tfMaximoPessoas" layoutX="374.0" layoutY="222.0" prefHeight="26.0" prefWidth="122.0" promptText="Quantidade máxima de pessoas" />
+      <Label layoutX="146.0" layoutY="177.0" text="Numero do Salao:" />
+      <Label layoutX="143.0" layoutY="227.0" text="Quantidade maxima de pessoas:" />
+      <Label layoutX="148.0" layoutY="286.0" text="Informacoes Adicionais:" />
+      <TextArea fx:id="taInformacoesAdicionais" layoutX="375.0" layoutY="273.0" prefHeight="102.0" prefWidth="252.0" promptText="Informações Adicionais" />
    </children>
 </AnchorPane>
