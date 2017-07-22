@@ -55,9 +55,8 @@ public class ClienteDAO {
         tx.commit();
     }
 
-    public void deletarCadastro(Long id){
+    public void deletarCadastro(Cliente c1){
         tx = session.beginTransaction();
-        c1 = session.get(Cliente.class, id);
         session.delete(c1);
         tx.commit();
     }
