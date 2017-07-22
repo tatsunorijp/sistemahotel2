@@ -14,8 +14,6 @@ import sistemahotel.dominio.gerenciamento_local.LocalDAO;
 import java.io.IOException;
 //Programado por Tatsunori
 public class CadastroSalao {
-    @FXML
-    TextField tfNmroHab;
 
     @FXML
     TextField tfNmroSalao;
