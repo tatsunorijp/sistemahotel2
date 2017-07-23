@@ -4,22 +4,22 @@ import javax.persistence.Entity;
 //Programado por Tatsunori
 @Entity
 public class Habitacao extends Local {
-    private int camasDeSolteiro;
-    private int camasDeCasal;
+    private String camasDeSolteiro;
+    private String camasDeCasal;
 
-    public int getCamasDeSolteiro() {
+    public String getCamasDeSolteiro() {
         return camasDeSolteiro;
     }
 
-    public void setCamasDeSolteiro(int camasDeSolteiro) {
+    public void setCamasDeSolteiro(String camasDeSolteiro) {
         this.camasDeSolteiro = camasDeSolteiro;
     }
 
-    public int getCamasDeCasal() {
+    public String getCamasDeCasal() {
         return camasDeCasal;
     }
 
-    public void setCamasDeCasal(int camasDeCasal) {
+    public void setCamasDeCasal(String camasDeCasal) {
         this.camasDeCasal = camasDeCasal;
     }
 

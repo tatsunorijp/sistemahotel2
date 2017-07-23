@@ -10,7 +10,6 @@ public abstract class Local {
     @Id
     @GeneratedValue
     protected Long id;
-    @Column(name = "Numero", unique = true)
     private String numero;
     protected String tipo;
     protected String status;

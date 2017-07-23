@@ -65,8 +65,7 @@
                                     <ListView prefHeight="541.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                     <Button fx:id="btNovaHabitacao" layoutX="11.0" layoutY="10.0" mnemonicParsing="false" onAction="#btNovaHabitacaoActionHandler" prefHeight="40.0" prefWidth="232.0" text="Nova Habitacao" />
                                     <Button fx:id="btNovoSalaoDeEventos" layoutX="11.0" layoutY="50.0" mnemonicParsing="false" onAction="#btNovoSalaoDeEventosActionHandler" prefHeight="40.0" prefWidth="232.0" text="Novo Salao de Eventos" />
-                                    <Button fx:id="btDeletarHabitacao" layoutX="11.0" layoutY="90.0" mnemonicParsing="false" onAction="#btDeletarHabitacaoActionHandler" prefHeight="40.0" prefWidth="232.0" text="Deletar Habitacao" />
-                                    <Button fx:id="btDeletarSalaoDeEventos" layoutX="11.0" layoutY="130.0" mnemonicParsing="false" onAction="#btDeletarSalaoDeEventosActionHandler" prefHeight="40.0" prefWidth="232.0" text="Deletar Salao de Eventos" />
+                                    <Button fx:id="btDeletarLocal" layoutX="11.0" layoutY="90.0" mnemonicParsing="false" onAction="#btDeletarLocalActionHandler" prefHeight="40.0" prefWidth="232.0" text="Deletar Local" />
                                  </children>
                               </AnchorPane>
                            </content>

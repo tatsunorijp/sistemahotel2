@@ -229,26 +229,13 @@ public class newTelaInicial implements Initializable{
         }
 
     }
-    public void btDeletarHabitacaoActionHandler(){
+    public void btDeletarLocalActionHandler(){
         try{
             Node node;
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/fxml_locais/deletar_habitacao.fxml"));
+            loader.setLocation(getClass().getResource("/fxml/fxml_locais/deletar_local.fxml"));
             node = loader.load();
-            Tab tb = new Tab("Deletar Habitação",node);
-            tbPane.getTabs().add(tb);
-        }catch(IOException ex){
-            ex.printStackTrace();
-        }
-
-    }
-    public void btDeletarSalaoDeEventosActionHandler(){
-        try{
-            Node node;
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/fxml_locais/deletar_salao.fxml"));
-            node = loader.load();
-            Tab tb = new Tab("Deletar Salão de Eventos",node);
+            Tab tb = new Tab("Deletar Local",node);
             tbPane.getTabs().add(tb);
         }catch(IOException ex){
             ex.printStackTrace();

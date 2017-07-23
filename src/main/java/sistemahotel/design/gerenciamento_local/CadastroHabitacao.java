@@ -27,12 +27,12 @@ public class CadastroHabitacao implements Initializable {
     @FXML
     ComboBox cbCamasDeCasal;
 
-    ObservableList<Integer> list= FXCollections.observableArrayList();
+    ObservableList<String> list= FXCollections.observableArrayList();
 
     public void btNovaHabActionHandler(ActionEvent e){
         String nmroHab = tfNmroHab.getText();
-        int camasSolteiro = (int) cbCamasDeSolteiro.getValue();
-        int camasCasal = (int) cbCamasDeCasal.getValue();
+        String camasSolteiro = cbCamasDeSolteiro.getSelectionModel().getSelectedItem().toString();
+        String camasCasal = cbCamasDeCasal.getSelectionModel().getSelectedItem().toString();
         String informacoesAdicionais = taInformacoesAdicionais.getText();
 
         LocalDAO hab = new LocalDAO();
@@ -46,10 +46,10 @@ public class CadastroHabitacao implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        list.add(0);
-        list.add(1);
-        list.add(2);
-        list.add(3);
+        list.add("0");
+        list.add("1");
+        list.add("2");
+        list.add("3");
 
         cbCamasDeSolteiro.setItems(list);
         cbCamasDeCasal.setItems(list);

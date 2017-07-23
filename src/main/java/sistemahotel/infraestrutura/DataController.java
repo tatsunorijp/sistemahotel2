@@ -197,6 +197,8 @@ public class DataController {
         }
         return habitacoes;
     }
+
+
     public static List<Local> listLocal() {
         Session session = ssf.openSession();
         Transaction transaction = null;

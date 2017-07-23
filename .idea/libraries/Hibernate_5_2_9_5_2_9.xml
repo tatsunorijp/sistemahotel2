@@ -13,6 +13,7 @@
       <root url="jar://$PROJECT_DIR$/lib/javassist-3.20.0-GA.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/hibernate-core-5.2.9.Final.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar!/" />
+      <root url="jar:///root/Downloads/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
