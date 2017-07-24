@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_estoque.AlterarProduto">
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_estoque.AlterarProduto">
    <children>
       <Button fx:id="btAlterar" layoutX="383.0" layoutY="370.0" mnemonicParsing="false" onAction="#btAlterarActionHandler" text="Alterar" />
       <Label layoutX="244.0" layoutY="155.0" text="Produto:" />
@@ -14,7 +14,7 @@
       <TextField fx:id="tfPreco" layoutX="374.0" layoutY="238.0" />
       <Label layoutX="244.0" layoutY="243.0" text="Preço:" />
       <Label layoutX="244.0" layoutY="197.0" text="Quantidade:" />
-      <Label layoutX="242.0" layoutY="284.0" text="Alerta Estoque:" />
+      <Label layoutX="242.0" layoutY="284.0" text="Alerta de estoque:" />
       <TextField fx:id="tfAlertaEstoque" layoutX="374.0" layoutY="279.0" />
    </children>
 </AnchorPane>
