@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_estoque.AlterarProdutoSelecao">
+   <children>
+      <TableView fx:id="tvAlterarProduto" layoutX="57.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="tcNome" prefWidth="436.0" text="Nome do produto" />
+          <TableColumn fx:id="tcPreco" prefWidth="118.0" text="Preco" />
+            <TableColumn fx:id="tcQuantidade" prefWidth="205.0" text="Quantidade em Estoque" />
+            <TableColumn fx:id="tcId" minWidth="0.0" prefWidth="66.0" text="ID" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
