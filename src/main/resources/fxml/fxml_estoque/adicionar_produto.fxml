@@ -5,14 +5,16 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_estoque.AdicionarProduto">
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_estoque.AdicionarProduto">
    <children>
-      <TextField fx:id="tfPreco" layoutX="372.0" layoutY="254.0" promptText="Preço produto" />
-      <Button fx:id="btNovoProduto" layoutX="404.0" layoutY="344.0" mnemonicParsing="false" onAction="#btNovoProdutoActionHandler" text="Novo Produto" />
-      <TextField fx:id="tfNome" layoutX="372.0" layoutY="212.0" promptText="Nome Produto" />
-      <TextField fx:id="tfQuantidade" layoutX="372.0" layoutY="296.0" promptText="Quantidade Produto" />
-      <Label layoutX="284.0" layoutY="217.0" text="Nome:" />
-      <Label layoutX="284.0" layoutY="259.0" text="Preco:" />
-      <Label layoutX="284.0" layoutY="299.0" text="Quantidade:" />
+      <TextField fx:id="tfNome" layoutX="446.0" layoutY="142.0" promptText="Nome Produto" />
+      <TextField fx:id="tfPreco" layoutX="446.0" layoutY="184.0" promptText="Preço produto" />
+      <TextField fx:id="tfQuantidade" layoutX="446.0" layoutY="226.0" promptText="Quantidade Produto" />
+      <TextField fx:id="tfAlertaEstoque" layoutX="446.0" layoutY="267.0" promptText="Quantidade para alerta de estoque" />
+      <Button fx:id="btNovoProduto" layoutX="371.0" layoutY="403.0" mnemonicParsing="false" onAction="#btNovoProdutoActionHandler" text="Novo Produto" />
+      <Label layoutX="197.0" layoutY="147.0" text="Nome:" />
+      <Label layoutX="197.0" layoutY="189.0" text="Preco:" />
+      <Label layoutX="197.0" layoutY="229.0" text="Quantidade:" />
+      <Label layoutX="194.0" layoutY="272.0" text="Quantidade para alerta de estoque:" />
    </children>
 </AnchorPane>

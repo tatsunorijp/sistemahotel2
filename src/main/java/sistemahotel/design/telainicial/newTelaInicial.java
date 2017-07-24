@@ -170,7 +170,7 @@ public class newTelaInicial implements Initializable{
         try{
             Node node;
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/fxml_estoque/selecionar_produto.fxml"));
+            loader.setLocation(getClass().getResource("/fxml/fxml_estoque/selecionar_alterar_produto.fxml"));
             node = loader.load();
             Tab tb = new Tab("Alterar Produto",node);
             tbPane.getTabs().add(tb);

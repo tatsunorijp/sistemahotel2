@@ -13,6 +13,7 @@ import sistemahotel.infraestrutura.DataController;
 import sistemahotel.dominio.gerenciamento_estoque.EstoqueDAO;
 import javafx.scene.control.TextField;
 
+import javax.xml.soap.Text;
 import java.io.IOException;
 
 //Programado por Tatsunori
@@ -23,13 +24,16 @@ public class AdicionarProduto {
     TextField tfQuantidade;
     @FXML
     TextField tfPreco;
+    @FXML
+    TextField tfAlertaEstoque;
 
     public void btNovoProdutoActionHandler(ActionEvent e) {
         EstoqueDAO estoque = new EstoqueDAO();
         String nome = tfNome.getText();
         String quantidade =tfQuantidade.getText();
         String preco = tfPreco.getText();
-        estoque.adicionarProduto(nome, quantidade, preco);
+        String alertaEstoque = tfAlertaEstoque.getText();
+        estoque.adicionarProduto(nome, quantidade, preco, alertaEstoque);
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");

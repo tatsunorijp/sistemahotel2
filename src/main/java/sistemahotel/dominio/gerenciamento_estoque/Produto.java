@@ -14,6 +14,7 @@ public class Produto {
     private String nome;
     private String quantidade;
     private String preco;
+    private String alertaEstoque;
 
     public String toString(){return this.nome;}
     public Long getId() {
@@ -26,6 +27,10 @@ public class Produto {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getAlertaEstoque() {
+        return alertaEstoque;
     }
 
     public String getQuantidade() {
@@ -45,4 +50,7 @@ public class Produto {
     }
 
 
+    public void setAlertaEstoque(String alertaEstoque) {
+        this.alertaEstoque = alertaEstoque;
+    }
 }
