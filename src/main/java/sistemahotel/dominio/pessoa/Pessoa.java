@@ -7,15 +7,16 @@ import java.time.LocalDate;
 
 //Programado por Leonardo
 @Entity
+@Table(name = "Pessoa",
+        uniqueConstraints = @UniqueConstraint(columnNames = {"CPF", "RG"}))
 public abstract class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     @NotNull
     protected String tipo;
-    @Column(name="CPF", unique = true)
+    @Column (name = "CPF", unique = true)
     private String CPF;
-    @Column (name = "RG", unique = true)
     private String RG;
     private String nome;
     private LocalDate dataDeNascimento;

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="592.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.telainicial.TelaInicial">
+   <children>
+      <Button fx:id="btClientes" layoutX="139.0" layoutY="35.0" mnemonicParsing="false" onAction="#btClientesActionHandler" text="Clientes" />
+      <Button fx:id="btReservas" layoutX="284.0" layoutY="35.0" mnemonicParsing="false" onAction="#btReservasActionHandler" text="Reservas" />
+      <Button fx:id="btLocal" layoutX="439.0" layoutY="35.0" mnemonicParsing="false" onAction="#btLocalActionHandler" text="Local" />
+      <Button fx:id="btEstoque" layoutX="571.0" layoutY="35.0" mnemonicParsing="false" onAction="#btEstoqueActionHandler" text="Estoque" />
+   </children>
+</AnchorPane>

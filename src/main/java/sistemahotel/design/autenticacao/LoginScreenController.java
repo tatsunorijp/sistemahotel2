@@ -41,7 +41,7 @@ public class LoginScreenController{
         else {*/
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/fxml_start/newTelaInicial.fxml"));
+            loader.setLocation(getClass().getResource("/fxml/fxml_start/telainicial.fxml"));
             Parent root = null;
             try {
                 root = loader.load();

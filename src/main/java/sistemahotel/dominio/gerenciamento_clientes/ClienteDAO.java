@@ -1,9 +1,13 @@
 package sistemahotel.dominio.gerenciamento_clientes;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import sistemahotel.infraestrutura.DataController;
 import sistemahotel.infraestrutura.Passing;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import static sistemahotel.infraestrutura.DataController.ssf;
 //Programado por Tatsunori
