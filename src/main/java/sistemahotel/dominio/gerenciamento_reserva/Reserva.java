@@ -26,7 +26,8 @@ public class Reserva implements Initializable {
     @JoinColumn(name = "fk_local", nullable=false)
     private Local local;
     private String status;
-    private LocalDate data;
+    private LocalDate checkIn;
+    private LocalDate checkOut;
     public Reserva(){
 
     }
@@ -34,14 +35,21 @@ public class Reserva implements Initializable {
         return cliente.getNome();
     }
 
-    public LocalDate getData() {
-        return data;
+    public LocalDate getCheckIn() {
+        return checkIn;
     }
 
-    public void setData(LocalDate data) {
-        this.data = data;
+    public void setCheckIn(LocalDate checkIn) {
+        this.checkIn = checkIn;
     }
 
+    public LocalDate getCheckOut() {
+        return checkOut;
+    }
+
+    public void setCheckOut(LocalDate checkOut) {
+        this.checkOut = checkOut;
+    }
 
     public String getStatus() {
         return status;
