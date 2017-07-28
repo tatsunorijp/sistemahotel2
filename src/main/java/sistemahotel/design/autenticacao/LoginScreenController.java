@@ -1,5 +1,7 @@
 package sistemahotel.design.autenticacao;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sistemahotel.dominio.gerenciamento_acesso.Usuario;
+import sistemahotel.dominio.gerenciamento_reserva.Reserva;
 import sistemahotel.infraestrutura.DataController;
 
 import java.io.IOException;
@@ -24,7 +27,6 @@ public class LoginScreenController{
     PasswordField tfPassword;
 
     public void btLoginActionHandler(ActionEvent e){
-        DataController controller = new DataController();
         /*String login = tfLogin.getText();
         String password = tfPassword.getText();
         Autenticacao autenticacao = new Autenticacao();
