@@ -24,9 +24,7 @@ public class GerenciamentoEstoque {
     @FXML
     Button btEstoque;
     @FXML
-    Button btNovaReservaHab;
-    @FXML
-    Button btNovaReservaSalao;
+    Button btNovo;
     @FXML
     Button btAlterar;
     @FXML
@@ -96,7 +94,7 @@ public class GerenciamentoEstoque {
         stage.show();
     }
 
-    public void btNovaReservaHabActionHandler(ActionEvent e){
+    public void btNovoActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_estoque/adicionar_produto.fxml"));

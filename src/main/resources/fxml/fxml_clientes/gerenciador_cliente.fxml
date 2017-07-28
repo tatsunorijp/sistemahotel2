@@ -5,75 +5,100 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_clientes.GerenciamentoCliente">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="144.0" layoutX="2.0" opacity="0.31" stroke="#8a8a8a" strokeType="INSIDE" width="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Button fx:id="btClientes" layoutX="640.0" layoutY="44.0" mnemonicParsing="false" onAction="#btClientesActionHandler" prefHeight="55.0" prefWidth="71.0">
-         <graphic>
-            <ImageView fitHeight="55.0" fitWidth="55.0">
-               <image>
-                  <Image url="@../../../../../../../Downloads/clientes2.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="btReservas" layoutX="737.0" layoutY="43.0" mnemonicParsing="false" onAction="#btReservasActionHandler" prefHeight="65.0" prefWidth="73.0">
-         <graphic>
-            <ImageView fitHeight="47.0" fitWidth="55.0">
-               <image>
-                  <Image url="@../../../../../../../Downloads/reservas2.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="btLocal" layoutX="832.0" layoutY="44.0" mnemonicParsing="false" onAction="#btLocalActionHandler" prefHeight="63.0" prefWidth="69.0">
-         <graphic>
-            <ImageView fitHeight="55.0" fitWidth="55.0">
-               <image>
-                  <Image url="@../../../../../../../Downloads/locais3.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="btEstoque" layoutX="927.0" layoutY="44.0" mnemonicParsing="false" onAction="#btEstoqueActionHandler">
-         <graphic>
-            <ImageView fitHeight="55.0" fitWidth="55.0">
-               <image>
-                  <Image url="@../../../../../../../Downloads/produtos2.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="btNovaReservaHab" layoutX="46.0" layoutY="204.0" mnemonicParsing="false" onAction="#btNovaReservaHabActionHandler" text="Novo Cliente" />
-      <Button fx:id="btAlterar" layoutX="40.0" layoutY="248.0" mnemonicParsing="false" onAction="#btAlterarActionHandler" text="Alterar Cliente" />
-      <Button fx:id="btExcluir" layoutX="41.0" layoutY="292.0" mnemonicParsing="false" onAction="#btExcluirActionHandler" text="Excluir Cliente" />
-      <MenuBar layoutX="9.0" layoutY="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <menus>
-            <Menu mnemonicParsing="false" text="File">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Close" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Edit">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
-               </items>
-            </Menu>
-         </menus>
-      </MenuBar>
-      <Label layoutX="651.0" layoutY="115.0" text="Clientes" />
-      <Label layoutX="744.0" layoutY="116.0" text="Reservas" />
-      <Label layoutX="851.0" layoutY="117.0" text="Locais" />
-      <Label layoutX="935.0" layoutY="117.0" text="Produtos" />
+      <SplitPane dividerPositions="0.19843342036553524" layoutX="389.0" layoutY="274.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="1022.0">
+               <children>
+                  <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Close" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Delete" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="About" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <Button fx:id="btClientes" layoutX="595.0" layoutY="45.0" mnemonicParsing="false" onAction="#btClientesActionHandler" prefHeight="55.0" prefWidth="55.0">
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="55.0">
+                           <image>
+                              <Image url="@../../../../../imagens/clientes2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btReservas" layoutX="705.0" layoutY="42.0" mnemonicParsing="false" onAction="#btReservasActionHandler" prefHeight="65.0" prefWidth="73.0">
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="55.0">
+                           <image>
+                              <Image url="@../../../../../imagens/reservas2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btLocal" layoutX="817.0" layoutY="43.0" mnemonicParsing="false" onAction="#btLocalActionHandler" prefHeight="55.0" prefWidth="55.0">
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="55.0">
+                           <image>
+                              <Image url="@../../../../../imagens/locais3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btEstoque" layoutX="918.0" layoutY="42.0" mnemonicParsing="false" onAction="#btEstoqueActionHandler">
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="55.0">
+                           <image>
+                              <Image url="@../../../../../imagens/produtos2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="605.0" layoutY="118.0" text="Clientes" />
+                  <Label layoutX="712.0" layoutY="117.0" text="Reservas" />
+                  <Label layoutX="833.0" layoutY="117.0" text="Locais" />
+                  <Label layoutX="926.0" layoutY="117.0" text="Produtos" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.15784313725490196" layoutX="456.0" layoutY="178.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <VBox layoutX="2.0" prefHeight="603.0" prefWidth="170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button fx:id="btNovo" mnemonicParsing="false" onAction="#btNovoActionHandler" prefHeight="40.0" prefWidth="183.0" text="Novo Cliente" />
+                                    <Button fx:id="btAlterar" mnemonicParsing="false" onAction="#btAlterarActionHandler" prefHeight="40.0" prefWidth="184.0" text="Alterar Cliente" />
+                                    <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#btExcluirActionHandler" prefHeight="40.0" prefWidth="184.0" text="Excluir Cliente" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="603.0" prefWidth="807.0" />
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>

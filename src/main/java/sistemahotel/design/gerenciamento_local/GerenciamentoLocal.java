@@ -24,11 +24,9 @@ public class GerenciamentoLocal {
     @FXML
     Button btEstoque;
     @FXML
-    Button btNovaReservaHab;
+    Button btNovaHab;
     @FXML
-    Button btNovaReservaSalao;
-    @FXML
-    Button btAlterar;
+    Button btNovoSalao;
     @FXML
     Button btExcluir;
 
@@ -96,7 +94,7 @@ public class GerenciamentoLocal {
         stage.show();
     }
 
-    public void btNovaReservaHabActionHandler(ActionEvent e){
+    public void btNovaHabActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_locais/cadastro_habitacao.fxml"));
@@ -111,7 +109,7 @@ public class GerenciamentoLocal {
         stage.show();
     }
 
-    public void btNovaReservaSalaoActionHandler(ActionEvent e){
+    public void btNovoSalaoActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_locais/cadastro_salao.fxml"));

@@ -96,7 +96,7 @@ public class GerenciamentoCliente {
         stage.show();
     }
 
-    public void btNovaReservaHabActionHandler(ActionEvent e){
+    public void btNovoActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_clientes/cadastro_cliente.fxml"));
