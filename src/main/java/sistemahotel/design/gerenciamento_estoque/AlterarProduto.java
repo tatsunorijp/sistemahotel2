@@ -1,3 +1,4 @@
+
 package sistemahotel.design.gerenciamento_estoque;
 
 import javafx.event.ActionEvent;

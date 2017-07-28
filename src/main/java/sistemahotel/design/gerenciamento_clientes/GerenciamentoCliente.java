@@ -3,24 +3,26 @@ package sistemahotel.design.gerenciamento_clientes;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import sistemahotel.dominio.gerenciamento_clientes.Cliente;
 import sistemahotel.dominio.gerenciamento_clientes.ClienteDAO;
 import sistemahotel.dominio.pessoa.Pessoa;
 import sistemahotel.infraestrutura.DataController;
+import sistemahotel.infraestrutura.Passing;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
@@ -132,8 +134,8 @@ public class GerenciamentoCliente implements Initializable{
     public void btAlterarActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/fxml/fxml_clientes/alterar_cadastro_list.fxml"));
         Parent root = null;
+        loader.setLocation(getClass().getResource("/fxml/fxml_clientes/cadastrocliente_selecionado.fxml"));
         try {
             root = loader.load();
         } catch (IOException e1) {
@@ -145,7 +147,20 @@ public class GerenciamentoCliente implements Initializable{
     }
 
     public void btExcluirActionHandler(ActionEvent e){
-        Stage stage = new Stage();
+        ClienteDAO dc = new ClienteDAO();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Deletar Reserva");
+        alert.setHeaderText("Deseja deletar o cliente selecionado?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            dc.deletarCadastro(Passing.clientepass);
+
+        } else {
+            // ... user chose CANCEL or closed the dialog
+        }
+
+        /*Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_clientes/deletar_cadastrocliente.fxml"));
         Parent root = null;
@@ -156,7 +171,7 @@ public class GerenciamentoCliente implements Initializable{
         }
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
-        stage.show();
+        stage.show();*/
     }
 
     @Override
@@ -166,5 +181,15 @@ public class GerenciamentoCliente implements Initializable{
         TCRG.setCellValueFactory(new PropertyValueFactory<>("RG"));
         TVCliente.setItems(FXCollections.observableList(list));
         ClienteDAO dc = new ClienteDAO();
+
+        TVCliente.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent click) {
+                if (click.getClickCount() == 1) {
+                    Passing.clientepass = TVCliente.getSelectionModel().getSelectedItem();
+
+                }
+            }
+        });
     }
 }

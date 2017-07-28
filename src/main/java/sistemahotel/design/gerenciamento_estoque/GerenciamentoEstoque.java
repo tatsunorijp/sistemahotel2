@@ -10,18 +10,18 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import sistemahotel.dominio.gerenciamento_estoque.EstoqueDAO;
 import sistemahotel.dominio.gerenciamento_estoque.Produto;
 import sistemahotel.infraestrutura.DataController;
+import sistemahotel.infraestrutura.Passing;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
@@ -135,6 +135,19 @@ public class GerenciamentoEstoque implements Initializable{
     public void btAlterarActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
+        Parent root = null;
+        loader.setLocation(getClass().getResource("/fxml/fxml_estoque/alterar_produto.fxml"));
+        try {
+            root = loader.load();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        stage.setTitle("Sistema Hotel");
+        stage.setScene(new Scene(root));
+        stage.show();
+        /*
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_estoque/selecionar_alterar_produto.fxml"));
         Parent root = null;
         try {
@@ -144,11 +157,23 @@ public class GerenciamentoEstoque implements Initializable{
         }
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
-        stage.show();
+        stage.show();*/
     }
 
     public void btExcluirActionHandler(ActionEvent e){
-        Stage stage = new Stage();
+        EstoqueDAO dp = new EstoqueDAO();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Deletar Produto");
+        alert.setHeaderText("Deseja deletar o produto selecionado?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            dp.removerProduto(Passing.produtopass);
+        } else {
+            // ... user chose CANCEL or closed the dialog
+        }
+
+        /*Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_estoque/remover_produto.fxml"));
         Parent root = null;
@@ -159,18 +184,27 @@ public class GerenciamentoEstoque implements Initializable{
         }
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
-        stage.show();
+        stage.show();*/
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        EstoqueDAO ap = new EstoqueDAO();
         ObservableList<Produto> list = FXCollections.observableList(DataController.listProduto());
         tcNome.setCellValueFactory( new PropertyValueFactory<>("nome"));
         tcPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));
         tcQuantidade.setCellValueFactory(new PropertyValueFactory<>("quantidade"));
         tcId.setCellValueFactory(new PropertyValueFactory<>("id"));
         tvAlterarProduto.setItems(FXCollections.observableList(list));
+
+        tvAlterarProduto.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent click) {
+                if (click.getClickCount() == 1) {
+                    Passing.produtopass = (Produto) tvAlterarProduto.getSelectionModel().getSelectedItem();
+
+                }
+            }
+        });
 
     }
 }

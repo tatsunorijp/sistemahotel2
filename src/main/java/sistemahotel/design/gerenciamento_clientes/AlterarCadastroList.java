@@ -1,3 +1,4 @@
+//classe inutilizada
 package sistemahotel.design.gerenciamento_clientes;
 
 import javafx.collections.FXCollections;

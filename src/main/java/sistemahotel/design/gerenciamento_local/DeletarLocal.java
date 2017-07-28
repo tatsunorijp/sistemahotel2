@@ -1,3 +1,4 @@
+//classe inutilizada
 package sistemahotel.design.gerenciamento_local;
 
 import javafx.collections.FXCollections;

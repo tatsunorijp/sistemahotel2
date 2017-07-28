@@ -1,3 +1,4 @@
+//classe inutilizada
 package sistemahotel.design.gerenciamento_estoque;
 
 import com.sun.org.apache.xml.internal.security.Init;
