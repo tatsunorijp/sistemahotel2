@@ -42,10 +42,10 @@ public class AlterarReservaList implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList<Reserva> list = FXCollections.observableList(DataController.listReserva());
-        tcCliente.setCellValueFactory( new PropertyValueFactory<>("Cliente"));
-        tcLocal.setCellValueFactory(new PropertyValueFactory<>("Local"));
-        tcStatus.setCellValueFactory(new PropertyValueFactory<>("Status"));
-        tcData.setCellValueFactory(new PropertyValueFactory<>("Data"));
+        tcCliente.setCellValueFactory( new PropertyValueFactory<>("cliente"));
+        tcLocal.setCellValueFactory(new PropertyValueFactory<>("local"));
+        tcStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        tcData.setCellValueFactory(new PropertyValueFactory<>("data"));
         tvReserva.setItems(FXCollections.observableList(list));
 
         tvReserva.setOnMouseClicked(new EventHandler<MouseEvent>() {

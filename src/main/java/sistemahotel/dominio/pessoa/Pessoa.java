@@ -17,6 +17,7 @@ public abstract class Pessoa {
     protected String tipo;
     @Column (name = "CPF", unique = true)
     private String CPF;
+    @NotNull
     private String RG;
     private String nome;
     private LocalDate dataDeNascimento;

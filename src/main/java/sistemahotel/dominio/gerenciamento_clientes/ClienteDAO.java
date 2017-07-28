@@ -17,11 +17,13 @@ public class ClienteDAO {
     private String endereco;
     private long id;
 
-    Session session = ssf.openSession();
+
     Transaction tx = null;
 
     Cliente c1 = new Cliente();
     public void novoCliente(String nome, String endereco, String cpf, String telefone, String rg, String email, String cidade, String nacionalidade, String placaDoCarro, String informacoesAdicionais, LocalDate dataDeNascimento){
+        Session session = ssf.openSession();
+        tx = session.beginTransaction();
         c1.setTipo();
         c1.setNome(nome);
         c1.setCPF(cpf);
@@ -35,10 +37,13 @@ public class ClienteDAO {
         c1.setInformacoesAdicionais(informacoesAdicionais);
         c1.setDataDeNascimento(dataDeNascimento);
         session.save(c1);
+        tx.commit();
+        session.close();
     }
 
     //byTatsu
     public void alterarCadastro(String nome, String endereco, String cpf, String telefone, String rg, String email, String cidade, String nacionalidade, String placaDoCarro, String informacoesAdicionais, LocalDate dataDeNascimento){
+        Session session = ssf.openSession();
         tx = session.beginTransaction();
         id = Passing.clientepass.getId();
         c1 = session.get(Cliente.class, id);
@@ -57,11 +62,14 @@ public class ClienteDAO {
         session.flush();
         session.saveOrUpdate(c1);
         tx.commit();
+        session.close();
     }
 
     public void deletarCadastro(Cliente c1){
+        Session session = ssf.openSession();
         tx = session.beginTransaction();
         session.delete(c1);
         tx.commit();
+        session.close();
     }
 }
