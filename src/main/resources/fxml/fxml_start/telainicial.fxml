@@ -35,7 +35,7 @@
                         </Menu>
                      </menus>
                   </MenuBar>
-                  <Button fx:id="btClientes1" layoutX="595.0" layoutY="45.0" mnemonicParsing="false" onAction="#btClientesActionHandler" prefHeight="55.0" prefWidth="55.0">
+                  <Button fx:id="btClientes" layoutX="595.0" layoutY="45.0" mnemonicParsing="false" onAction="#btClientesActionHandler" prefHeight="55.0" prefWidth="55.0">
                      <graphic>
                         <ImageView fitHeight="55.0" fitWidth="55.0">
                            <image>
@@ -44,7 +44,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btReservas1" layoutX="705.0" layoutY="42.0" mnemonicParsing="false" onAction="#btReservasActionHandler" prefHeight="65.0" prefWidth="73.0">
+                  <Button fx:id="btReservas" layoutX="705.0" layoutY="42.0" mnemonicParsing="false" onAction="#btReservasActionHandler" prefHeight="65.0" prefWidth="73.0">
                      <graphic>
                         <ImageView fitHeight="55.0" fitWidth="55.0">
                            <image>
@@ -53,7 +53,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btLocal1" layoutX="817.0" layoutY="43.0" mnemonicParsing="false" onAction="#btLocalActionHandler" prefHeight="55.0" prefWidth="55.0">
+                  <Button fx:id="btLocal" layoutX="817.0" layoutY="43.0" mnemonicParsing="false" onAction="#btLocalActionHandler" prefHeight="55.0" prefWidth="55.0">
                      <graphic>
                         <ImageView fitHeight="55.0" fitWidth="55.0">
                            <image>
@@ -62,7 +62,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btEstoque1" layoutX="918.0" layoutY="42.0" mnemonicParsing="false" onAction="#btEstoqueActionHandler">
+                  <Button fx:id="btEstoque" layoutX="918.0" layoutY="42.0" mnemonicParsing="false" onAction="#btEstoqueActionHandler">
                      <graphic>
                         <ImageView fitHeight="55.0" fitWidth="55.0">
                            <image>
