@@ -24,7 +24,9 @@ public class GerenciamentoEstoque {
     @FXML
     Button btEstoque;
     @FXML
-    Button btNovo;
+    Button btNovaReservaHab;
+    @FXML
+    Button btNovaReservaSalao;
     @FXML
     Button btAlterar;
     @FXML
@@ -81,7 +83,7 @@ public class GerenciamentoEstoque {
     public void btEstoqueActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/fxml/fxml_clientes/gerenciador_estoque.fxml"));
+        loader.setLocation(getClass().getResource("/fxml/fxml_estoque/gerenciador_estoque.fxml"));
         Parent root = null;
         try {
             root = loader.load();
@@ -93,7 +95,8 @@ public class GerenciamentoEstoque {
         ((Node)e.getSource()).getParent().getScene().getWindow().hide();
         stage.show();
     }
-    /*public void btNovoActionHandler(ActionEvent e){
+
+    public void btNovaReservaHabActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_estoque/adicionar_produto.fxml"));
@@ -106,7 +109,7 @@ public class GerenciamentoEstoque {
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
         stage.show();
-    }*/
+    }
 
     public void btAlterarActionHandler(ActionEvent e){
         Stage stage = new Stage();
@@ -137,4 +140,5 @@ public class GerenciamentoEstoque {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
 }

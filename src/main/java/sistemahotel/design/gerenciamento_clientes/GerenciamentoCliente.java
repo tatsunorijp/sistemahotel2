@@ -24,7 +24,9 @@ public class GerenciamentoCliente {
     @FXML
     Button btEstoque;
     @FXML
-    Button btNovo;
+    Button btNovaReservaHab;
+    @FXML
+    Button btNovaReservaSalao;
     @FXML
     Button btAlterar;
     @FXML
@@ -33,7 +35,7 @@ public class GerenciamentoCliente {
     public void btClientesActionHandler(ActionEvent e) {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/fxml/fxml_clientes/gerenciador_clientes.fxml"));
+        loader.setLocation(getClass().getResource("/fxml/fxml_clientes/gerenciador_cliente.fxml"));
         Parent root = null;
         try {
             root = loader.load();
@@ -94,7 +96,7 @@ public class GerenciamentoCliente {
         stage.show();
     }
 
-    /*public void btNovoActionHandler(ActionEvent e){
+    public void btNovaReservaHabActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_clientes/cadastro_cliente.fxml"));
@@ -107,7 +109,7 @@ public class GerenciamentoCliente {
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
         stage.show();
-    }*/
+    }
 
     public void btAlterarActionHandler(ActionEvent e){
         Stage stage = new Stage();

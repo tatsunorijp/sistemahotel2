@@ -23,6 +23,8 @@ public class TelaInicial {
     Button btLocal;
     @FXML
     Button btEstoque;
+    @FXML
+    Button btNovoCliente;
 
     public void btClientesActionHandler(ActionEvent e) {
         Stage stage = new Stage();

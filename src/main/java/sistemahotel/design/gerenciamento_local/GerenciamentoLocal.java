@@ -24,11 +24,11 @@ public class GerenciamentoLocal {
     @FXML
     Button btEstoque;
     @FXML
-    Button btNovaHabitacao;
+    Button btNovaReservaHab;
     @FXML
-    Button btNovoSalao;
-    //@FXML
-    //Button btAlterar;
+    Button btNovaReservaSalao;
+    @FXML
+    Button btAlterar;
     @FXML
     Button btExcluir;
 
@@ -96,7 +96,7 @@ public class GerenciamentoLocal {
         stage.show();
     }
 
-    public void btNovaHabActionHandler(ActionEvent e){
+    public void btNovaReservaHabActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_locais/cadastro_habitacao.fxml"));
@@ -110,7 +110,8 @@ public class GerenciamentoLocal {
         stage.setScene(new Scene(root));
         stage.show();
     }
-    public void btNovoSalaoActionHandler(ActionEvent e){
+
+    public void btNovaReservaSalaoActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_locais/cadastro_salao.fxml"));
@@ -128,7 +129,7 @@ public class GerenciamentoLocal {
     /*public void btAlterarActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/fxml/fxml_locais/alterar_reserva_list.fxml"));
+        loader.setLocation(getClass().getResource("/fxml/fxml_locais/alterar_cadastro_list.fxml"));
         Parent root = null;
         try {
             root = loader.load();
