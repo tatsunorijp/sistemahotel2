@@ -2,6 +2,7 @@ package sistemahotel.design.gerenciamento_clientes;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
@@ -58,6 +59,9 @@ public class CadastroCliente {
         alert.setHeaderText(null);
         alert.setContentText("Cadastro Efetuado");
         alert.showAndWait();
-        }
+        ((Node)e.getSource()).getParent().getScene().getWindow().hide();
+
+    }
+
 
 }

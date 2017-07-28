@@ -126,6 +126,7 @@ public class GerenciamentoLocal implements Initializable{
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
         stage.show();
+
     }
 
     public void btNovoSalaoActionHandler(ActionEvent e){
@@ -141,6 +142,7 @@ public class GerenciamentoLocal implements Initializable{
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
         stage.show();
+
     }
 
     /*public void btAlterarActionHandler(ActionEvent e){

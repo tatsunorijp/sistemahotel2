@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
@@ -42,6 +43,8 @@ public class CadastroHabitacao implements Initializable {
         alert.setHeaderText(null);
         alert.setContentText("Habitação Cadastrada");
         alert.showAndWait();
+        ((Node)e.getSource()).getParent().getScene().getWindow().hide();
+
     }
 
     @Override

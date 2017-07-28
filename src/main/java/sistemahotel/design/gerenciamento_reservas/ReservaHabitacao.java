@@ -54,6 +54,7 @@ public class ReservaHabitacao {
             alert.setTitle("Operação realizada com sucesso");
             alert.setHeaderText(null);
             alert.setContentText("Reserva Efetuada");
+            ((Node)e.getSource()).getParent().getScene().getWindow().hide();
             alert.showAndWait();
 
 
@@ -62,6 +63,7 @@ public class ReservaHabitacao {
             alert.setHeaderText(null);
             alert.setContentText("Cliente Invalido");
             alert.showAndWait();
+
         }
     }
 }

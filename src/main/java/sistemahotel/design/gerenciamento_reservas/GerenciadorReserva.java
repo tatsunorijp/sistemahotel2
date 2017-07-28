@@ -68,7 +68,6 @@ public class GerenciadorReserva implements Initializable{
         }
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
-        ((Node) e.getSource()).getParent().getScene().getWindow().hide();
         stage.show();
     }
 
@@ -84,7 +83,6 @@ public class GerenciadorReserva implements Initializable{
         }
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
-        ((Node) e.getSource()).getParent().getScene().getWindow().hide();
         stage.show();
     }
 
@@ -100,7 +98,6 @@ public class GerenciadorReserva implements Initializable{
         }
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
-        ((Node)e.getSource()).getParent().getScene().getWindow().hide();
         stage.show();
     }
 
@@ -116,7 +113,6 @@ public class GerenciadorReserva implements Initializable{
         }
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
-        ((Node)e.getSource()).getParent().getScene().getWindow().hide();
         stage.show();
     }
 
@@ -204,6 +200,7 @@ public class GerenciadorReserva implements Initializable{
         }
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
+        ((Node)e.getSource()).getParent().getScene().getWindow().hide();
         stage.show();*/
     }
 

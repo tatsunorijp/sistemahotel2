@@ -40,5 +40,7 @@ public class AdicionarProduto {
         alert.setHeaderText(null);
         alert.setContentText("Cadastro Efetuado");
         alert.showAndWait();
+        ((Node)e.getSource()).getParent().getScene().getWindow().hide();
+
     }
 }

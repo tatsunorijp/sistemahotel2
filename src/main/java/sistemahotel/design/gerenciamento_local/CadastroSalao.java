@@ -36,6 +36,8 @@ public class CadastroSalao {
         alert.setHeaderText(null);
         alert.setContentText("Salão Cadastrado");
         alert.showAndWait();
+        ((Node)e.getSource()).getParent().getScene().getWindow().hide();
+
 
     }
 }

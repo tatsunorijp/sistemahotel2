@@ -64,6 +64,8 @@ public class ReservaSalao {
             alert.setHeaderText(null);
             alert.setContentText("Reserva Efetuada");
             alert.showAndWait();
+            ((Node)e.getSource()).getParent().getScene().getWindow().hide();
+
         }
     }
 

@@ -64,6 +64,8 @@ public class AlterarCadastro implements Initializable{
         alert.setHeaderText(null);
         alert.setContentText("Cadastro Alterado");
         alert.showAndWait();
+        ((Node)e.getSource()).getParent().getScene().getWindow().hide();
+
     }
 
     @Override

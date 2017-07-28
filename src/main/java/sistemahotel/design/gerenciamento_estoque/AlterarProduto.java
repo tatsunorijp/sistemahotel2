@@ -43,6 +43,8 @@ public class AlterarProduto implements Initializable{
         alert.setHeaderText(null);
         alert.setContentText("Alteração efetuada");
         alert.showAndWait();
+        ((Node)e.getSource()).getParent().getScene().getWindow().hide();
+
 
     }
 

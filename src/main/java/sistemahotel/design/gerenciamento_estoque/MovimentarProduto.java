@@ -1,7 +1,9 @@
 package sistemahotel.design.gerenciamento_estoque;
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -20,7 +22,7 @@ public class MovimentarProduto {
     @FXML
     Button btInc;
 
-    public void btIncrementoActionHandler(){
+    public void btIncrementoActionHandler(ActionEvent e){
         EstoqueDAO ip = new EstoqueDAO();
         String incremento = tfIncr.getText();
         String estoque = Passing.produtopass.getQuantidade();
@@ -37,6 +39,8 @@ public class MovimentarProduto {
         alert.setHeaderText(null);
         alert.setContentText("Movimentação realizada");
         alert.showAndWait();
+        ((Node)e.getSource()).getParent().getScene().getWindow().hide();
+
     }
 
 
