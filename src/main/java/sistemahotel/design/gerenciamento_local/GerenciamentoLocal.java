@@ -52,6 +52,10 @@ public class GerenciamentoLocal implements Initializable{
     TableColumn<Local, String> tcNumeroLocal;
     @FXML
     TableColumn <Local, String> tcTipoLocal; //TROCAR PARA STATUS
+    @FXML
+    TableColumn <Local, String> tcCamasCasal;
+    @FXML
+    TableColumn <Local, String> tcCamasSolteiro;
 
     ObservableList<Local> list;
 
@@ -200,6 +204,8 @@ public class GerenciamentoLocal implements Initializable{
         list = FXCollections.observableList(DataController.listLocal());
         tcNumeroLocal.setCellValueFactory( new PropertyValueFactory<>("Numero"));
         tcTipoLocal.setCellValueFactory(new PropertyValueFactory<>("Tipo"));
+        tcCamasSolteiro.setCellValueFactory(new PropertyValueFactory<>("camasDeSolteiro"));
+        tcCamasCasal.setCellValueFactory(new PropertyValueFactory<>("camasDeCasal"));
         TVLocal.setItems(FXCollections.observableList(list));
 
         // TRECHO DO FILTRO
