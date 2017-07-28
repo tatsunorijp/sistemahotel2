@@ -43,6 +43,8 @@ public class GerenciamentoEstoque implements Initializable{
     @FXML
     Button btExcluir;
     @FXML
+    Button btMovimentarEstoque;
+    @FXML
     TableView tvAlterarProduto;
     @FXML
     TableColumn tcNome;
@@ -185,6 +187,22 @@ public class GerenciamentoEstoque implements Initializable{
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
         stage.show();*/
+    }
+
+    public void btMovimentarEstoqueActionHandler(ActionEvent e){
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = null;
+        loader.setLocation(getClass().getResource("/fxml/fxml_estoque/movimentar_produto.fxml"));
+        try {
+            root = loader.load();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        stage.setTitle("Sistema Hotel");
+        stage.setScene(new Scene(root));
+        stage.show();
+
     }
 
     @Override

@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_estoque.GerenciamentoEstoque">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_estoque.GerenciamentoEstoque">
    <children>
       <SplitPane dividerPositions="0.19843342036553524" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
@@ -83,15 +83,16 @@
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <SplitPane dividerPositions="0.13529411764705881" layoutX="456.0" layoutY="178.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.16862745098039217" layoutX="456.0" layoutY="178.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <items>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="608.0" prefWidth="252.0">
                            <children>
-                              <VBox layoutX="2.0" prefHeight="603.0" prefWidth="170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
+                              <VBox layoutX="2.0" prefHeight="603.0" prefWidth="171.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <Button fx:id="btNovo" mnemonicParsing="false" onAction="#btNovoActionHandler" prefHeight="40.0" prefWidth="136.0" text="Novo Produto" />
-                                    <Button fx:id="btAlterar" mnemonicParsing="false" onAction="#btAlterarActionHandler" prefHeight="40.0" prefWidth="135.0" text="Alterar Produto" />
-                                    <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#btExcluirActionHandler" prefHeight="40.0" prefWidth="135.0" text="Excluir Produto" />
+                                    <Button fx:id="btNovo" mnemonicParsing="false" onAction="#btNovoActionHandler" prefHeight="40.0" prefWidth="207.0" text="Novo Produto" />
+                                    <Button fx:id="btAlterar" mnemonicParsing="false" onAction="#btAlterarActionHandler" prefHeight="40.0" prefWidth="204.0" text="Alterar Produto" />
+                                    <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#btExcluirActionHandler" prefHeight="40.0" prefWidth="205.0" text="Excluir Produto" />
+                                    <Button fx:id="btMovimentarEstoque" mnemonicParsing="false" onAction="#btMovimentarEstoqueActionHandler" prefHeight="44.0" prefWidth="204.0" text="Movimentar Estoque" />
                                  </children>
                               </VBox>
                            </children>
