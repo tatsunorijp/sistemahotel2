@@ -2,6 +2,8 @@ package sistemahotel.design.gerenciamento_reservas;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -30,6 +32,8 @@ import java.util.ResourceBundle;
  */
 public class GerenciadorReserva implements Initializable{
     @FXML
+    TextField tfFiltro;
+    @FXML
     Button btClientes;
     @FXML
     Button btReservas;
@@ -46,7 +50,7 @@ public class GerenciadorReserva implements Initializable{
     @FXML
     Button btExcluir;
     @FXML
-    TableView<Reserva> tvReserva;
+    TableView<Reserva> TVReserva;
     @FXML
     TableColumn<Reserva, String> tcCliente;
     @FXML
@@ -55,6 +59,8 @@ public class GerenciadorReserva implements Initializable{
     TableColumn <Reserva, String> tcStatus;
     @FXML
     TableColumn <Reserva, String> tcData;
+
+    ObservableList<Reserva> list;
 
     public void btClientesActionHandler(ActionEvent e) {
         Stage stage = new Stage();
@@ -209,18 +215,41 @@ public class GerenciadorReserva implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList<Reserva> list = FXCollections.observableList(DataController.listReserva());
+        list = FXCollections.observableList(DataController.listReserva());
         tcCliente.setCellValueFactory( new PropertyValueFactory<>("cliente"));
         tcLocal.setCellValueFactory(new PropertyValueFactory<>("local"));
         tcStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
         tcData.setCellValueFactory(new PropertyValueFactory<>("data"));
-        tvReserva.setItems(FXCollections.observableList(list));
+        TVReserva.setItems(FXCollections.observableList(list));
 
-        tvReserva.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        // TRECHO DO FILTRO
+        FilteredList<Reserva> filteredReservaData = new FilteredList<>(list, p -> true);
+        tfFiltro.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredReservaData.setPredicate(reserva -> {
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (reserva.getCliente().getNome().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                } else if (reserva.getStatus().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                }
+                return false;
+            });
+        });
+        SortedList<Reserva> sortedReservaData = new SortedList<>(filteredReservaData);
+        sortedReservaData.comparatorProperty().bind(TVReserva.comparatorProperty());
+        TVReserva.setItems(sortedReservaData);
+        // TRECHO DO FILTRO
+
+        TVReserva.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent click) {
                 if (click.getClickCount() == 1) {
-                    Passing.reservapass = tvReserva.getSelectionModel().getSelectedItem();
+                    Passing.reservapass = TVReserva.getSelectionModel().getSelectedItem();
 
                 }
             }
