@@ -10,14 +10,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sistemahotel.dominio.gerenciamento_acesso.Usuario;
+import sistemahotel.infraestrutura.DataController;
 
 import java.io.IOException;
 import java.util.Scanner;
 
 public class LoginScreenController{
-    private long idgerente;
-    Usuario user;
-    Scanner s = new Scanner(System.in);
+
     @FXML
     TextField tfLogin;
 
@@ -25,8 +24,8 @@ public class LoginScreenController{
     PasswordField tfPassword;
 
     public void btLoginActionHandler(ActionEvent e){
-        /*DataController controller = new DataController();
-        String login = tfLogin.getText();
+        DataController controller = new DataController();
+        /*String login = tfLogin.getText();
         String password = tfPassword.getText();
         Autenticacao autenticacao = new Autenticacao();
         user = autenticacao.Autenticar(login, password);

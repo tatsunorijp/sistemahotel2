@@ -6,6 +6,8 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -93,7 +95,15 @@
                               </VBox>
                            </children>
                         </AnchorPane>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="603.0" prefWidth="807.0" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="603.0" prefWidth="807.0">
+                           <children>
+                              <TableView fx:id="tvDeletarLocal" layoutX="8.0" layoutY="8.0" prefHeight="600.0" prefWidth="833.0">
+                                 <columns>
+                                    <TableColumn fx:id="tcNumeroLocal" prefWidth="181.0" text="Numero do local" />
+                                    <TableColumn fx:id="tcTipoLocal" prefWidth="644.0" text="Tipo do local" />
+                                 </columns>
+                              </TableView>
+                           </children></AnchorPane>
                      </items>
                   </SplitPane>
                </children>

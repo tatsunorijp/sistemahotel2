@@ -7,8 +7,6 @@ import java.time.LocalDate;
 
 //Programado por Leonardo
 @Entity
-@Table(name = "Pessoa",
-        uniqueConstraints = @UniqueConstraint(columnNames = {"CPF", "RG"}))
 public abstract class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

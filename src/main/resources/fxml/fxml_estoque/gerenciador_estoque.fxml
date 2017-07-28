@@ -6,6 +6,8 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -93,7 +95,17 @@
                               </VBox>
                            </children>
                         </AnchorPane>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="603.0" prefWidth="807.0" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="603.0" prefWidth="807.0">
+                           <children>
+                              <TableView fx:id="tvAlterarProduto" layoutX="14.0" layoutY="14.0" prefHeight="594.0" prefWidth="859.0">
+                                 <columns>
+                                    <TableColumn fx:id="tcNome" prefWidth="436.0" text="Nome do produto" />
+                                    <TableColumn fx:id="tcPreco" prefWidth="118.0" text="Preco" />
+                                    <TableColumn fx:id="tcQuantidade" prefWidth="205.0" text="Quantidade em Estoque" />
+                                    <TableColumn fx:id="tcId" minWidth="0.0" prefWidth="66.0" text="ID" />
+                                 </columns>
+                              </TableView>
+                           </children></AnchorPane>
                      </items>
                   </SplitPane>
                </children>

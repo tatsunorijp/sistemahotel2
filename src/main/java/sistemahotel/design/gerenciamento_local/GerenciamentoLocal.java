@@ -1,20 +1,31 @@
 package sistemahotel.design.gerenciamento_local;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import sistemahotel.dominio.gerenciamento_local.Local;
+import sistemahotel.dominio.gerenciamento_local.LocalDAO;
+import sistemahotel.infraestrutura.DataController;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * Created by marcelo on 27/07/17.
  */
-public class GerenciamentoLocal {
+public class GerenciamentoLocal implements Initializable{
     @FXML
     Button btClientes;
     @FXML
@@ -29,6 +40,12 @@ public class GerenciamentoLocal {
     Button btNovoSalao;
     @FXML
     Button btExcluir;
+    @FXML
+    TableView<Local> tvDeletarLocal;
+    @FXML
+    TableColumn<Local, String> tcNumeroLocal;
+    @FXML
+    TableColumn <Local, String> tcTipoLocal;
 
     public void btClientesActionHandler(ActionEvent e) {
         Stage stage = new Stage();
@@ -154,4 +171,12 @@ public class GerenciamentoLocal {
         stage.show();
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        LocalDAO dl = new LocalDAO();
+        ObservableList<Local> list = FXCollections.observableList(DataController.listLocal());
+        tcNumeroLocal.setCellValueFactory( new PropertyValueFactory<>("Numero"));
+        tcTipoLocal.setCellValueFactory(new PropertyValueFactory<>("Tipo"));
+        tvDeletarLocal.setItems(FXCollections.observableList(list));
+    }
 }

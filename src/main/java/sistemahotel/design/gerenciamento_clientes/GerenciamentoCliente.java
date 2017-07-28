@@ -1,20 +1,32 @@
 package sistemahotel.design.gerenciamento_clientes;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import sistemahotel.dominio.gerenciamento_clientes.Cliente;
+import sistemahotel.dominio.gerenciamento_clientes.ClienteDAO;
+import sistemahotel.dominio.pessoa.Pessoa;
+import sistemahotel.infraestrutura.DataController;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * Created by marcelo on 27/07/17.
  */
-public class GerenciamentoCliente {
+public class GerenciamentoCliente implements Initializable{
     @FXML
     Button btClientes;
     @FXML
@@ -31,6 +43,12 @@ public class GerenciamentoCliente {
     Button btAlterar;
     @FXML
     Button btExcluir;
+    @FXML
+    TableView<Cliente> TVCliente;
+    @FXML
+    TableColumn<Pessoa, String> TCNome;
+    @FXML
+    TableColumn <Pessoa, String> TCRG;
 
     public void btClientesActionHandler(ActionEvent e) {
         Stage stage = new Stage();
@@ -141,4 +159,12 @@ public class GerenciamentoCliente {
         stage.show();
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ObservableList<Cliente> list = FXCollections.observableList(DataController.listCliente());
+        TCNome.setCellValueFactory( new PropertyValueFactory<>("nome"));
+        TCRG.setCellValueFactory(new PropertyValueFactory<>("RG"));
+        TVCliente.setItems(FXCollections.observableList(list));
+        ClienteDAO dc = new ClienteDAO();
+    }
 }
