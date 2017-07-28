@@ -8,6 +8,7 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -97,7 +98,7 @@
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="603.0" prefWidth="807.0">
                            <children>
-                              <TableView fx:id="tvAlterarProduto" layoutX="14.0" layoutY="14.0" prefHeight="594.0" prefWidth="859.0">
+                              <TableView fx:id="tvAlterarProduto" layoutX="14.0" layoutY="14.0" prefHeight="507.0" prefWidth="878.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
                                     <TableColumn fx:id="tcNome" prefWidth="436.0" text="Nome do produto" />
                                     <TableColumn fx:id="tcPreco" prefWidth="118.0" text="Preco" />
@@ -105,6 +106,8 @@
                                     <TableColumn fx:id="tcId" minWidth="0.0" prefWidth="66.0" text="ID" />
                                  </columns>
                               </TableView>
+                              <TextField fx:id="tfFiltro" layoutX="693.0" layoutY="568.0" promptText="Nome do produto" />
+                              <Label layoutX="641.0" layoutY="573.0" text="Filtro:" />
                            </children></AnchorPane>
                      </items>
                   </SplitPane>

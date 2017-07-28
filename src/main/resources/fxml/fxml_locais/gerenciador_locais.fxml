@@ -8,6 +8,7 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -97,12 +98,14 @@
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="603.0" prefWidth="807.0">
                            <children>
-                              <TableView fx:id="tvDeletarLocal" layoutX="8.0" layoutY="8.0" prefHeight="600.0" prefWidth="833.0">
+                              <TableView fx:id="tvDeletarLocal" layoutX="8.0" layoutY="8.0" prefHeight="559.0" prefWidth="842.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
                                     <TableColumn fx:id="tcNumeroLocal" prefWidth="181.0" text="Numero do local" />
-                                    <TableColumn fx:id="tcTipoLocal" prefWidth="644.0" text="Tipo do local" />
+                                    <TableColumn fx:id="tcTipoLocal" prefWidth="660.0" text="Tipo do local" />
                                  </columns>
                               </TableView>
+                              <Label layoutX="606.0" layoutY="573.0" text="Filtro:" />
+                              <TextField fx:id="tfFiltro" layoutX="657.0" layoutY="568.0" promptText="Número do local" />
                            </children></AnchorPane>
                      </items>
                   </SplitPane>
