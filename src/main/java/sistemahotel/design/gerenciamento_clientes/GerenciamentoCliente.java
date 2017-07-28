@@ -2,6 +2,8 @@ package sistemahotel.design.gerenciamento_clientes;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -29,6 +31,8 @@ import java.util.ResourceBundle;
  * Created by marcelo on 27/07/17.
  */
 public class GerenciamentoCliente implements Initializable{
+    @FXML
+    TextField tfFiltro;
     @FXML
     Button btClientes;
     @FXML
@@ -181,6 +185,29 @@ public class GerenciamentoCliente implements Initializable{
         TCRG.setCellValueFactory(new PropertyValueFactory<>("RG"));
         TVCliente.setItems(FXCollections.observableList(list));
         ClienteDAO dc = new ClienteDAO();
+
+        // TRECHO DO FILTRO
+        FilteredList<Cliente> filteredClienteData = new FilteredList<>(list, p -> true);
+        tfFiltro.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredClienteData.setPredicate(cliente -> {
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (cliente.getNome().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                } else if (cliente.getRG().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                }
+                return false;
+            });
+        });
+        SortedList<Cliente> sortedClienteData = new SortedList<>(filteredClienteData);
+        sortedClienteData.comparatorProperty().bind(TVCliente.comparatorProperty());
+        TVCliente.setItems(sortedClienteData);
+        // TRECHO DO FILTRO
 
         TVCliente.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
