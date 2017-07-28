@@ -178,11 +178,11 @@ public class GerenciadorReserva implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        /*ObservableList<Reserva> list = FXCollections.observableList(DataController.listReserva());
+        ObservableList<Reserva> list = FXCollections.observableList(DataController.listReserva());
         tcCliente.setCellValueFactory( new PropertyValueFactory<>("cliente"));
         tcLocal.setCellValueFactory(new PropertyValueFactory<>("local"));
         tcStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
         tcData.setCellValueFactory(new PropertyValueFactory<>("data"));
-        tvReserva.setItems(FXCollections.observableList(list));*/
+        tvReserva.setItems(FXCollections.observableList(list));
     }
 }
