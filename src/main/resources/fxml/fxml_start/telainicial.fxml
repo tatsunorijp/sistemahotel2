@@ -6,11 +6,13 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_reservas.GerenciadorReserva">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.telainicial.TelaInicial">
    <children>
       <SplitPane dividerPositions="0.19843342036553524" layoutX="399.0" layoutY="284.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
@@ -77,7 +79,17 @@
                   <Label layoutX="926.0" layoutY="117.0" text="Produtos" />
                </children>
             </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tvReserva" layoutX="14.0" layoutY="14.0" prefHeight="559.0" prefWidth="842.0">
+                     <columns>
+                        <TableColumn fx:id="tcCliente" prefWidth="181.0" text="Cliente" />
+                        <TableColumn fx:id="tcLocal" prefWidth="139.0" text="Local" />
+                        <TableColumn fx:id="tcStatus" prefWidth="248.0" text="Status" />
+                        <TableColumn fx:id="tcData" prefWidth="327.0" text="Data" />
+                     </columns>
+                  </TableView>
+               </children></AnchorPane>
          </items>
       </SplitPane>
    </children>

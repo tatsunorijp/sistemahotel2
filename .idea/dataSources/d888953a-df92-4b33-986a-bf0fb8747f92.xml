@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="hibernate.cfg.xml/Hibernate">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
     <root id="1"/>
     <schema id="2" parent="1" name="sistemahotel_interface">
       <Current>1</Current>
@@ -9,211 +9,187 @@
     <schema id="3" parent="1" name="information_schema"/>
     <schema id="4" parent="1" name="mysql"/>
     <schema id="5" parent="1" name="performance_schema"/>
-    <schema id="6" parent="1" name="sistemahotel_inferface"/>
-    <schema id="7" parent="1" name="sys"/>
-    <schema id="8" parent="1" name="wordpress"/>
-    <table id="9" parent="2" name="Local"/>
-    <table id="10" parent="2" name="Pessoa"/>
-    <table id="11" parent="2" name="Produto"/>
-    <table id="12" parent="2" name="Reserva"/>
-    <table id="13" parent="2" name="hibernate_sequence"/>
-    <column id="14" parent="9" name="DTYPE">
+    <schema id="6" parent="1" name="teste"/>
+    <table id="7" parent="2" name="Local"/>
+    <table id="8" parent="2" name="Pessoa"/>
+    <table id="9" parent="2" name="Produto"/>
+    <table id="10" parent="2" name="Reserva"/>
+    <table id="11" parent="2" name="hibernate_sequence"/>
+    <column id="12" parent="7" name="DTYPE">
       <Position>1</Position>
       <DataType>varchar(31)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="9" name="id">
+    <column id="13" parent="7" name="id">
       <Position>2</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="16" parent="9" name="informacoesAdicionais">
+    <column id="14" parent="7" name="informacoesAdicionais">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="17" parent="9" name="numero">
+    <column id="15" parent="7" name="numero">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="18" parent="9" name="status">
+    <column id="16" parent="7" name="status">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="19" parent="9" name="tipo">
+    <column id="17" parent="7" name="tipo">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="20" parent="9" name="camasDeCasal">
+    <column id="18" parent="7" name="camasDeCasal">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="21" parent="9" name="camasDeSolteiro">
+    <column id="19" parent="7" name="camasDeSolteiro">
       <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="22" parent="9" name="maximoPessoas">
+    <column id="20" parent="7" name="maximoPessoas">
       <Position>9</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="23" parent="9" name="PRIMARY">
+    <key id="21" parent="7" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="24" parent="10" name="DTYPE">
+    <column id="22" parent="8" name="DTYPE">
       <Position>1</Position>
       <DataType>varchar(31)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="10" name="id">
+    <column id="23" parent="8" name="id">
       <Position>2</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="26" parent="10" name="CPF">
+    <column id="24" parent="8" name="CPF">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="27" parent="10" name="RG">
+    <column id="25" parent="8" name="RG">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="28" parent="10" name="dataDeNascimento">
+    <column id="26" parent="8" name="dataDeNascimento">
       <Position>5</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="29" parent="10" name="nome">
+    <column id="27" parent="8" name="nome">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="30" parent="10" name="tipo">
+    <column id="28" parent="8" name="tipo">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="31" parent="10" name="login">
+    <column id="29" parent="8" name="login">
       <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="32" parent="10" name="senha">
+    <column id="30" parent="8" name="senha">
       <Position>9</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="33" parent="10" name="cidade">
+    <column id="31" parent="8" name="cidade">
       <Position>10</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="34" parent="10" name="email">
+    <column id="32" parent="8" name="email">
       <Position>11</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="35" parent="10" name="endereco">
+    <column id="33" parent="8" name="endereco">
       <Position>12</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="36" parent="10" name="informacoesAdicionais">
+    <column id="34" parent="8" name="informacoesAdicionais">
       <Position>13</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="37" parent="10" name="nacionalidade">
+    <column id="35" parent="8" name="nacionalidade">
       <Position>14</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="38" parent="10" name="placaDoCarro">
+    <column id="36" parent="8" name="placaDoCarro">
       <Position>15</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="39" parent="10" name="telefone">
+    <column id="37" parent="8" name="telefone">
       <Position>16</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <index id="40" parent="10" name="UKqbjywk7bvi2aidqetyym1ldmh">
-      <ColNames>CPF
-RG</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="41" parent="10" name="UK_p7jmtim9xt2leartex386ls24">
-      <ColNames>CPF</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="42" parent="10" name="PRIMARY">
+    <key id="38" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="43" parent="10" name="UKqbjywk7bvi2aidqetyym1ldmh">
-      <ColNames>CPF
-RG</ColNames>
-      <UnderlyingIndexName>UKqbjywk7bvi2aidqetyym1ldmh</UnderlyingIndexName>
-    </key>
-    <key id="44" parent="10" name="UK_p7jmtim9xt2leartex386ls24">
-      <ColNames>CPF</ColNames>
-      <UnderlyingIndexName>UK_p7jmtim9xt2leartex386ls24</UnderlyingIndexName>
-    </key>
-    <column id="45" parent="11" name="id">
+    <column id="39" parent="9" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="46" parent="11" name="alertaEstoque">
+    <column id="40" parent="9" name="alertaEstoque">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="47" parent="11" name="nome">
+    <column id="41" parent="9" name="nome">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="48" parent="11" name="preco">
+    <column id="42" parent="9" name="preco">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="49" parent="11" name="quantidade">
+    <column id="43" parent="9" name="quantidade">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="50" parent="11" name="PRIMARY">
+    <key id="44" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="51" parent="12" name="id">
+    <column id="45" parent="10" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="52" parent="12" name="data">
+    <column id="46" parent="10" name="data">
       <Position>2</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="53" parent="12" name="status">
+    <column id="47" parent="10" name="status">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="54" parent="12" name="fk_cliente">
+    <column id="48" parent="10" name="fk_cliente">
       <Position>4</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="55" parent="12" name="fk_local">
+    <column id="49" parent="10" name="fk_local">
       <Position>5</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="56" parent="12" name="FK2i662c97kophy29nvb6kjnma8">
+    <index id="50" parent="10" name="FK2i662c97kophy29nvb6kjnma8">
       <ColNames>fk_cliente</ColNames>
     </index>
-    <index id="57" parent="12" name="FKamtlb4p4wjrj1e5ilk5pjo3qs">
+    <index id="51" parent="10" name="FKamtlb4p4wjrj1e5ilk5pjo3qs">
       <ColNames>fk_local</ColNames>
     </index>
-    <key id="58" parent="12" name="PRIMARY">
+    <key id="52" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="59" parent="13" name="next_val">
+    <column id="53" parent="11" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
