@@ -24,7 +24,7 @@ import java.util.ResourceBundle;
 /**
  * Created by marcelo on 27/07/17.
  */
-public class TelaInicial implements Initializable{
+public class TelaInicial{
     @FXML
     Button btClientes;
     @FXML
@@ -35,16 +35,6 @@ public class TelaInicial implements Initializable{
     Button btEstoque;
     @FXML
     Button btNovoCliente;
-    @FXML
-    TableView<Reserva> tvReserva;
-    @FXML
-    TableColumn<Reserva, String> tcCliente;
-    @FXML
-    TableColumn <Reserva, String> tcLocal;
-    @FXML
-    TableColumn <Reserva, String> tcStatus;
-    @FXML
-    TableColumn <Reserva, String> tcData;
 
     public void btClientesActionHandler(ActionEvent e) {
         Stage stage = new Stage();
@@ -110,14 +100,5 @@ public class TelaInicial implements Initializable{
         stage.show();
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        ObservableList<Reserva> list = FXCollections.observableList(DataController.listReserva());
-        tcCliente.setCellValueFactory( new PropertyValueFactory<>("cliente"));
-        tcLocal.setCellValueFactory(new PropertyValueFactory<>("local"));
-        tcStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
-        tcData.setCellValueFactory(new PropertyValueFactory<>("data"));
-        tvReserva.setItems(FXCollections.observableList(list));
 
-    }
 }
