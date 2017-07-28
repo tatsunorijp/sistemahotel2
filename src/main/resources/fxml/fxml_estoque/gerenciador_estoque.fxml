@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_estoque.GerenciamentoEstoque">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_estoque.GerenciamentoEstoque">
    <children>
       <SplitPane dividerPositions="0.19843342036553524" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
@@ -102,7 +102,7 @@
                                  <columns>
                                     <TableColumn fx:id="tcNome" prefWidth="436.0" text="Nome do produto" />
                                     <TableColumn fx:id="tcPreco" prefWidth="118.0" text="Preco" />
-                                    <TableColumn fx:id="tcQuantidade" prefWidth="205.0" text="Quantidade em Estoque" />
+                                    <TableColumn fx:id="tcQuantidade" prefWidth="205.0" text="Qtd. (unidades)" />
                                     <TableColumn fx:id="tcId" minWidth="0.0" prefWidth="66.0" text="ID" />
                                  </columns>
                               </TableView>
