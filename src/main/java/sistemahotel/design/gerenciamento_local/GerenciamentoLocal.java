@@ -2,6 +2,8 @@ package sistemahotel.design.gerenciamento_local;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -29,6 +31,8 @@ import java.util.ResourceBundle;
  */
 public class GerenciamentoLocal implements Initializable{
     @FXML
+    TextField tfFiltro;
+    @FXML
     Button btClientes;
     @FXML
     Button btReservas;
@@ -43,11 +47,13 @@ public class GerenciamentoLocal implements Initializable{
     @FXML
     Button btExcluir;
     @FXML
-    TableView<Local> tvDeletarLocal;
+    TableView<Local> TVLocal;
     @FXML
     TableColumn<Local, String> tcNumeroLocal;
     @FXML
-    TableColumn <Local, String> tcTipoLocal;
+    TableColumn <Local, String> tcTipoLocal; //TROCAR PARA STATUS
+
+    ObservableList<Local> list;
 
     public void btClientesActionHandler(ActionEvent e) {
         Stage stage = new Stage();
@@ -191,16 +197,39 @@ public class GerenciamentoLocal implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        ObservableList<Local> list = FXCollections.observableList(DataController.listLocal());
+        list = FXCollections.observableList(DataController.listLocal());
         tcNumeroLocal.setCellValueFactory( new PropertyValueFactory<>("Numero"));
         tcTipoLocal.setCellValueFactory(new PropertyValueFactory<>("Tipo"));
-        tvDeletarLocal.setItems(FXCollections.observableList(list));
+        TVLocal.setItems(FXCollections.observableList(list));
 
-        tvDeletarLocal.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        // TRECHO DO FILTRO
+        FilteredList<Local> filteredLocalData = new FilteredList<>(list, p -> true);
+        tfFiltro.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredLocalData.setPredicate(local -> {
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                /*if (local.getStatus().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                } else */if (local.getNumero().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                }
+                return false;
+            });
+        });
+        SortedList<Local> sortedLocalData = new SortedList<>(filteredLocalData);
+        sortedLocalData.comparatorProperty().bind(TVLocal.comparatorProperty());
+        TVLocal.setItems(sortedLocalData);
+        // TRECHO DO FILTRO
+
+        TVLocal.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent click) {
                 if (click.getClickCount() == 1) {
-                    Passing.localpass = tvDeletarLocal.getSelectionModel().getSelectedItem();
+                    Passing.localpass = TVLocal.getSelectionModel().getSelectedItem();
                 }
             }
         });

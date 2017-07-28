@@ -99,7 +99,7 @@
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="603.0" prefWidth="807.0">
                            <children>
-                              <TableView fx:id="tvAlterarProduto" layoutX="14.0" layoutY="14.0" prefHeight="507.0" prefWidth="878.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TableView fx:id="TVProduto" layoutX="14.0" layoutY="14.0" prefHeight="507.0" prefWidth="878.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
                                     <TableColumn fx:id="tcNome" prefWidth="436.0" text="Nome do produto" />
                                     <TableColumn fx:id="tcPreco" prefWidth="118.0" text="Preco" />

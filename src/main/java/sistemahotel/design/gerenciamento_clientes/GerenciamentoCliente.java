@@ -56,6 +56,8 @@ public class GerenciamentoCliente implements Initializable{
     @FXML
     TableColumn <Pessoa, String> TCRG;
 
+    ObservableList<Cliente> list;
+
     public void btClientesActionHandler(ActionEvent e) {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
@@ -176,7 +178,7 @@ public class GerenciamentoCliente implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList<Cliente> list = FXCollections.observableList(DataController.listCliente());
+        list = FXCollections.observableList(DataController.listCliente());
         TCNome.setCellValueFactory( new PropertyValueFactory<>("nome"));
         TCRG.setCellValueFactory(new PropertyValueFactory<>("RG"));
         TVCliente.setItems(FXCollections.observableList(list));

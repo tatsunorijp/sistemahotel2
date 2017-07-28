@@ -2,6 +2,8 @@ package sistemahotel.design.gerenciamento_estoque;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -29,6 +31,8 @@ import java.util.ResourceBundle;
  */
 public class GerenciamentoEstoque implements Initializable{
     @FXML
+    TextField tfFiltro;
+    @FXML
     Button btClientes;
     @FXML
     Button btReservas;
@@ -45,7 +49,7 @@ public class GerenciamentoEstoque implements Initializable{
     @FXML
     Button btMovimentarEstoque;
     @FXML
-    TableView tvAlterarProduto;
+    TableView TVProduto;
     @FXML
     TableColumn tcNome;
     @FXML
@@ -54,6 +58,8 @@ public class GerenciamentoEstoque implements Initializable{
     TableColumn tcQuantidade;
     @FXML
     TableColumn tcId;
+
+    ObservableList<Produto> list;
 
     public void btClientesActionHandler(ActionEvent e) {
         Stage stage = new Stage();
@@ -203,18 +209,39 @@ public class GerenciamentoEstoque implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList<Produto> list = FXCollections.observableList(DataController.listProduto());
+        list = FXCollections.observableList(DataController.listProduto());
         tcNome.setCellValueFactory( new PropertyValueFactory<>("nome"));
         tcPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));
         tcQuantidade.setCellValueFactory(new PropertyValueFactory<>("quantidade"));
         tcId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        tvAlterarProduto.setItems(FXCollections.observableList(list));
+        TVProduto.setItems(FXCollections.observableList(list));
 
-        tvAlterarProduto.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        // TRECHO DO FILTRO
+        FilteredList<Produto> filteredProdutoData = new FilteredList<>(list, p -> true);
+        tfFiltro.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredProdutoData.setPredicate(produto -> {
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (produto.getNome().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                }
+                return false;
+            });
+        });
+        SortedList<Produto> sortedProdutoData = new SortedList<>(filteredProdutoData);
+        sortedProdutoData.comparatorProperty().bind(TVProduto.comparatorProperty());
+        TVProduto.setItems(sortedProdutoData);
+        // TRECHO DO FILTRO
+
+        TVProduto.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent click) {
                 if (click.getClickCount() == 1) {
-                    Passing.produtopass = (Produto) tvAlterarProduto.getSelectionModel().getSelectedItem();
+                    Passing.produtopass = (Produto) TVProduto.getSelectionModel().getSelectedItem();
 
                 }
             }
