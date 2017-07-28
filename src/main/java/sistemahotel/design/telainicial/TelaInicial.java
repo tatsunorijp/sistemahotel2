@@ -39,7 +39,7 @@ public class TelaInicial{
     public void btClientesActionHandler(ActionEvent e) {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/fxml/fxml_clientes/gerenciador_cliente"));
+        loader.setLocation(getClass().getResource("/fxml/fxml_clientes/gerenciador_cliente.fxml"));
         Parent root = null;
         try {
             root = loader.load();
