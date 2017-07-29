@@ -66,7 +66,6 @@ public class ReservaHabitacao {
             alert.setHeaderText(null);
             alert.setContentText("Cliente Invalido");
             alert.showAndWait();
-
         }
     }
 }

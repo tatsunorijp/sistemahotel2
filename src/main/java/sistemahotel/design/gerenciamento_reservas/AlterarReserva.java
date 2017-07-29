@@ -61,5 +61,7 @@ public class AlterarReserva implements Initializable{
         tfNomeCliente.setText(reservapass.getCliente().getNome());
         tfLocal.setText(reservapass.getLocal().getNumero());
         tfStatus.setText(reservapass.getStatus());
+        dpCheckIn.setValue(reservapass.getCheckIn());
+        dpCheckOut.setValue(reservapass.getCheckOut());
     }
 }
