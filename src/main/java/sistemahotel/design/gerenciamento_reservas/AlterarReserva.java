@@ -37,6 +37,8 @@ public class AlterarReserva implements Initializable{
     DatePicker dpCheckIn;
     @FXML
     DatePicker dpCheckOut;
+    @FXML
+    TextField tfHospedes;
 
     public void btAlterarActionHandler(ActionEvent e){
         ReservaDAO gr = new ReservaDAO();
@@ -45,7 +47,9 @@ public class AlterarReserva implements Initializable{
         String status = tfStatus.getText();
         LocalDate dateIn = dpCheckIn.getValue();
         LocalDate dateOut = dpCheckOut.getValue();
-        gr.alterarReserva(nome, local, status, dateIn, dateOut);
+        String qtdhospedes = tfHospedes.getText();
+        System.out.println(Integer.valueOf(qtdhospedes));
+        gr.alterarReserva(nome, local, status, dateIn, dateOut, qtdhospedes);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");
         alert.setHeaderText(null);
@@ -61,7 +65,6 @@ public class AlterarReserva implements Initializable{
         tfNomeCliente.setText(reservapass.getCliente().getNome());
         tfLocal.setText(reservapass.getLocal().getNumero());
         tfStatus.setText(reservapass.getStatus());
-        dpCheckIn.setValue(reservapass.getCheckIn());
-        dpCheckOut.setValue(reservapass.getCheckOut());
+        tfHospedes.setText(reservapass.getQtdhospede());
     }
 }

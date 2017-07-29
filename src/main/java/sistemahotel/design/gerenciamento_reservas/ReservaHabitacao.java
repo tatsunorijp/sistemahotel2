@@ -31,6 +31,8 @@ public class ReservaHabitacao {
     @FXML
     TextField tfQuarto;
     @FXML
+    TextField tfHospedes;
+    @FXML
     DatePicker dpCheckIn;
     @FXML
     DatePicker dpCheckOut;
@@ -42,6 +44,7 @@ public class ReservaHabitacao {
         DataController controller = new DataController();
         String cliente = tfCliente.getText();
         String quarto = tfQuarto.getText();
+        String qtdhospedes = tfHospedes.getText();
         LocalDate dateIn = dpCheckIn.getValue();
         LocalDate dateOut = dpCheckOut.getValue();
         for (Cliente c : DataController.listCliente()) {
@@ -53,7 +56,7 @@ public class ReservaHabitacao {
                 habitacaoobj = h;
         }
             ReservaDAO gr = new ReservaDAO();
-            gr.novaReservaHab(clienteobj, habitacaoobj, dateIn, dateOut);
+            gr.novaReservaHab(clienteobj, habitacaoobj, dateIn, dateOut, qtdhospedes);
             alert.setTitle("Operação realizada com sucesso");
             alert.setHeaderText(null);
             alert.setContentText("Reserva Efetuada");

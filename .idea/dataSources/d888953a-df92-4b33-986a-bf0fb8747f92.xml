@@ -178,18 +178,31 @@
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="50" parent="10" name="FK2i662c97kophy29nvb6kjnma8">
+    <column id="50" parent="10" name="checkIn">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="51" parent="10" name="checkOut">
+      <Position>7</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="52" parent="10" name="qtdhospede">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="53" parent="10" name="FK2i662c97kophy29nvb6kjnma8">
       <ColNames>fk_cliente</ColNames>
     </index>
-    <index id="51" parent="10" name="FKamtlb4p4wjrj1e5ilk5pjo3qs">
+    <index id="54" parent="10" name="FKamtlb4p4wjrj1e5ilk5pjo3qs">
       <ColNames>fk_local</ColNames>
     </index>
-    <key id="52" parent="10" name="PRIMARY">
+    <key id="55" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="53" parent="11" name="next_val">
+    <column id="56" parent="11" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
     </column>

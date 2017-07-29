@@ -7,10 +7,11 @@
 
 <AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_reservas.ReservaHabitacao">
    <children>
-      <TextField fx:id="tfCliente" layoutX="314.0" layoutY="137.0" promptText="Nome Cliente" />
-      <TextField fx:id="tfQuarto" layoutX="314.0" layoutY="176.0" promptText="Numero Quarto" />
+      <TextField fx:id="tfCliente" layoutX="314.0" layoutY="112.0" promptText="Nome Cliente" />
+      <TextField fx:id="tfQuarto" layoutX="314.0" layoutY="144.0" promptText="Numero Quarto" />
       <DatePicker fx:id="dpCheckIn" layoutX="314.0" layoutY="214.0" promptText="Data Check In" />
       <Button fx:id="btReserva" layoutX="344.0" layoutY="336.0" mnemonicParsing="false" onAction="#btReservaActionHandler" text="Fazer Reserva" />
       <DatePicker fx:id="dpCheckOut" layoutX="314.0" layoutY="251.0" promptText="Data Check out" />
+      <TextField fx:id="tfHospedes" layoutX="314.0" layoutY="180.0" promptText="Qtd Hospedes" />
    </children>
 </AnchorPane>

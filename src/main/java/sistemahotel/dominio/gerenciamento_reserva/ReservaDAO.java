@@ -23,7 +23,7 @@ public class ReservaDAO {
     Scanner s = new Scanner(System.in);
     Session session = ssf.openSession();
     Transaction tx = null;
-    public void novaReservaHab(Cliente cliente, Habitacao habitacao, LocalDate dateIn, LocalDate dateOut){
+    public void novaReservaHab(Cliente cliente, Habitacao habitacao, LocalDate dateIn, LocalDate dateOut, String qtdhospedes){
         Session session = ssf.openSession();
         tx = session.beginTransaction();
         Reserva nr1 = new Reserva();
@@ -33,6 +33,7 @@ public class ReservaDAO {
         nr1.setCheckOut(dateOut);
         nr1.getCliente();
         nr1.setStatus("Reservado");
+        nr1.setQtdhospede(qtdhospedes);
         session.save(nr1);
         tx.commit();
         session.close();
@@ -52,7 +53,7 @@ public class ReservaDAO {
         session.close();
     }
 
-    public void alterarReserva(String nome, String local, String status, LocalDate dataIn, LocalDate dataOut){
+    public void alterarReserva(String nome, String local, String status, LocalDate dataIn, LocalDate dataOut, String qtdhospedes){
         Session session = ssf.openSession();
         Reserva r;
         tx = session.beginTransaction();
@@ -70,6 +71,7 @@ public class ReservaDAO {
         r.setStatus(status);
         r.setCheckIn(dataIn);
         r.setCheckOut(dataOut);
+        r.setQtdhospede(qtdhospedes);
         session.save(r);
         tx.commit();
         session.close();

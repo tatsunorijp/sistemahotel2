@@ -28,6 +28,9 @@ public class Reserva implements Initializable {
     private String status;
     private LocalDate checkIn;
     private LocalDate checkOut;
+    private String qtdhospede;
+
+
     public Reserva(){
 
     }
@@ -83,6 +86,13 @@ public class Reserva implements Initializable {
         this.id = id;
     }
 
+    public String getQtdhospede() {
+        return qtdhospede;
+    }
+
+    public void setQtdhospede(String qtdhospede) {
+        this.qtdhospede = qtdhospede;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
