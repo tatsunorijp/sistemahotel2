@@ -31,7 +31,9 @@ public class ReservaSalao {
     @FXML
     TextField tfSalao;
     @FXML
-    DatePicker dpData;
+    DatePicker dpCheckIn;
+    @FXML
+    DatePicker dpCheckOut;
 
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
@@ -40,7 +42,8 @@ public class ReservaSalao {
         DataController controller = new DataController();
         String cliente = tfCliente.getText();
         String salao = tfSalao.getText();
-        LocalDate date = dpData.getValue();
+        LocalDate dateIn = dpCheckIn.getValue();
+        LocalDate dateOut = dpCheckOut.getValue();
 
         for (Cliente c : DataController.listCliente()) {
             if (c.getNome().equals(cliente))
@@ -52,7 +55,7 @@ public class ReservaSalao {
         }
 
             ReservaDAO gr = new ReservaDAO();
-            gr.novaReservaSalao(clienteobj, salaofestas, date);
+            gr.novaReservaSalao(clienteobj, salaofestas, dateIn, dateOut);
 
         if (clienteobj == null) {
             alert.setTitle("Operação Falhou");

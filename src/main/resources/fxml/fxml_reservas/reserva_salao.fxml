@@ -5,11 +5,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_reservas.ReservaSalao">
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_reservas.ReservaSalao">
    <children>
-      <TextField fx:id="tfCliente" layoutX="324.0" layoutY="212.0" promptText="Nome Cliente" />
-      <TextField fx:id="tfSalao" layoutX="324.0" layoutY="253.0" promptText="Numero Salao" />
-      <DatePicker fx:id="dpData" layoutX="314.0" layoutY="296.0" promptText="Data de uso" />
+      <TextField fx:id="tfCliente" layoutX="324.0" layoutY="130.0" promptText="Nome Cliente" />
+      <TextField fx:id="tfSalao" layoutX="324.0" layoutY="171.0" promptText="Numero Salao" />
+      <DatePicker fx:id="dpCheckIn" layoutX="314.0" layoutY="214.0" promptText="Check In" />
       <Button fx:id="btFazerReserva" layoutX="358.0" layoutY="343.0" mnemonicParsing="false" onAction="#btReservaActionHandler" text="Fazer Reserva" />
+      <DatePicker fx:id="dpCheckOut" layoutX="314.0" layoutY="254.0" promptText="Check Out" />
    </children>
 </AnchorPane>

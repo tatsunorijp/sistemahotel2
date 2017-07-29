@@ -32,6 +32,8 @@ public class ReservaHabitacao {
     TextField tfQuarto;
     @FXML
     DatePicker dpCheckIn;
+    @FXML
+    DatePicker dpCheckOut;
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
     public void btReservaActionHandler(ActionEvent e) {
@@ -40,7 +42,8 @@ public class ReservaHabitacao {
         DataController controller = new DataController();
         String cliente = tfCliente.getText();
         String quarto = tfQuarto.getText();
-        LocalDate date = dpCheckIn.getValue();
+        LocalDate dateIn = dpCheckIn.getValue();
+        LocalDate dateOut = dpCheckOut.getValue();
         for (Cliente c : DataController.listCliente()) {
             if (c.getNome().equals(cliente))
                 clienteobj = c;
@@ -50,7 +53,7 @@ public class ReservaHabitacao {
                 habitacaoobj = h;
         }
             ReservaDAO gr = new ReservaDAO();
-            gr.novaReservaHab(clienteobj, habitacaoobj, date);
+            gr.novaReservaHab(clienteobj, habitacaoobj, dateIn, dateOut);
             alert.setTitle("Operação realizada com sucesso");
             alert.setHeaderText(null);
             alert.setContentText("Reserva Efetuada");
