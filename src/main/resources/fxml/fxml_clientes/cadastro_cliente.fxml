@@ -19,7 +19,6 @@
       <Label layoutX="73.0" layoutY="195.0" text="Endereco:" />
       <TextField fx:id="tfTelefone" layoutX="147.0" layoutY="230.0" promptText="Telefone" />
       <Label layoutX="73.0" layoutY="235.0" text="Telefone:" />
-      <Button fx:id="btCadastrar" layoutX="350.0" layoutY="428.0" mnemonicParsing="false" onAction="#btCadastrarActionHandler" text="Cadastrar" />
       <TextField fx:id="tfEmail" layoutX="147.0" layoutY="274.0" promptText="E-mail" />
       <TextField fx:id="tfCidade" layoutX="147.0" layoutY="318.0" promptText="Cidade" />
       <TextField fx:id="tfNacionalidade" layoutX="555.0" layoutY="70.0" promptText="Nacionalidade" />
@@ -31,5 +30,6 @@
       <Label layoutX="406.0" layoutY="115.0" text="Placa do carro" />
       <Label layoutX="406.0" layoutY="155.0" text="Data de nascimento" />
       <TextArea fx:id="tfInformacoesAdicionais" layoutX="514.0" layoutY="229.0" prefHeight="110.0" prefWidth="200.0" promptText="Informações adicionais" />
+      <Button fx:id="btCadastrar" layoutX="350.0" layoutY="428.0" mnemonicParsing="false" onAction="#btCadastrarActionHandler" text="Cadastrar" />
    </children>
 </AnchorPane>

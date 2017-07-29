@@ -27,6 +27,8 @@ public class CadastroHabitacao implements Initializable {
     ComboBox cbCamasDeSolteiro;
     @FXML
     ComboBox cbCamasDeCasal;
+    @FXML
+    TextField tfPreco;
 
     ObservableList<String> list= FXCollections.observableArrayList();
 
@@ -35,9 +37,10 @@ public class CadastroHabitacao implements Initializable {
         String camasSolteiro = cbCamasDeSolteiro.getSelectionModel().getSelectedItem().toString();
         String camasCasal = cbCamasDeCasal.getSelectionModel().getSelectedItem().toString();
         String informacoesAdicionais = taInformacoesAdicionais.getText();
+        String preco = tfPreco.getText();
 
         LocalDAO hab = new LocalDAO();
-        hab.novaHabitacao(nmroHab,camasSolteiro,camasCasal,informacoesAdicionais);
+        hab.novaHabitacao(nmroHab,camasSolteiro,camasCasal,informacoesAdicionais, preco);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");
         alert.setHeaderText(null);

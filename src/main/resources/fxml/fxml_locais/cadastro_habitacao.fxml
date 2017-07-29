@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_local.CadastroHabitacao">
+<AnchorPane prefHeight="581.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_local.CadastroHabitacao">
    <children>
       <TextField fx:id="tfNmroHab" layoutX="414.0" layoutY="114.0" promptText="Numero da habitacao" />
       <Button fx:id="btNovaHab" layoutX="338.0" layoutY="513.0" mnemonicParsing="false" onAction="#btNovaHabActionHandler" text="Cadastrar Habitacao" />
@@ -18,5 +18,7 @@
       <Label layoutX="138.0" layoutY="172.0" text="Quantidade de camas de solteiro:" />
       <Label layoutX="138.0" layoutY="223.0" text="Quantidade de camas de casal:" />
       <Label layoutX="147.0" layoutY="350.0" text="Informacoes adicionais:" />
+      <TextField fx:id="tfPreco" layoutX="416.0" layoutY="254.0" promptText="Preço da habitação" />
+      <Label layoutX="138.0" layoutY="259.0" text="Preco da habitacao:" />
    </children>
 </AnchorPane>

@@ -11,7 +11,7 @@ import java.util.Scanner;
 //Programado por Tatsunori
 public class LocalDAO {
     Transaction tx = null;
-    public void novaHabitacao(String numero, String camasSolteiro, String camasCasal, String informacoesAdicionais) {
+    public void novaHabitacao(String numero, String camasSolteiro, String camasCasal, String informacoesAdicionais, String preco) {
         Session session = ssf.openSession();
         tx = session.beginTransaction();
         Habitacao habitacao = new Habitacao();
@@ -19,18 +19,20 @@ public class LocalDAO {
         habitacao.setCamasDeSolteiro(camasSolteiro);
         habitacao.setCamasDeCasal(camasCasal);
         habitacao.setInformacoesAdicionais(informacoesAdicionais);
+        habitacao.setPreco(preco);
         session.save(habitacao);
         tx.commit();
         session.close();
     }
 
-    public void novoSalao(String numero, String maximoPessoas, String informacoesAdicionais) {
+    public void novoSalao(String numero, String maximoPessoas, String informacoesAdicionais, String preco) {
         Session session = ssf.openSession();
         tx = session.beginTransaction();
         SalaoFestas salao = new SalaoFestas();
         salao.setNumero(numero);
         salao.setMaximoPessoas(maximoPessoas);
         salao.setInformacoesAdicionais(informacoesAdicionais);
+        salao.setPreco(preco);
         session.save(salao);
         tx.commit();
         session.close();

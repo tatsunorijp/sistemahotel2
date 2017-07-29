@@ -14,6 +14,15 @@ public class Local {
     protected String tipo;
     protected String status;
     protected String informacoesAdicionais;
+    protected String preco;
+
+    public String getPreco() {
+        return preco;
+    }
+
+    public void setPreco(String preco) {
+        this.preco = preco;
+    }
 
     public String getInformacoesAdicionais() {
         return informacoesAdicionais;

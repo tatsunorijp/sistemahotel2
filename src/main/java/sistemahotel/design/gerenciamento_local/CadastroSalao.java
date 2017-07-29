@@ -22,6 +22,8 @@ public class CadastroSalao {
     TextField tfMaximoPessoas;
     @FXML
     TextArea taInformacoesAdicionais;
+    @FXML
+    TextField tfPrecoH;
 
 
     public void btCadastrarSalaoActionHandler(ActionEvent e){
@@ -29,7 +31,8 @@ public class CadastroSalao {
         String numeroSalao = tfNmroSalao.getText();
         String maximoPessoas = tfMaximoPessoas.getText();
         String informacoesAdicionais = taInformacoesAdicionais.getText();
-        salao.novoSalao(numeroSalao,maximoPessoas,informacoesAdicionais);
+        String precoH = tfPrecoH.getText();
+        salao.novoSalao(numeroSalao,maximoPessoas,informacoesAdicionais,precoH);
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");
