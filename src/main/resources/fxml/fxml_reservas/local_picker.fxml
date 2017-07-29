@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="314.0" prefWidth="809.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_reservas.LocalPicker">
+   <children>
+      <TableView fx:id="TVLocal" prefHeight="248.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="tcNumeroLocal" prefWidth="195.0" text="Numero do local" />
+            <TableColumn fx:id="tcTipoLocal" prefWidth="192.0" text="Tipo do local" />
+            <TableColumn fx:id="tcCamasCasal" prefWidth="209.0" text="Camas de Casal" />
+            <TableColumn fx:id="tcCamasSolteiro" prefWidth="212.0" text="Camas de Solteiro" />
+         </columns>
+      </TableView>
+      <Label layoutX="557.0" layoutY="270.0" text="Filtro:" />
+      <TextField fx:id="tfFiltro" layoutX="601.0" layoutY="266.0" prefHeight="26.0" prefWidth="191.0" promptText="Número" />
+   </children>
+</AnchorPane>

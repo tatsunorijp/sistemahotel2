@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="331.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_reservas.ClientePicker">
+   <children>
+      <TableView fx:id="TVCliente" prefHeight="275.0" prefWidth="825.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="TCNome" prefWidth="453.0" text="Nome" />
+            <TableColumn fx:id="TCRG" minWidth="0.0" prefWidth="138.0" text="R.G." />
+         </columns>
+      </TableView>
+      <TextField fx:id="tfFiltro" layoutX="411.0" layoutY="289.0" promptText="Nome ou RG" />
+      <Label layoutX="367.0" layoutY="294.0" text="Filtro:" />
+   </children>
+</AnchorPane>
