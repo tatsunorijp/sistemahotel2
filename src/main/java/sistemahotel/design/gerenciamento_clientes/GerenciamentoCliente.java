@@ -218,6 +218,20 @@ public class GerenciamentoCliente implements Initializable{
                     Passing.clientepass = TVCliente.getSelectionModel().getSelectedItem();
 
                 }
+                else if (click.getClickCount() == 2){
+                    Stage stage = new Stage();
+                    FXMLLoader loader = new FXMLLoader();
+                    Parent root = null;
+                    loader.setLocation(getClass().getResource("/fxml/fxml_clientes/mostra_cliente.fxml"));
+                    try {
+                        root = loader.load();
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
+                    stage.setTitle("Sistema Hotel");
+                    stage.setScene(new Scene(root));
+                    stage.show();
+                }
             }
         });
     }
