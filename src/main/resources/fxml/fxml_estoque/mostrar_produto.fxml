@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="489.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_estoque.MostraProduto">
+   <children>
+      <TextField fx:id="tfNome" layoutX="257.0" layoutY="128.0" />
+      <Label layoutX="135.0" layoutY="133.0" text="Nome" />
+      <Label layoutX="135.0" layoutY="180.0" text="Quantidade" />
+      <Label layoutX="135.0" layoutY="221.0" text="Preco" />
+      <Label layoutX="135.0" layoutY="265.0" text="Alerta Estoque" />
+      <TextField fx:id="tfQuantidade" layoutX="257.0" layoutY="175.0" />
+      <TextField fx:id="tfPreco" layoutX="257.0" layoutY="216.0" />
+      <TextField fx:id="tfAlerta" layoutX="257.0" layoutY="260.0" />
+   </children>
+</AnchorPane>

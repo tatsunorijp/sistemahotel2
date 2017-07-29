@@ -248,6 +248,20 @@ public class GerenciamentoEstoque implements Initializable{
                     Passing.produtopass = (Produto) TVProduto.getSelectionModel().getSelectedItem();
 
                 }
+                else if (click.getClickCount() == 2){
+                    Stage stage = new Stage();
+                    FXMLLoader loader = new FXMLLoader();
+                    Parent root = null;
+                    loader.setLocation(getClass().getResource("/fxml/fxml_estoque/mostrar_produto.fxml"));
+                    try {
+                        root = loader.load();
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
+                    stage.setTitle("Sistema Hotel");
+                    stage.setScene(new Scene(root));
+                    stage.show();
+                }
             }
         });
 
