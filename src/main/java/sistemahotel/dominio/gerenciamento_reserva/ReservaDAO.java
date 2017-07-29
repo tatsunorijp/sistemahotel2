@@ -75,6 +75,17 @@ public class ReservaDAO {
         session.close();
     }
 
+    public void checkIn(){
+        Session session = ssf.openSession();
+        tx = session.beginTransaction();
+        Reserva r;
+        r = session.get(Reserva.class, reservapass.getId());
+        r.setStatus("Em andamento");
+        session.save(r);
+        tx.commit();
+        session.close();
+    }
+
     public void deletarReserva(Reserva r){
         Session session = ssf.openSession();
         //Reserva r;

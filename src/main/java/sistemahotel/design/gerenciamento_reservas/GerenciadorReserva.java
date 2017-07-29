@@ -27,6 +27,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import static sistemahotel.infraestrutura.DataController.ssf;
 import static sistemahotel.infraestrutura.Passing.reservapass;
 
 /**
@@ -226,10 +227,8 @@ public class GerenciadorReserva implements Initializable{
 
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
-            reservapass = TVReserva.getSelectionModel().getSelectedItem();
-            reservapass.setStatus("Em andamento");
-        } else {
             // ... user chose CANCEL or closed the dialog
+            dl.checkIn();
         }
     }
 
