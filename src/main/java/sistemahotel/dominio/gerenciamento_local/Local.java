@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 //Programado por Tatsunori
 @Entity
-public abstract class Local {
+public class Local {
     @Id
     @GeneratedValue
     protected Long id;

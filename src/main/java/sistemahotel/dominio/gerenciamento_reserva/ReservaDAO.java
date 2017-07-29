@@ -23,12 +23,12 @@ public class ReservaDAO {
     Scanner s = new Scanner(System.in);
     Session session = ssf.openSession();
     Transaction tx = null;
-    public void novaReservaHab(Cliente cliente, Habitacao habitacao, LocalDate dateIn, LocalDate dateOut, String qtdhospedes){
+    public void novaReservaHab(Cliente cliente, Local local, LocalDate dateIn, LocalDate dateOut, String qtdhospedes){
         Session session = ssf.openSession();
         tx = session.beginTransaction();
         Reserva nr1 = new Reserva();
         nr1.setCliente(cliente);
-        nr1.setLocal(habitacao);
+        nr1.setLocal(local);
         nr1.setCheckIn(dateIn);
         nr1.setCheckOut(dateOut);
         nr1.getCliente();

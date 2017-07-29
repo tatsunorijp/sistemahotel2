@@ -12,9 +12,23 @@ public class Passing {
 
     public static Cliente clientepass = new Cliente();
     public static Reserva reservapass = new Reserva();
-    public static Local localpass;
+    public static Local localpass = new Local();
     public static Habitacao habitacaopass = new Habitacao();
     public static SalaoFestas salaopass = new SalaoFestas();
     public static Produto produtopass = new Produto();
+
+    public static void resetClientepass(){
+        clientepass.setInformacoesAdicionais("");
+        clientepass.setPlacaDoCarro("");
+        clientepass.setNacionalidade("");
+        clientepass.setCidade("");
+        clientepass.setEmail("");
+        clientepass.setRG("");
+        clientepass.setEndereco("");
+        clientepass.setTelefone("");
+        clientepass.setNome("");
+        clientepass.setCPF("");
+        clientepass.setCidade("");
+    }
 
 }

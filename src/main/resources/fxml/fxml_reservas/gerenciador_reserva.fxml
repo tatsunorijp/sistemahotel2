@@ -89,9 +89,8 @@
                            <children>
                               <VBox prefHeight="603.0" prefWidth="170.0">
                                  <children>
-                                    <Button fx:id="btNovaReservaHab" mnemonicParsing="false" onAction="#btNovaReservaHabActionHandler" prefHeight="40.0" prefWidth="250.0" text="Nova Reserva Habitacao" />
+                                    <Button fx:id="btNovaReservaHab" mnemonicParsing="false" onAction="#btNovaReservaActionHandler" prefHeight="40.0" prefWidth="250.0" text="Nova Reserva" />
                                     <Button fx:id="btAlterar" mnemonicParsing="false" onAction="#btAlterarActionHandler" prefHeight="40.0" prefWidth="242.0" text="Alterar Reserva" />
-                                    <Button fx:id="btNovaReservaSalao" mnemonicParsing="false" onAction="#btNovaReservaSalaoActionHandler" prefHeight="40.0" prefWidth="250.0" text="Nova Reserva Salao" />
                                     <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#btExcluirActionHandler" prefHeight="40.0" prefWidth="259.0" text="Excluir Reserva" />
                                     <Button fx:id="btCheckIn" mnemonicParsing="false" onAction="#btCheckInActionHandler" prefHeight="40.0" prefWidth="259.0" text="Check In" />
                                  </children>

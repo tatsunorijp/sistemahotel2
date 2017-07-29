@@ -131,25 +131,10 @@ public class GerenciadorReserva implements Initializable{
         stage.show();
     }
 
-    public void btNovaReservaHabActionHandler(ActionEvent e){
+    public void btNovaReservaActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/fxml/fxml_reservas/reserva_habitacao.fxml"));
-        Parent root = null;
-        try {
-            root = loader.load();
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-        stage.setTitle("Sistema Hotel");
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-
-    public void btNovaReservaSalaoActionHandler(ActionEvent e){
-        Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/fxml/fxml_reservas/reserva_salao.fxml"));
         Parent root = null;
         try {
             root = loader.load();
