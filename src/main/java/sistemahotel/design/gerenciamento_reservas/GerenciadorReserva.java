@@ -27,6 +27,8 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import static sistemahotel.infraestrutura.Passing.reservapass;
+
 /**
  * Created by marcelo on 27/07/17.
  */
@@ -49,6 +51,8 @@ public class GerenciadorReserva implements Initializable{
     Button btAlterar;
     @FXML
     Button btExcluir;
+    @FXML
+    Button btCheckIn;
     @FXML
     TableView<Reserva> TVReserva;
     @FXML
@@ -193,7 +197,7 @@ public class GerenciadorReserva implements Initializable{
 
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
-            dl.deletarReserva(Passing.reservapass);
+            dl.deletarReserva(reservapass);
         } else {
             // ... user chose CANCEL or closed the dialog
         }
@@ -212,6 +216,21 @@ public class GerenciadorReserva implements Initializable{
         stage.setScene(new Scene(root));
         ((Node)e.getSource()).getParent().getScene().getWindow().hide();
         stage.show();*/
+    }
+
+    public void btCheckInActionHandler(ActionEvent e){
+        ReservaDAO dl = new ReservaDAO();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Realizar Check In");
+        alert.setHeaderText("Deseja realizar o check in da reserva selecionada?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            reservapass = TVReserva.getSelectionModel().getSelectedItem();
+            reservapass.setStatus("Em andamento");
+        } else {
+            // ... user chose CANCEL or closed the dialog
+        }
     }
 
     @Override
@@ -250,7 +269,7 @@ public class GerenciadorReserva implements Initializable{
             @Override
             public void handle(MouseEvent click) {
                 if (click.getClickCount() == 1) {
-                    Passing.reservapass = TVReserva.getSelectionModel().getSelectedItem();
+                    reservapass = TVReserva.getSelectionModel().getSelectedItem();
 
                 }
             }

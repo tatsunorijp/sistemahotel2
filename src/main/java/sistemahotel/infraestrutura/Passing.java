@@ -10,11 +10,11 @@ import sistemahotel.dominio.gerenciamento_reserva.Reserva;
 //Programado por Tatsunori
 public class Passing {
 
-    public static Cliente clientepass;
-    public static Reserva reservapass;
+    public static Cliente clientepass = new Cliente();
+    public static Reserva reservapass = new Reserva();
     public static Local localpass;
-    public static Habitacao habitacaopass;
-    public static SalaoFestas salaopass;
-    public static Produto produtopass;
+    public static Habitacao habitacaopass = new Habitacao();
+    public static SalaoFestas salaopass = new SalaoFestas();
+    public static Produto produtopass = new Produto();
 
 }
