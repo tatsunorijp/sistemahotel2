@@ -50,7 +50,6 @@ public class AlterarReserva implements Initializable{
         LocalDate dateIn = dpCheckIn.getValue();
         LocalDate dateOut = dpCheckOut.getValue();
         String qtdhospedes = tfHospedes.getText();
-        System.out.println(Integer.valueOf(qtdhospedes));
         gr.alterarReserva(nome, local, status, dateIn, dateOut, qtdhospedes);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");

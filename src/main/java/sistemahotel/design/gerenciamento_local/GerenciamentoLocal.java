@@ -45,6 +45,10 @@ public class GerenciamentoLocal implements Initializable{
     @FXML
     Button btNovoSalao;
     @FXML
+    Button btAlteraHab;
+    @FXML
+    Button btAlteraSalao;
+    @FXML
     Button btExcluir;
     @FXML
     TableView<Local> TVLocal;
@@ -155,10 +159,10 @@ public class GerenciamentoLocal implements Initializable{
 
     }
 
-    /*public void btAlterarActionHandler(ActionEvent e){
+    public void btAlteraLocalActionHandler(ActionEvent e){
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/fxml/fxml_locais/alterar_cadastro_list.fxml"));
+        loader.setLocation(getClass().getResource("/fxml/fxml_locais/alterar_local.fxml"));
         Parent root = null;
         try {
             root = loader.load();
@@ -168,7 +172,7 @@ public class GerenciamentoLocal implements Initializable{
         stage.setTitle("Sistema Hotel");
         stage.setScene(new Scene(root));
         stage.show();
-    }*/
+    }
 
     public void btExcluirActionHandler(ActionEvent e){
         LocalDAO dl = new LocalDAO();

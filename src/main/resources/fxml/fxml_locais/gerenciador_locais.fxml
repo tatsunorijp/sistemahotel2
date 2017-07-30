@@ -91,6 +91,7 @@
                                  <children>
                                     <Button fx:id="btNovaHab" mnemonicParsing="false" onAction="#btNovaHabActionHandler" prefHeight="40.0" prefWidth="307.0" text="Nova Habitacao" />
                                     <Button fx:id="btNovoSalao" mnemonicParsing="false" onAction="#btNovoSalaoActionHandler" prefHeight="40.0" prefWidth="307.0" text="Novo Salao" />
+                                    <Button fx:id="btAlteraLocal" mnemonicParsing="false" onAction="#btAlteraLocalActionHandler" prefHeight="41.0" prefWidth="173.0" text="Alterar Local" />
                                     <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#btExcluirActionHandler" prefHeight="40.0" prefWidth="308.0" text="Excluir Local" />
                                  </children>
                               </VBox>

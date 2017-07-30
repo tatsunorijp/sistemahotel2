@@ -4,9 +4,14 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import sistemahotel.dominio.gerenciamento_acesso.Usuario;
 import sistemahotel.dominio.gerenciamento_clientes.Cliente;
+import sistemahotel.dominio.gerenciamento_estoque.Produto;
 import sistemahotel.infraestrutura.DataController;
 
 import static sistemahotel.infraestrutura.DataController.ssf;
+import static sistemahotel.infraestrutura.Passing.habitacaopass;
+import static sistemahotel.infraestrutura.Passing.localpass;
+import static sistemahotel.infraestrutura.Passing.salaopass;
+
 import java.util.Scanner;
 //Programado por Tatsunori
 public class LocalDAO {
@@ -38,8 +43,16 @@ public class LocalDAO {
         session.close();
     }
 
-    public void editarLocal() {
 
+    public void alterarLocal(String preco, String informacoes) {
+        Session session = ssf.openSession();
+        tx = session.beginTransaction();
+        Local local = session.get(Local.class, localpass.getId());
+        local.setPreco(preco);
+        local.setInformacoesAdicionais(informacoes);
+        session.save(local);
+        tx.commit();
+        session.close();
     }
 
     public void deletarLocal(Local local) {

@@ -2,6 +2,7 @@ package sistemahotel.design.gerenciamento_local;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -18,15 +19,18 @@ public class MostraLocal implements Initializable{
     @FXML
     TextField tfTipo;
     @FXML
+    TextField tfPreco;
+    @FXML
     TextField tfStatus;
     @FXML
-    TextField tfInformacoes;
+    TextArea taInformacoes;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tfNumero.setText(localpass.getNumero());
         tfTipo.setText(localpass.getTipo());
+        tfPreco.setText(localpass.getPreco());
         tfStatus.setText(localpass.getStatus());
-        tfInformacoes.setText(localpass.getInformacoesAdicionais());
+        taInformacoes.setText(localpass.getInformacoesAdicionais());
     }
 }

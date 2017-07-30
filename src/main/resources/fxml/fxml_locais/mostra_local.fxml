@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="513.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_local.MostraLocal">
    <children>
-      <Label layoutX="107.0" layoutY="106.0" text="Numero" />
-      <Label layoutX="107.0" layoutY="148.0" text="Tipo" />
+      <Label layoutX="109.0" layoutY="72.0" text="Numero" />
+      <Label layoutX="115.0" layoutY="148.0" text="Tipo" />
       <Label layoutX="107.0" layoutY="192.0" text="Status" />
       <Label layoutX="84.0" layoutY="257.0" text="Informacoes Adicionais" />
-      <TextField fx:id="tfInformacoes" layoutX="259.0" layoutY="252.0" prefHeight="188.0" prefWidth="333.0" />
       <TextField fx:id="tfStatus" layoutX="259.0" layoutY="187.0" />
       <TextField fx:id="tfTipo" layoutX="259.0" layoutY="143.0" />
-      <TextField fx:id="tfNumero" layoutX="259.0" layoutY="101.0" />
+      <TextField fx:id="tfNumero" layoutX="259.0" layoutY="67.0" />
+      <TextField fx:id="tfPreco" layoutX="259.0" layoutY="105.0" />
+      <Label layoutX="110.0" layoutY="110.0" text="Preco" />
+      <TextArea fx:id="taInformacoes" layoutX="271.0" layoutY="257.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
