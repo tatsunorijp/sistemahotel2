@@ -2,6 +2,7 @@ package sistemahotel.design.gerenciamento_clientes;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -34,7 +35,7 @@ public class MostraCliente implements Initializable{
     @FXML
     TextField tfData;
     @FXML
-    TextField tfInformacoes;
+    TextArea taInformacoes;
 
 
     @Override
@@ -49,7 +50,7 @@ public class MostraCliente implements Initializable{
         tfNacionalidade.setText(clientepass.getNacionalidade());
         tfPlaca.setText(clientepass.getPlacaDoCarro());
         tfData.setText(String.valueOf(clientepass.getDataDeNascimento()));
-        tfInformacoes.setText(clientepass.getInformacoesAdicionais());
+        taInformacoes.setText(clientepass.getInformacoesAdicionais());
     }
 
 

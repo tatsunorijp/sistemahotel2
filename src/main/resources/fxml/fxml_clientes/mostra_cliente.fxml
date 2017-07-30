@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -22,11 +23,11 @@
       <Label layoutX="92.0" layoutY="221.0" text="Nacionalidade" />
       <Label layoutX="91.0" layoutY="247.0" text="Placa do Carro" />
       <Label layoutX="63.0" layoutY="317.0" text="Informacoes Adicionais" />
-      <TextField fx:id="tfInformacoes" layoutX="238.0" layoutY="317.0" prefHeight="94.0" prefWidth="188.0" />
       <TextField fx:id="tfCidade" layoutX="238.0" layoutY="189.0" />
       <TextField fx:id="tfNacionalidade" layoutX="238.0" layoutY="216.0" />
       <TextField fx:id="tfPlaca" layoutX="238.0" layoutY="242.0" />
       <TextField fx:id="tfData" layoutX="238.0" layoutY="268.0" />
       <Label layoutX="91.0" layoutY="273.0" text="Data de Nascimento" />
+      <TextArea fx:id="taInformacoes" layoutX="238.0" layoutY="311.0" prefHeight="133.0" prefWidth="199.0" />
    </children>
 </AnchorPane>

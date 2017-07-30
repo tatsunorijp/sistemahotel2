@@ -106,7 +106,7 @@
                                     <TableColumn fx:id="tcCliente" prefWidth="181.0" text="Cliente" />
                                     <TableColumn fx:id="tcLocal" prefWidth="139.0" text="Local" />
                                     <TableColumn fx:id="tcStatus" prefWidth="248.0" text="Status" />
-                                    <TableColumn fx:id="tcData" prefWidth="327.0" text="Data" />
+                                    <TableColumn fx:id="tcCheckIn" prefWidth="327.0" text="Check In" />
                                  </columns>
                               </TableView>
                            </children>

@@ -1,5 +1,7 @@
 package sistemahotel.dominio.gerenciamento_reserva;
 
+import sistemahotel.dominio.gerenciamento_estoque.Produto;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,35 +12,25 @@ import java.util.List;
  * Created by tatsunori on 30/07/17.
  */
 @Entity
-public class Consumacao {
+public class Consumacao{
     @Id
     @GeneratedValue
     private long id;
-    private List<String> produto;
-    private List<String> preco;
-    private Reserva reserva;
+    private List<Produto> produto;
 
-    public List<String> getProduto() {
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public List<Produto> getProduto() {
         return produto;
     }
 
-    public void setProduto(List<String> produto) {
+    public void setProduto(List<Produto> produto) {
         this.produto = produto;
-    }
-
-    public List<String> getPreco() {
-        return preco;
-    }
-
-    public void setPreco(List<String> preco) {
-        this.preco = preco;
-    }
-
-    public Reserva getReserva() {
-        return reserva;
-    }
-
-    public void setReserva(Reserva reserva) {
-        this.reserva = reserva;
     }
 }

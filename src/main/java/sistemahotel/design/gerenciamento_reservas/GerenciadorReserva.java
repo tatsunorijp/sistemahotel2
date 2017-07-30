@@ -63,7 +63,7 @@ public class GerenciadorReserva implements Initializable{
     @FXML
     TableColumn <Reserva, String> tcStatus;
     @FXML
-    TableColumn <Reserva, String> tcData;
+    TableColumn <Reserva, String> tcCheckIn;
 
     ObservableList<Reserva> list;
 
@@ -223,7 +223,7 @@ public class GerenciadorReserva implements Initializable{
         tcCliente.setCellValueFactory( new PropertyValueFactory<>("cliente"));
         tcLocal.setCellValueFactory(new PropertyValueFactory<>("local"));
         tcStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
-        tcData.setCellValueFactory(new PropertyValueFactory<>("data"));
+        tcCheckIn.setCellValueFactory(new PropertyValueFactory<>("checkIn"));
         TVReserva.setItems(FXCollections.observableList(list));
 
         // TRECHO DO FILTRO

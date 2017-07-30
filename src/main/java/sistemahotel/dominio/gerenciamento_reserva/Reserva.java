@@ -31,9 +31,8 @@ public class Reserva implements Initializable {
     private LocalDate checkIn;
     private LocalDate checkOut;
     private String qtdhospede;
-    @OneToOne
-    @JoinColumn(name = "fk_consumacao", nullable=false)
-    private Consumacao consumo;
+    @OneToMany
+    private List<Produto> consumo;
 
 
 
