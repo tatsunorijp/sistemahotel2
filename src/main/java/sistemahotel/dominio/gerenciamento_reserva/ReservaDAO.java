@@ -99,4 +99,11 @@ public class ReservaDAO {
 
     }
 
+    public void addConsumo(Long idReserva, String produtoNome, String preco){
+        Session session = ssf.openSession();
+        tx = session.beginTransaction();
+        tx.commit();
+        session.close();
+    }
+
 }

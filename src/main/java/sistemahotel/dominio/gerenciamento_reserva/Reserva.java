@@ -6,10 +6,12 @@ import sistemahotel.dominio.gerenciamento_estoque.Produto;
 import sistemahotel.dominio.gerenciamento_local.Local;
 import sistemahotel.infraestrutura.DataController;
 
+import java.sql.Date;
 import javax.persistence.*;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -29,11 +31,12 @@ public class Reserva implements Initializable {
     private LocalDate checkIn;
     private LocalDate checkOut;
     private String qtdhospede;
+    @OneToOne
+    @JoinColumn(name = "fk_consumacao", nullable=false)
+    private Consumacao consumo;
 
 
-    public Reserva(){
 
-    }
     public String toString(){
         return cliente.getNome();
     }
