@@ -34,7 +34,13 @@ public class Reserva implements Initializable {
     @OneToMany
     private List<Produto> consumo;
 
+    public List<Produto> getConsumo() {
+        return consumo;
+    }
 
+    public void setConsumo(List<Produto> consumo) {
+        this.consumo = consumo;
+    }
 
     public String toString(){
         return cliente.getNome();
