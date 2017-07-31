@@ -6,6 +6,7 @@ import sistemahotel.dominio.gerenciamento_estoque.Produto;
 import sistemahotel.dominio.gerenciamento_local.Local;
 import sistemahotel.infraestrutura.DataController;
 
+import java.sql.Array;
 import java.sql.Date;
 import javax.persistence.*;
 import java.net.URL;
@@ -32,14 +33,15 @@ public class Reserva implements Initializable {
     private LocalDate checkOut;
     private String qtdhospede;
     @OneToMany
-    private List<Produto> consumo;
+    private ArrayList<Produto> consumo = new ArrayList<>();
 
-    public List<Produto> getConsumo() {
+    public ArrayList<Produto> getConsumo() {
         return consumo;
     }
 
-    public void setConsumo(List<Produto> consumo) {
-        this.consumo = consumo;
+    public void addConsumacao(Produto produto){
+        consumo.add(produto);
+
     }
 
     public String toString(){

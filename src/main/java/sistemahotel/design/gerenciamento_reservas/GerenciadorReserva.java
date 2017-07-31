@@ -217,6 +217,22 @@ public class GerenciadorReserva implements Initializable{
         }
     }
 
+    public void btAddConsumoActionHandler(ActionEvent e){
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/fxml/fxml_reservas/seleciona_consumo.fxml"));
+        Parent root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        stage.setTitle("Sistema Hotel");
+        stage.setScene(new Scene(root));
+        stage.show();
+
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         list = FXCollections.observableList(DataController.listReserva());

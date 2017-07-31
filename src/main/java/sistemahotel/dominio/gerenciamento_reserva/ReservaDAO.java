@@ -1,6 +1,7 @@
 package sistemahotel.dominio.gerenciamento_reserva;
 import org.hibernate.Transaction;
 import sistemahotel.dominio.gerenciamento_clientes.Cliente;
+import sistemahotel.dominio.gerenciamento_estoque.Produto;
 import sistemahotel.dominio.gerenciamento_local.Habitacao;
 import sistemahotel.dominio.gerenciamento_local.Local;
 import org.hibernate.Session;
@@ -39,19 +40,6 @@ public class ReservaDAO {
         session.close();
     }
 
-    public void novaReservaSalao(Cliente cliente, SalaoFestas salaofestas, LocalDate dateIn, LocalDate dateOut){
-        Session session = ssf.openSession();
-        tx = session.beginTransaction();
-        Reserva nrs1 = new Reserva();
-        nrs1.setCliente(cliente);
-        nrs1.setLocal(salaofestas);
-        nrs1.setCheckIn(dateIn);
-        nrs1.setCheckOut(dateOut);
-        nrs1.setStatus("Reservado");
-        session.save(nrs1);
-        tx.commit();
-        session.close();
-    }
 
     public void alterarReserva(String nome, String local, String status, LocalDate dataIn, LocalDate dataOut, String qtdhospedes){
         Session session = ssf.openSession();
@@ -99,9 +87,16 @@ public class ReservaDAO {
 
     }
 
-    public void addConsumo(Long idReserva, String produtoNome, String preco){
+    public void addConsumo(String produtoNome, String preco, String quantidade){
         Session session = ssf.openSession();
         tx = session.beginTransaction();
+        Reserva r;
+        r = session.get(Reserva.class, reservapass.getId());
+        Produto produto = new Produto();
+            produto.setNome(produtoNome);
+            produto.setPreco(preco);
+            produto.setQuantidade(quantidade);
+        r.addConsumacao(produto);
         tx.commit();
         session.close();
     }

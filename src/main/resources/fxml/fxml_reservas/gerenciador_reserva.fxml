@@ -83,16 +83,17 @@
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <SplitPane dividerPositions="0.17058823529411765" layoutX="456.0" layoutY="178.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.18137254901960784" layoutX="456.0" layoutY="178.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <items>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <VBox prefHeight="603.0" prefWidth="170.0">
+                              <VBox prefHeight="603.0" prefWidth="170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
                                  <children>
                                     <Button fx:id="btNovaReservaHab" mnemonicParsing="false" onAction="#btNovaReservaActionHandler" prefHeight="40.0" prefWidth="250.0" text="Nova Reserva" />
                                     <Button fx:id="btAlterar" mnemonicParsing="false" onAction="#btAlterarActionHandler" prefHeight="40.0" prefWidth="242.0" text="Alterar Reserva" />
                                     <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#btExcluirActionHandler" prefHeight="40.0" prefWidth="259.0" text="Excluir Reserva" />
                                     <Button fx:id="btCheckIn" mnemonicParsing="false" onAction="#btCheckInActionHandler" prefHeight="40.0" prefWidth="259.0" text="Check In" />
+                                    <Button fx:id="btAddConsumo" mnemonicParsing="false" onAction="#btAddConsumoActionHandler" prefHeight="40.0" prefWidth="227.0" text="Adicionar consumo" />
                                  </children>
                               </VBox>
                            </children>
@@ -101,7 +102,7 @@
                            <children>
                               <Label layoutX="501.0" layoutY="573.0" text="Filtro:" />
                               <TextField fx:id="tfFiltro" layoutX="553.0" layoutY="568.0" prefHeight="26.0" prefWidth="275.0" promptText="Nome do cliente ou status da reserva" />
-                              <TableView fx:id="TVReserva" prefHeight="559.0" prefWidth="842.0">
+                              <TableView fx:id="TVReserva" prefHeight="559.0" prefWidth="842.0" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
                                     <TableColumn fx:id="tcCliente" prefWidth="181.0" text="Cliente" />
                                     <TableColumn fx:id="tcLocal" prefWidth="139.0" text="Local" />
