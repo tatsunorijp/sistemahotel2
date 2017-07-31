@@ -97,6 +97,7 @@ public class ReservaDAO {
             produto.setPreco(preco);
             produto.setQuantidade(quantidade);
         r.addConsumacao(produto);
+        session.save(r);
         tx.commit();
         session.close();
     }
