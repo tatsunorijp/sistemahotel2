@@ -27,13 +27,7 @@ public class MovimentarProduto {
         String incremento = tfIncr.getText();
         String estoque = Passing.produtopass.getQuantidade();
 
-        int estoI = Integer.valueOf(estoque);
-        int incrT = Integer.valueOf(incremento);
-
-        estoI = estoI + incrT;
-        estoque = String.valueOf(estoI);
-
-        ip.incrementarProduto(Passing.produtopass.getId(), estoque);
+        ip.incrementarProduto(Passing.produtopass.getId(), estoque, incremento);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");
         alert.setHeaderText(null);

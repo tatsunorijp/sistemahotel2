@@ -16,6 +16,7 @@ public class Produto {
     private String preco;
     private String alertaEstoque;
 
+
     public String toString(){return this.nome;}
     public Long getId() {
         return id;

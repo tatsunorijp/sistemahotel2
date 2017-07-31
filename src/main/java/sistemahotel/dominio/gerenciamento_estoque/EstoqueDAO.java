@@ -45,11 +45,17 @@ public class EstoqueDAO {
         session.close();
     }
 
-    public void incrementarProduto(Long id, String quantidade){
+    public void incrementarProduto(Long id, String estoque, String incremento){
         Session session = ssf.openSession();
         tx = session.beginTransaction();
         Produto produto = session.get(Produto.class, id);
-        produto.setQuantidade(quantidade);
+
+        int estoI = Integer.valueOf(estoque);
+        int incrT = Integer.valueOf(incremento);
+        estoI = estoI + incrT;
+        estoque = String.valueOf(estoI);
+
+        produto.setQuantidade(estoque);
         session.save(produto);
         tx.commit();
         session.close();

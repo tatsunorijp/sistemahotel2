@@ -38,9 +38,9 @@ public class Reserva implements Initializable {
         return consumo;
     }
 
+
     public void addConsumacao(Produto produto){
         consumo.add(produto);
-
     }
 
     public String toString(){
