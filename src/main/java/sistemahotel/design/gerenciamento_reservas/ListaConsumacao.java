@@ -2,11 +2,14 @@ package sistemahotel.design.gerenciamento_reservas;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sistemahotel.dominio.gerenciamento_estoque.Produto;
 import sistemahotel.dominio.gerenciamento_reserva.Consumacao;
 import sistemahotel.infraestrutura.DataController;
 
@@ -19,7 +22,7 @@ import java.util.ResourceBundle;
  */
 public class ListaConsumacao implements Initializable {
     @FXML
-    TableView TVListaConsumacao;
+    TableView TVListaConsumo;
     @FXML
     TableColumn tcCliente;
     @FXML
@@ -32,14 +35,14 @@ public class ListaConsumacao implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        /*list = FXCollections.observableList(DataController.listConsumacao());
+        list = FXCollections.observableList(DataController.listConsumacao());
         tcCliente.setCellValueFactory( new PropertyValueFactory<>("cliente"));
         tcProduto.setCellValueFactory(new PropertyValueFactory<>("produto"));
         tcQuantidade.setCellValueFactory(new PropertyValueFactory<>("quantidade"));
         tcPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));
-        TVListaConsumacao.setItems(FXCollections.observableList(list));
+        TVListaConsumo.setItems(FXCollections.observableList(list));
 
-        // TRECHO DO FILTRO
+        /*// TRECHO DO FILTRO
         FilteredList<Consumacao> filteredProdutoData = new FilteredList<>(list, p -> true);
         tfFiltro.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredProdutoData.setPredicate(produto -> {
