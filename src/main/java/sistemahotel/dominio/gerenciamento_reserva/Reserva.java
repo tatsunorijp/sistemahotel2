@@ -32,7 +32,6 @@ public class Reserva implements Initializable {
     private LocalDate checkIn;
     private LocalDate checkOut;
     private String qtdhospede;
-    @OneToMany
     private ArrayList<Produto> consumo = new ArrayList<>();
 
     public ArrayList<Produto> getConsumo() {
