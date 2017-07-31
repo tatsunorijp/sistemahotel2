@@ -1,27 +1,20 @@
 package sistemahotel.dominio.gerenciamento_reserva;
+
 import org.hibernate.Transaction;
 import sistemahotel.dominio.gerenciamento_clientes.Cliente;
-import sistemahotel.dominio.gerenciamento_estoque.Produto;
-import sistemahotel.dominio.gerenciamento_local.Habitacao;
+import sistemahotel.dominio.gerenciamento_estoque.EstoqueDAO;
 import sistemahotel.dominio.gerenciamento_local.Local;
 import org.hibernate.Session;
-import sistemahotel.dominio.gerenciamento_local.LocalDAO;
-import sistemahotel.dominio.gerenciamento_local.SalaoFestas;
-import sistemahotel.dominio.pessoa.Pessoa;
 import sistemahotel.infraestrutura.DataController;
-import sistemahotel.infraestrutura.Passing;
 
 import static sistemahotel.infraestrutura.DataController.ssf;
 import static sistemahotel.infraestrutura.Passing.reservapass;
 
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Scanner;
+
 //Programado por Tatsunori
 public class ReservaDAO {
 
-    Scanner s = new Scanner(System.in);
     Session session = ssf.openSession();
     Transaction tx = null;
     public void novaReservaHab(Cliente cliente, Local local, LocalDate dateIn, LocalDate dateOut, String qtdhospedes){
@@ -87,19 +80,39 @@ public class ReservaDAO {
 
     }
 
-    public void addConsumo(String produtoNome, String preco, String quantidade){
+    public boolean addConsumo(String produtoNome, String preco, String quantidade, String estoque, Long id, String cliente){
         Session session = ssf.openSession();
         tx = session.beginTransaction();
+
         Reserva r;
         r = session.get(Reserva.class, reservapass.getId());
-        Produto produto = new Produto();
-            produto.setNome(produtoNome);
-            produto.setPreco(preco);
-            produto.setQuantidade(quantidade);
-        r.addConsumacao(produto);
-        session.save(r);
-        tx.commit();
-        session.close();
+
+        int Iquantidade = Integer.valueOf(quantidade);
+        int Iestoque = Integer.valueOf(estoque);
+        if((Iestoque - Iquantidade) >= 0){
+            Consumacao consumo = new Consumacao();
+            consumo.setProduto(produtoNome);
+            consumo.setPreco(preco);
+            consumo.setQuantidade(quantidade);
+            consumo.setCliente(cliente);
+            consumo.setReserva(r);
+
+            session.save(consumo);
+            tx.commit();
+            session.close();
+
+            quantidade = String.valueOf(-Iquantidade);
+            EstoqueDAO ic = new EstoqueDAO();
+            ic.incrementarProduto(id, estoque, quantidade);
+
+            return true;
+
+        }else{
+            session.close();
+            return false;
+        }
+
+
     }
 
 }

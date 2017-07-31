@@ -24,6 +24,7 @@
         <mapping class="sistemahotel.dominio.gerenciamento_local.Habitacao"/>
         <mapping class="sistemahotel.dominio.gerenciamento_local.SalaoFestas"/>
         <mapping class="sistemahotel.dominio.gerenciamento_local.Local"/>
+        <mapping class="sistemahotel.dominio.gerenciamento_reserva.Consumacao"/>
 
     </session-factory>
 </hibernate-configuration>

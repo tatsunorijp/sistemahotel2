@@ -12,7 +12,6 @@ import javax.persistence.*;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -32,16 +31,6 @@ public class Reserva implements Initializable {
     private LocalDate checkIn;
     private LocalDate checkOut;
     private String qtdhospede;
-    private ArrayList<Produto> consumo = new ArrayList<>();
-
-    public ArrayList<Produto> getConsumo() {
-        return consumo;
-    }
-
-
-    public void addConsumacao(Produto produto){
-        consumo.add(produto);
-    }
 
     public String toString(){
         return cliente.getNome();

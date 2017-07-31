@@ -11,6 +11,7 @@ import sistemahotel.dominio.gerenciamento_estoque.Produto;
 import sistemahotel.dominio.gerenciamento_local.Habitacao;
 import sistemahotel.dominio.gerenciamento_local.Local;
 import sistemahotel.dominio.gerenciamento_local.SalaoFestas;
+import sistemahotel.dominio.gerenciamento_reserva.Consumacao;
 import sistemahotel.dominio.gerenciamento_reserva.Reserva;
 
 import java.util.List;
@@ -120,6 +121,25 @@ public class DataController {
             session.close();
         }
         return reservas;
+    }
+
+    public static List<Consumacao> listConsumacao() {
+        Session session = ssf.openSession();
+        Transaction transaction = null;
+
+        List consumo = null;
+
+        try {
+            transaction = session.beginTransaction();
+            consumo = session.createQuery("FROM Consumacao").list();
+            transaction.commit();
+        } catch (HibernateException e) {
+            if (transaction != null) transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return consumo;
     }
 
     public static List<Cliente> listCliente() {

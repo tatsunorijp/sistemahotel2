@@ -16,6 +16,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import sistemahotel.dominio.gerenciamento_estoque.EstoqueDAO;
 import sistemahotel.dominio.gerenciamento_estoque.Produto;
 import sistemahotel.dominio.gerenciamento_reserva.ReservaDAO;
 import sistemahotel.infraestrutura.DataController;
@@ -23,6 +24,7 @@ import sistemahotel.infraestrutura.Passing;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
@@ -48,14 +50,29 @@ public class SelecionarConsumo implements Initializable {
 
     public void btAdicionarConsumoActionHandler(ActionEvent e){
         ReservaDAO add = new ReservaDAO();
-        add.addConsumo(Passing.produtopass.getNome(),Passing.produtopass.getPreco(),tfQuantidade.getText());
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Operação realizada com sucesso");
-        alert.setHeaderText(null);
-        alert.setContentText("Cadastro Efetuado");
-        alert.showAndWait();
-        ((Node)e.getSource()).getParent().getScene().getWindow().hide();
+        String nome = Passing.produtopass.getNome();
+        String preco = Passing.produtopass.getPreco();
+        String estoque = Passing.produtopass.getQuantidade();
+        Long id = Passing.produtopass.getId();
+        String cliente = Passing.reservapass.getCliente().getNome();
+        String quantidadeConsumir = tfQuantidade.getText();
 
+
+        if (add.addConsumo(nome, preco, quantidadeConsumir, estoque, id, cliente)) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Operação realizada com sucesso");
+            alert.setHeaderText(null);
+            alert.setContentText("Consumo Registrado");
+            alert.showAndWait();
+            ((Node) e.getSource()).getParent().getScene().getWindow().hide();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Operação não realizada");
+            alert.setHeaderText(null);
+            alert.setContentText("Estoque insuficiente");
+            alert.showAndWait();
+            ((Node) e.getSource()).getParent().getScene().getWindow().hide();
+        }
     }
 
     @Override
@@ -92,7 +109,6 @@ public class SelecionarConsumo implements Initializable {
             public void handle(MouseEvent click) {
                 if (click.getClickCount() == 1) {
                     Passing.produtopass = (Produto) TVConsumo.getSelectionModel().getSelectedItem();
-
                 }
             }
         });
