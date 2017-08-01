@@ -21,9 +21,6 @@ import static sistemahotel.infraestrutura.Passing.habitacaopass;
 import static sistemahotel.infraestrutura.Passing.localpass;
 import static sistemahotel.infraestrutura.Passing.salaopass;
 
-/**
- * Created by marcelo on 30/07/17.
- */
 public class AlterarLocal implements Initializable{
     @FXML
     TextField tfPreco;

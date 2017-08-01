@@ -13,7 +13,7 @@ import static sistemahotel.infraestrutura.Passing.localpass;
 import static sistemahotel.infraestrutura.Passing.salaopass;
 
 import java.util.Scanner;
-//Programado por Tatsunori
+
 public class LocalDAO {
 
     private static LocalDAO uniqueInstance;

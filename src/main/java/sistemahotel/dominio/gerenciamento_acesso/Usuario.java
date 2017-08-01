@@ -3,7 +3,7 @@ package sistemahotel.dominio.gerenciamento_acesso;
 import sistemahotel.dominio.pessoa.Pessoa;
 
 import javax.persistence.Entity;
-//Programado por Marcelo
+
 @Entity
 public abstract class Usuario extends Pessoa {
 

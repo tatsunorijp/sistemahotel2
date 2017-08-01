@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-//Programado por Tatsunori
+
 @Entity
 public class Cliente extends Pessoa {
     private String telefone;

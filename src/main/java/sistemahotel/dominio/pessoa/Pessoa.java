@@ -5,7 +5,7 @@ import com.sun.istack.internal.NotNull;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-//Programado por Leonardo
+
 @Entity
 public abstract class Pessoa {
     @Id

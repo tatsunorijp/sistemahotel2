@@ -1,7 +1,7 @@
 package sistemahotel.dominio.gerenciamento_acesso;
 
 import javax.persistence.Entity;
-//Programado por Marcelo
+
 @Entity
 public class Gerente extends Usuario {
 

@@ -19,7 +19,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import static sistemahotel.infraestrutura.Passing.produtopass;
-//Programado por Marcelo
+
 public class AlterarProduto implements Initializable{
     @FXML
     TextField tfNome;

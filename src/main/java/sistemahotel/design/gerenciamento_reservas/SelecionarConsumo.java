@@ -27,9 +27,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-/**
- * Created by tatsunori on 30/07/17.
- */
+
 public class SelecionarConsumo implements Initializable {
     @FXML
     TableView TVConsumo;

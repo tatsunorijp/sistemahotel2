@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 
-//Programado por Tatsunori
+
 @Entity
 public class Reserva implements Initializable {
     @Id

@@ -12,7 +12,7 @@ import sistemahotel.infraestrutura.DataController;
 
 import java.time.LocalDate;
 
-//Programado por Tatsunori
+
 public class CadastroCliente {
     @FXML
     TextField tfNome;

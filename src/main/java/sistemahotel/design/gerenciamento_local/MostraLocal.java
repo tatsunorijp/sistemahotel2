@@ -10,9 +10,7 @@ import java.util.ResourceBundle;
 
 import static sistemahotel.infraestrutura.Passing.localpass;
 
-/**
- * Created by marcelo on 29/07/17.
- */
+
 public class MostraLocal implements Initializable{
     @FXML
     TextField tfNumero;

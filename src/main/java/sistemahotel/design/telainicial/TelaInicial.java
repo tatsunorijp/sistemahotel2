@@ -21,9 +21,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- * Created by marcelo on 27/07/17.
- */
+
 public class TelaInicial{
     @FXML
     Button btClientes;

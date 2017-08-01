@@ -9,9 +9,7 @@ import java.util.ResourceBundle;
 
 import static sistemahotel.infraestrutura.Passing.produtopass;
 
-/**
- * Created by marcelo on 29/07/17.
- */
+
 public class MostraProduto implements Initializable{
     @FXML
     TextField tfNome;

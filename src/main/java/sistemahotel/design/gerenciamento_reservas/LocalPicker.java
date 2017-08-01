@@ -26,9 +26,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- * Created by tatsunori on 28/07/17.
- */
 public class LocalPicker implements Initializable {
     @FXML
     TableView<Local> TVLocal;

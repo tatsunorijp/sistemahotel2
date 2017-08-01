@@ -28,9 +28,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-/**
- * Created by marcelo on 21/07/17.
- */
+
 public class DeletarReserva implements Initializable {
     Cliente current;
     @FXML

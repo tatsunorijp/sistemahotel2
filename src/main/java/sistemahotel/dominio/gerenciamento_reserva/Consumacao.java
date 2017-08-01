@@ -2,9 +2,7 @@ package sistemahotel.dominio.gerenciamento_reserva;
 
 import javax.persistence.*;
 
-/**
- * Created by tatsunori on 31/07/17.
- */
+
 @Entity
 public class Consumacao {
     @Id

@@ -27,9 +27,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-/**
- * Created by marcelo on 27/07/17.
- */
+
 public class GerenciamentoCliente implements Initializable{
     @FXML
     TextField tfFiltro;

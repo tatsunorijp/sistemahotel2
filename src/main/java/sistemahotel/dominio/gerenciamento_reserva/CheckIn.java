@@ -7,7 +7,7 @@ import sistemahotel.dominio.gerenciamento_acesso.Usuario;
 
 import java.util.Scanner;
 
-//Programado por Marcelo
+
 public class CheckIn {
     Session session;
     Scanner s = new Scanner(System.in);

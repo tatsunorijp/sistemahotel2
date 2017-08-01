@@ -19,7 +19,6 @@ import java.util.ResourceBundle;
 
 import static sistemahotel.infraestrutura.Passing.clientepass;
 
-//Programado por Marcelo
 
 public class AlterarCadastro implements Initializable{
     @FXML

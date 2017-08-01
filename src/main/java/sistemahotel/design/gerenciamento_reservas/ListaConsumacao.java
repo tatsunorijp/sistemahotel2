@@ -17,9 +17,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-/**
- * Created by tatsunori on 31/07/17.
- */
 public class ListaConsumacao implements Initializable {
     @FXML
     TableView TVListaConsumo;

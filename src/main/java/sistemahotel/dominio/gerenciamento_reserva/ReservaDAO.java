@@ -12,7 +12,7 @@ import static sistemahotel.infraestrutura.Passing.reservapass;
 
 import java.time.LocalDate;
 
-//Programado por Tatsunori
+
 public class ReservaDAO {
 
     private static ReservaDAO uniqueInstance;

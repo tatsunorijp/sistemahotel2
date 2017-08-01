@@ -12,7 +12,7 @@ import java.util.List;
 
 import static sistemahotel.infraestrutura.DataController.listCliente;
 import static sistemahotel.infraestrutura.DataController.ssf;
-//Programado por Tatsunori
+
 public class ClienteDAO {
     private String nomecliente;
     private int opcao;

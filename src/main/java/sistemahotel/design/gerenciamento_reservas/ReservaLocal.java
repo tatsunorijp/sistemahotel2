@@ -23,8 +23,6 @@ import java.util.ResourceBundle;
 
 import static sistemahotel.infraestrutura.DataController.ssf;
 
-//Programado por Tatsunori
-
 public class ReservaLocal implements Initializable{
 
     Cliente clienteobj;

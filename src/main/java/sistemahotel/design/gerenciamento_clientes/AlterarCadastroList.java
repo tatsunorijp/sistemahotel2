@@ -31,9 +31,7 @@ import java.util.ResourceBundle;
 
 import static sistemahotel.infraestrutura.Passing.clientepass;
 
-/**
- * Created by tatsunori on 19/07/17.
- */
+
 public class AlterarCadastroList implements Initializable {
 
     @FXML

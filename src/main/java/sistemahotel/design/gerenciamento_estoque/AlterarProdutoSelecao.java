@@ -28,7 +28,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 import static sistemahotel.infraestrutura.Passing.produtopass;
-//Programado por Marcelo
+
 public class AlterarProdutoSelecao implements Initializable {
     @FXML
     TableView tvAlterarProduto;

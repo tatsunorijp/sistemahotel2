@@ -16,7 +16,7 @@ import javafx.scene.control.TextField;
 import javax.xml.soap.Text;
 import java.io.IOException;
 
-//Programado por Tatsunori
+
 public class AdicionarProduto {
     @FXML
     TextField tfNome;

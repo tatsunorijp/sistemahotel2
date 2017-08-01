@@ -34,7 +34,7 @@ import java.util.ResourceBundle;
 import static sistemahotel.infraestrutura.Passing.habitacaopass;
 import static sistemahotel.infraestrutura.Passing.produtopass;
 
-//Programado por Leonardo
+
 public class RemoverProduto implements Initializable{
     @FXML
     TableView tvDeletarProduto;

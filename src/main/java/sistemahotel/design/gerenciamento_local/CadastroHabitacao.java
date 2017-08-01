@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
-//Programado por Tatsunori
+
 public class CadastroHabitacao implements Initializable {
 
     @FXML

@@ -30,9 +30,6 @@ import java.util.ResourceBundle;
 import static sistemahotel.infraestrutura.DataController.ssf;
 import static sistemahotel.infraestrutura.Passing.reservapass;
 
-/**
- * Created by marcelo on 27/07/17.
- */
 public class GerenciadorReserva implements Initializable{
     @FXML
     TextField tfFiltro;

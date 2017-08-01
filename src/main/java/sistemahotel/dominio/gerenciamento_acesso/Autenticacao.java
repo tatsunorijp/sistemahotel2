@@ -4,7 +4,7 @@ import sistemahotel.dominio.gerenciamento_acesso.Usuario;
 import sistemahotel.infraestrutura.DataController;
 
 import javax.xml.crypto.Data;
-//Programado por Marcelo
+
 public class Autenticacao {
     Usuario user;
     DataController controller = new DataController();

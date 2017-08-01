@@ -12,9 +12,7 @@ import sistemahotel.infraestrutura.Passing;
 
 
 
-/**
- * Created by tatsunori on 28/07/17.
- */
+
 
 public class MovimentarEstoque {
     @FXML

@@ -16,9 +16,7 @@ import java.util.ResourceBundle;
 
 import static sistemahotel.infraestrutura.Passing.reservapass;
 
-/**
- * Created by marcelo on 29/07/17.
- */
+
 public class MostraReserva implements Initializable{
 
     @FXML

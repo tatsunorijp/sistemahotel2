@@ -24,7 +24,7 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import static sistemahotel.infraestrutura.Passing.reservapass;
-//Programado por Marcelo
+
 public class AlterarReserva implements Initializable{
     Cliente clienteobj;
     Habitacao habitacaoobj;

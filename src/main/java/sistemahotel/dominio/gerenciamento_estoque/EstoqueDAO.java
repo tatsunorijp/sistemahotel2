@@ -6,7 +6,7 @@ import org.hibernate.Transaction;
 
 import java.io.Serializable;
 import java.util.Scanner;
-//Programado por Leonardo
+
 public class EstoqueDAO {
 
     private static EstoqueDAO uniqueInstance;
