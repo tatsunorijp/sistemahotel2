@@ -15,8 +15,22 @@ import java.time.LocalDate;
 //Programado por Tatsunori
 public class ReservaDAO {
 
+    private static ReservaDAO uniqueInstance;
+
     Session session = ssf.openSession();
     Transaction tx = null;
+
+    private ReservaDAO(){
+
+    }
+
+    public static ReservaDAO getInstance(){
+        if(uniqueInstance == null){
+            uniqueInstance = new ReservaDAO();
+        }
+        return uniqueInstance;
+    }
+
     public void novaReservaHab(Cliente cliente, Local local, LocalDate dateIn, LocalDate dateOut, String qtdhospedes){
         Session session = ssf.openSession();
         tx = session.beginTransaction();
@@ -102,7 +116,7 @@ public class ReservaDAO {
             session.close();
 
             quantidade = String.valueOf(-Iquantidade);
-            EstoqueDAO ic = new EstoqueDAO();
+            EstoqueDAO ic = EstoqueDAO.getInstance();
             ic.incrementarProduto(id, estoque, quantidade);
 
             return true;

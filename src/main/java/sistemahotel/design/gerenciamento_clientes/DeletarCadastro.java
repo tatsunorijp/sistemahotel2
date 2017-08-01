@@ -47,7 +47,7 @@ public class DeletarCadastro implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ClienteDAO dc = new ClienteDAO();
+        ClienteDAO dc = ClienteDAO.getInstance();
         ObservableList<Cliente> list = FXCollections.observableList(DataController.listCliente());
         TCNome.setCellValueFactory( new PropertyValueFactory<>("nome"));
         TCRG.setCellValueFactory(new PropertyValueFactory<>("RG"));

@@ -60,6 +60,8 @@ public class GerenciamentoLocal implements Initializable{
     TableColumn <Local, String> tcCamasCasal;
     @FXML
     TableColumn <Local, String> tcCamasSolteiro;
+    @FXML
+    TableColumn <Local, String> tcPreco;
 
     ObservableList<Local> list;
 
@@ -175,7 +177,7 @@ public class GerenciamentoLocal implements Initializable{
     }
 
     public void btExcluirActionHandler(ActionEvent e){
-        LocalDAO dl = new LocalDAO();
+        LocalDAO dl = LocalDAO.getInstance();
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Deletar Local");
@@ -210,6 +212,7 @@ public class GerenciamentoLocal implements Initializable{
         tcTipoLocal.setCellValueFactory(new PropertyValueFactory<>("Tipo"));
         tcCamasSolteiro.setCellValueFactory(new PropertyValueFactory<>("camasDeSolteiro"));
         tcCamasCasal.setCellValueFactory(new PropertyValueFactory<>("camasDeCasal"));
+        tcPreco.setCellValueFactory(new PropertyValueFactory<>("Preco"));
         TVLocal.setItems(FXCollections.observableList(list));
 
         // TRECHO DO FILTRO

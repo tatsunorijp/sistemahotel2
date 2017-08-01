@@ -52,7 +52,7 @@ public class CadastroCliente {
         String informacoesAdicionais = tfInformacoesAdicionais.getText();
         LocalDate dataDeNascimento = tfDataDeNascimento.getValue();
 
-        ClienteDAO gc = new ClienteDAO();
+        ClienteDAO gc = ClienteDAO.getInstance();
         gc.novoCliente(nome, endereco, cpf,telefone,rg,email,cidade,nacionalidade,placaDoCarro,informacoesAdicionais,dataDeNascimento);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");

@@ -10,24 +10,24 @@
       <TextField fx:id="tfNome" layoutX="238.0" layoutY="33.0" />
       <TextField fx:id="tfEndereco" layoutX="238.0" layoutY="59.0" />
       <TextField fx:id="tfTelefone" layoutX="238.0" layoutY="85.0" />
-      <Label layoutX="99.0" layoutY="38.0" text="Nome" />
-      <Label layoutX="98.0" layoutY="64.0" text="Endereco" />
-      <Label layoutX="101.0" layoutY="90.0" text="Telefone" />
-      <Label layoutX="109.0" layoutY="116.0" text="RG" />
-      <Label layoutX="109.0" layoutY="142.0" text="CPF" />
+      <Label layoutX="80.0" layoutY="38.0" text="Nome" />
+      <Label layoutX="80.0" layoutY="64.0" text="Endereco" />
+      <Label layoutX="80.0" layoutY="90.0" text="Telefone" />
+      <Label layoutX="80.0" layoutY="116.0" text="RG" />
+      <Label layoutX="80.0" layoutY="142.0" text="CPF" />
       <TextField fx:id="tfRG" layoutX="238.0" layoutY="111.0" />
       <TextField fx:id="tfCPF" layoutX="238.0" layoutY="137.0" />
       <TextField fx:id="tfEmail" layoutX="238.0" layoutY="163.0" />
-      <Label layoutX="91.0" layoutY="168.0" text="Email" />
-      <Label layoutX="87.0" layoutY="194.0" text="Cidade" />
-      <Label layoutX="92.0" layoutY="221.0" text="Nacionalidade" />
-      <Label layoutX="91.0" layoutY="247.0" text="Placa do Carro" />
+      <Label layoutX="80.0" layoutY="168.0" text="Email" />
+      <Label layoutX="80.0" layoutY="194.0" text="Cidade" />
+      <Label layoutX="80.0" layoutY="221.0" text="Nacionalidade" />
+      <Label layoutX="80.0" layoutY="247.0" text="Placa do Carro" />
       <Label layoutX="63.0" layoutY="317.0" text="Informacoes Adicionais" />
       <TextField fx:id="tfCidade" layoutX="238.0" layoutY="189.0" />
       <TextField fx:id="tfNacionalidade" layoutX="238.0" layoutY="216.0" />
       <TextField fx:id="tfPlaca" layoutX="238.0" layoutY="242.0" />
       <TextField fx:id="tfData" layoutX="238.0" layoutY="268.0" />
-      <Label layoutX="91.0" layoutY="273.0" text="Data de Nascimento" />
+      <Label layoutX="80.0" layoutY="273.0" text="Data de Nascimento" />
       <TextArea fx:id="taInformacoes" layoutX="238.0" layoutY="311.0" prefHeight="133.0" prefWidth="199.0" />
    </children>
 </AnchorPane>

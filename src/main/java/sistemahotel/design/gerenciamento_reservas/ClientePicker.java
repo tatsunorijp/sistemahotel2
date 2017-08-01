@@ -46,7 +46,6 @@ public class ClientePicker implements Initializable {
         TCNome.setCellValueFactory( new PropertyValueFactory<>("nome"));
         TCRG.setCellValueFactory(new PropertyValueFactory<>("RG"));
         TVCliente.setItems(FXCollections.observableList(list));
-        ClienteDAO dc = new ClienteDAO();
 
         // TRECHO DO FILTRO
         FilteredList<Cliente> filteredClienteData = new FilteredList<>(list, p -> true);

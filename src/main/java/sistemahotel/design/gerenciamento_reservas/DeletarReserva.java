@@ -52,7 +52,7 @@ public class DeletarReserva implements Initializable {
         tcStatus.setCellValueFactory(new PropertyValueFactory<>("Status"));
         tcData.setCellValueFactory(new PropertyValueFactory<>("Data"));
         tvReserva.setItems(FXCollections.observableList(list));
-        ReservaDAO dl = new ReservaDAO();
+        ReservaDAO dl = ReservaDAO.getInstance();
         tvReserva.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent click) {

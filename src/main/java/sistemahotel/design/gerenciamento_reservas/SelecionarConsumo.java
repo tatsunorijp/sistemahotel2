@@ -49,7 +49,7 @@ public class SelecionarConsumo implements Initializable {
     ObservableList<Produto> list;
 
     public void btAdicionarConsumoActionHandler(ActionEvent e){
-        ReservaDAO add = new ReservaDAO();
+        ReservaDAO add = ReservaDAO.getInstance();
         String nome = Passing.produtopass.getNome();
         String preco = Passing.produtopass.getPreco();
         String estoque = Passing.produtopass.getQuantidade();

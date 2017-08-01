@@ -101,10 +101,11 @@
                            <children>
                               <TableView fx:id="TVLocal" layoutX="8.0" layoutY="8.0" prefHeight="559.0" prefWidth="814.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
-                                    <TableColumn fx:id="tcNumeroLocal" prefWidth="249.0" text="Numero do local" />
-                                    <TableColumn fx:id="tcTipoLocal" prefWidth="234.0" text="Tipo do local" />
-                                    <TableColumn fx:id="tcCamasCasal" prefWidth="163.0" text="Camas de Casal" />
-                                    <TableColumn fx:id="tcCamasSolteiro" prefWidth="195.0" text="Camas de Solteiro" />
+                                    <TableColumn fx:id="tcNumeroLocal" prefWidth="211.0" text="Numero do local" />
+                                    <TableColumn fx:id="tcTipoLocal" prefWidth="142.0" text="Tipo do local" />
+                                    <TableColumn fx:id="tcCamasCasal" prefWidth="181.0" text="Camas de Casal" />
+                                    <TableColumn fx:id="tcCamasSolteiro" prefWidth="174.0" text="Camas de Solteiro" />
+                                    <TableColumn fx:id="tcPreco" prefWidth="133.0" text="Preco (R$)" />
                                  </columns>
                               </TableView>
                               <Label layoutX="585.0" layoutY="573.0" text="Filtro:" />

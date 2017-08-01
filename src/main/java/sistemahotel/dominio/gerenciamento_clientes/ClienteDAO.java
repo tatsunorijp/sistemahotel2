@@ -19,9 +19,21 @@ public class ClienteDAO {
     private String endereco;
     private long id;
     Cliente c = new Cliente();
+    private static ClienteDAO uniqueInstance;
 
 
     Transaction tx = null;
+
+    private ClienteDAO(){
+
+    }
+
+    public static ClienteDAO getInstance(){
+        if(uniqueInstance == null){
+            uniqueInstance = new ClienteDAO();
+        }
+        return uniqueInstance;
+    }
 
     Cliente c1 = new Cliente();
     public void novoCliente(String nome, String endereco, String cpf, String telefone, String rg, String email, String cidade, String nacionalidade, String placaDoCarro, String informacoesAdicionais, LocalDate dataDeNascimento){

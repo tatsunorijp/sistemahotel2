@@ -39,7 +39,7 @@ public class CadastroHabitacao implements Initializable {
         String informacoesAdicionais = taInformacoesAdicionais.getText();
         String preco = tfPreco.getText();
 
-        LocalDAO hab = new LocalDAO();
+        LocalDAO hab = LocalDAO.getInstance();
         hab.novaHabitacao(nmroHab,camasSolteiro,camasCasal,informacoesAdicionais, preco);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Operação realizada com sucesso");

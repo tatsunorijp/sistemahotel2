@@ -15,7 +15,22 @@ import static sistemahotel.infraestrutura.Passing.salaopass;
 import java.util.Scanner;
 //Programado por Tatsunori
 public class LocalDAO {
+
+    private static LocalDAO uniqueInstance;
+
     Transaction tx = null;
+
+    private LocalDAO(){
+
+    }
+
+    public static LocalDAO getInstance(){
+        if(uniqueInstance == null){
+            uniqueInstance = new LocalDAO();
+        }
+        return uniqueInstance;
+    }
+
     public void novaHabitacao(String numero, String camasSolteiro, String camasCasal, String informacoesAdicionais, String preco) {
         Session session = ssf.openSession();
         tx = session.beginTransaction();
@@ -44,12 +59,14 @@ public class LocalDAO {
     }
 
 
-    public void alterarLocal(String preco, String informacoes) {
+    public void alterarLocal(String preco, String informacoes, String camasSolteiro, String camasCasal) {
         Session session = ssf.openSession();
         tx = session.beginTransaction();
         Local local = session.get(Local.class, localpass.getId());
         local.setPreco(preco);
         local.setInformacoesAdicionais(informacoes);
+        local.setCamasDeSolteiro(camasSolteiro);
+        local.setCamasDeCasal(camasCasal);
         session.save(local);
         tx.commit();
         session.close();

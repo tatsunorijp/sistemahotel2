@@ -9,7 +9,20 @@ import java.util.Scanner;
 //Programado por Leonardo
 public class EstoqueDAO {
 
+    private static EstoqueDAO uniqueInstance;
+
     Transaction tx = null;
+
+    private EstoqueDAO(){
+
+    }
+
+    public static EstoqueDAO getInstance(){
+        if(uniqueInstance == null){
+            uniqueInstance = new EstoqueDAO();
+        }
+        return uniqueInstance;
+    }
 
     public void adicionarProduto(String nome, String quantidade, String preco, String alertaEstoque){
         Session session = ssf.openSession();

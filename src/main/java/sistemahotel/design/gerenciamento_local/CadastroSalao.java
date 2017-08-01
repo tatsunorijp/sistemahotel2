@@ -27,7 +27,7 @@ public class CadastroSalao {
 
 
     public void btCadastrarSalaoActionHandler(ActionEvent e){
-        LocalDAO salao = new LocalDAO();
+        LocalDAO salao = LocalDAO.getInstance();
         String numeroSalao = tfNmroSalao.getText();
         String maximoPessoas = tfMaximoPessoas.getText();
         String informacoesAdicionais = taInformacoesAdicionais.getText();

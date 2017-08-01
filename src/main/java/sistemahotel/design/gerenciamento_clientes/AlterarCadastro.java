@@ -44,8 +44,9 @@ public class AlterarCadastro implements Initializable{
     TextArea tfInformacoesAdicionais;
     @FXML
     DatePicker tfDataDeNascimento;
+
     public void btAlterarActionHandler(ActionEvent e) {
-        ClienteDAO gc = new ClienteDAO();
+        ClienteDAO gc = ClienteDAO.getInstance();
         String nome = tfNomeCliente.getText();
         String cpf = tfCpfCliente.getText();
         String rg = tfRG.getText();

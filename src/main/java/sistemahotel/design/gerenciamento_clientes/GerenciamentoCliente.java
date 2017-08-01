@@ -153,7 +153,7 @@ public class GerenciamentoCliente implements Initializable{
     }
 
     public void btExcluirActionHandler(ActionEvent e){
-        ClienteDAO dc = new ClienteDAO();
+        ClienteDAO dc = ClienteDAO.getInstance();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Deletar Reserva");
         alert.setHeaderText("Deseja deletar o cliente selecionado?");
@@ -186,7 +186,6 @@ public class GerenciamentoCliente implements Initializable{
         TCNome.setCellValueFactory( new PropertyValueFactory<>("nome"));
         TCRG.setCellValueFactory(new PropertyValueFactory<>("RG"));
         TVCliente.setItems(FXCollections.observableList(list));
-        ClienteDAO dc = new ClienteDAO();
 
         // TRECHO DO FILTRO
         FilteredList<Cliente> filteredClienteData = new FilteredList<>(list, p -> true);

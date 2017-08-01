@@ -55,15 +55,17 @@ public class GerenciadorReserva implements Initializable{
     @FXML
     Button btCheckIn;
     @FXML
-    TableView<Reserva> TVReserva;
+    TableView <Reserva> TVReserva;
     @FXML
-    TableColumn<Reserva, String> tcCliente;
+    TableColumn <Reserva, String> tcCliente;
     @FXML
     TableColumn <Reserva, String> tcLocal;
     @FXML
     TableColumn <Reserva, String> tcStatus;
     @FXML
     TableColumn <Reserva, String> tcCheckIn;
+    @FXML
+    TableColumn <Reserva, String> tcCheckOut;
 
     ObservableList<Reserva> list;
 
@@ -176,7 +178,7 @@ public class GerenciadorReserva implements Initializable{
     }
 
     public void btExcluirActionHandler(ActionEvent e){
-        ReservaDAO dl = new ReservaDAO();
+        ReservaDAO dl = ReservaDAO.getInstance();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Deletar Reserva");
         alert.setHeaderText("Deseja deletar a reserva selecionada?");
@@ -205,7 +207,7 @@ public class GerenciadorReserva implements Initializable{
     }
 
     public void btCheckInActionHandler(ActionEvent e){
-        ReservaDAO dl = new ReservaDAO();
+        ReservaDAO dl = ReservaDAO.getInstance();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Realizar Check In");
         alert.setHeaderText("Deseja realizar o check in da reserva selecionada?");
@@ -240,6 +242,7 @@ public class GerenciadorReserva implements Initializable{
         tcLocal.setCellValueFactory(new PropertyValueFactory<>("local"));
         tcStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
         tcCheckIn.setCellValueFactory(new PropertyValueFactory<>("checkIn"));
+        tcCheckOut.setCellValueFactory(new PropertyValueFactory<>("checkOut"));
         TVReserva.setItems(FXCollections.observableList(list));
 
         // TRECHO DO FILTRO

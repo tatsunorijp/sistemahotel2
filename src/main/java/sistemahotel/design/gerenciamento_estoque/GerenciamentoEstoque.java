@@ -169,7 +169,7 @@ public class GerenciamentoEstoque implements Initializable{
     }
 
     public void btExcluirActionHandler(ActionEvent e){
-        EstoqueDAO dp = new EstoqueDAO();
+        EstoqueDAO dp = EstoqueDAO.getInstance();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Deletar Produto");
         alert.setHeaderText("Deseja deletar o produto selecionado?");

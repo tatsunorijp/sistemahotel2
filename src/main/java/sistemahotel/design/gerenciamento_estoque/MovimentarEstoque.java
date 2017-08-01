@@ -16,14 +16,14 @@ import sistemahotel.infraestrutura.Passing;
  * Created by tatsunori on 28/07/17.
  */
 
-public class MovimentarProduto {
+public class MovimentarEstoque {
     @FXML
     TextField tfIncr;
     @FXML
     Button btInc;
 
     public void btIncrementoActionHandler(ActionEvent e){
-        EstoqueDAO ip = new EstoqueDAO();
+        EstoqueDAO ip = EstoqueDAO.getInstance();
         String incremento = tfIncr.getText();
         String estoque = Passing.produtopass.getQuantidade();
 

@@ -51,7 +51,6 @@ public class AlterarCadastroList implements Initializable {
         TCNome.setCellValueFactory( new PropertyValueFactory<>("nome"));
         TCRG.setCellValueFactory(new PropertyValueFactory<>("RG"));
         TVCliente.setItems(FXCollections.observableList(list));
-        ClienteDAO dc = new ClienteDAO();
 
         TVCliente.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override

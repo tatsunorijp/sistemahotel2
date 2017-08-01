@@ -43,7 +43,7 @@ public class AlterarReserva implements Initializable{
 
 
     public void btAlterarActionHandler(ActionEvent e){
-        ReservaDAO gr = new ReservaDAO();
+        ReservaDAO gr = ReservaDAO.getInstance();
         String nome = tfNomeCliente.getText();
         String local = tfLocal.getText();
         String status = tfStatus.getText();

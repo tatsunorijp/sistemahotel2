@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -8,10 +9,14 @@
 
 <AnchorPane prefHeight="513.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemahotel.design.gerenciamento_local.AlterarLocal">
    <children>
-      <Label layoutX="93.0" layoutY="195.0" text="Informacoes Adicionais" />
+      <Label layoutX="93.0" layoutY="277.0" text="Informacoes Adicionais:" />
       <TextField fx:id="tfPreco" layoutX="271.0" layoutY="105.0" />
-      <Label layoutX="93.0" layoutY="110.0" text="Preco" />
-      <TextArea fx:id="taInformacoes" layoutX="271.0" layoutY="195.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="93.0" layoutY="110.0" text="Preco:" />
       <Button fx:id="btAlterar" layoutX="309.0" layoutY="431.0" mnemonicParsing="false" onAction="#btAlterarActionHandler" text="Alterar" />
+      <ComboBox fx:id="cbCamasDeSolteiro" layoutX="271.0" layoutY="164.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbCamasDeCasal" layoutX="271.0" layoutY="217.0" prefWidth="150.0" />
+      <TextArea fx:id="taInformacoes" layoutX="271.0" layoutY="275.0" prefHeight="112.0" prefWidth="200.0" />
+      <Label layoutX="94.0" layoutY="169.0" text="Camas de solteiro:" />
+      <Label layoutX="93.0" layoutY="222.0" text="Camas de Casal:" />
    </children>
 </AnchorPane>

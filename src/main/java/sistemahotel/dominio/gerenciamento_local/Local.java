@@ -15,6 +15,24 @@ public class Local {
     protected String status;
     protected String informacoesAdicionais;
     protected String preco;
+    private String camasDeSolteiro;
+    private String camasDeCasal;
+
+    public String getCamasDeSolteiro() {
+        return camasDeSolteiro;
+    }
+
+    public void setCamasDeSolteiro(String camasDeSolteiro) {
+        this.camasDeSolteiro = camasDeSolteiro;
+    }
+
+    public String getCamasDeCasal() {
+        return camasDeCasal;
+    }
+
+    public void setCamasDeCasal(String camasDeCasal) {
+        this.camasDeCasal = camasDeCasal;
+    }
 
     public String getPreco() {
         return preco;

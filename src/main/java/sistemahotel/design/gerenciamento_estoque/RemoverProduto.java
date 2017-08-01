@@ -50,7 +50,7 @@ public class RemoverProduto implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        EstoqueDAO dp = new EstoqueDAO();
+        EstoqueDAO dp = EstoqueDAO.getInstance();
         ObservableList<Produto> list = FXCollections.observableList(DataController.listProduto());
         tcNome.setCellValueFactory( new PropertyValueFactory<>("nome"));
         tcPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));

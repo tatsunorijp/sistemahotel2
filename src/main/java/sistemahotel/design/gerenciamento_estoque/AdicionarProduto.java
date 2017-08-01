@@ -28,7 +28,7 @@ public class AdicionarProduto {
     TextField tfAlertaEstoque;
 
     public void btNovoProdutoActionHandler(ActionEvent e) {
-        EstoqueDAO estoque = new EstoqueDAO();
+        EstoqueDAO estoque = EstoqueDAO.getInstance();
         String nome = tfNome.getText();
         String quantidade =tfQuantidade.getText();
         String preco = tfPreco.getText();

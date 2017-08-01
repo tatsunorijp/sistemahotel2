@@ -31,7 +31,7 @@ public class AlterarProduto implements Initializable{
     TextField tfAlertaEstoque;
 
     public void btAlterarActionHandler(ActionEvent e){
-        EstoqueDAO estoque = new EstoqueDAO();
+        EstoqueDAO estoque = EstoqueDAO .getInstance();
         String preco = tfPreco.getText();
         String quantidade = tfQuantidade.getText();
         String alertaEstoque = tfAlertaEstoque.getText();

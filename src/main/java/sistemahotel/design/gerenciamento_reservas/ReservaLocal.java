@@ -102,7 +102,7 @@ public class ReservaLocal implements Initializable{
             if (h.getNumero().equals(quarto))
                 localobj = h;
         }
-            ReservaDAO gr = new ReservaDAO();
+            ReservaDAO gr = ReservaDAO.getInstance();
             gr.novaReservaHab(clienteobj, localobj, dateIn, dateOut, qtdhospedes);
             alert.setTitle("Operação realizada com sucesso");
             alert.setHeaderText(null);
